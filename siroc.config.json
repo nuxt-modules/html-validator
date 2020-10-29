@@ -1,0 +1,5 @@
+{
+  "rollup": {
+    "externals": ["html-validate/build/formatters/codeframe", "html-validate/build/formatters/stylish"]
+  }
+}

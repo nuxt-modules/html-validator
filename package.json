@@ -1,0 +1,72 @@
+{
+  "name": "@nuxtjs/html-validator",
+  "version": "0.1.0",
+  "description": "html-validator integration for Nuxt.js",
+  "keywords": [
+    "nuxt",
+    "module",
+    "nuxt-module",
+    "html-validator",
+    "validation",
+    "html"
+  ],
+  "repository": "nuxt-community/html-validator-module",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "siroc build",
+    "dev": "nuxt-ts example",
+    "lint": "eslint --ext .js,.ts,.vue .",
+    "prepare": "yarn build",
+    "prepublishOnly": "yarn test",
+    "release": "yarn build && yarn test && release-it",
+    "test": "yarn lint && yarn build && jest"
+  },
+  "husky": {
+    "gitHooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "resolutions": {
+    "rollup-plugin-esbuild": "2.3.0"
+  },
+  "dependencies": {
+    "defu": "^3.1.0",
+    "html-validate": "^3.5.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "latest",
+    "@babel/preset-env": "latest",
+    "@babel/preset-typescript": "latest",
+    "@nuxt/test-utils": "0.0.1",
+    "@nuxt/types": "latest",
+    "@nuxt/typescript-runtime": "latest",
+    "@nuxtjs/eslint-config-typescript": "latest",
+    "@release-it/conventional-changelog": "^2.0.0",
+    "@types/jest": "latest",
+    "babel-eslint": "latest",
+    "babel-jest": "latest",
+    "eslint": "latest",
+    "husky": "4.3.0",
+    "jest": "latest",
+    "lint-staged": "10.5.0",
+    "nuxt-edge": "latest",
+    "release-it": "^14.2.0",
+    "siroc": "latest"
+  },
+  "peerDependencies": {
+    "chalk": "^3.0.0",
+    "consola": "^2.15.0",
+    "prettier": "^2.1.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "volta": {
+    "node": "10.22.1"
+  }
+}

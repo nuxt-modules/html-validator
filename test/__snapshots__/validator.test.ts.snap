@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`useValidator returns a valid htmlValidate instance 1`] = `
+Array [
+  Object {
+    "errorCount": 1,
+    "filePath": "inline",
+    "messages": Array [
+      Object {
+        "column": 42,
+        "context": undefined,
+        "line": 1,
+        "message": "Element <a> is not permitted as descendant of <a>",
+        "offset": 41,
+        "ruleId": "element-permitted-content",
+        "selector": "body > a > a",
+        "severity": 2,
+        "size": 1,
+      },
+    ],
+    "source": "<!DOCTYPE html><title>x</title><body><a><a>Test</a></a></body>",
+    "warningCount": 0,
+  },
+]
+`;
