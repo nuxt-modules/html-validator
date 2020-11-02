@@ -1,3 +1,5 @@
+[![@nuxtjs/html-validator](https://html-validator.nuxtjs.org/preview.png)](https://html-validator.nuxtjs.org)
+
 # @nuxtjs/html-validator
 
 [![npm version][npm-version-src]][npm-version-href]
