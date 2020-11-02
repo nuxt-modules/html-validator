@@ -1,6 +1,6 @@
 ---
 title: Introduction
-description: ''
+description: 'Automatically validate Nuxt server-rendered HTML (SSR and SSG) to detect common issues with HTML that can lead to hydration errors, as well as improve accessibility and best practice.'
 category: Getting started
 items:
  - Zero-configuration required
@@ -8,6 +8,9 @@ items:
  - Detects common accessibility mistakes
 
 ---
+
+<img src="/preview.png" class="light-img" />
+<img src="/preview-dark.png" class="dark-img" />
 
 ## Key features
 
@@ -23,14 +26,14 @@ This module configures [`html-validate`](https://html-validate.org/) to automati
     <code-block label="Yarn" active>
 
     ```bash
-    yarn add @nuxtjs/html-validator
+    yarn add @nuxtjs/html-validator --dev
     ```
 
     </code-block>
     <code-block label="NPM">
 
     ```bash
-    npm install @nuxtjs/html-validator --save
+    npm install @nuxtjs/html-validator --save-dev
     ```
 
     </code-block>
@@ -53,6 +56,7 @@ This module configures [`html-validate`](https://html-validate.org/) to automati
 
     ```js{}[nuxt.config.js]
     {
+      // Install @nuxtjs/html-validator as dependency instead of devDependency
       modules: ['@nuxtjs/html-validator']
     }
     ```
