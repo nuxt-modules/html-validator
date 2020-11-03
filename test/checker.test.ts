@@ -56,6 +56,20 @@ describe('useChecker', () => {
     expect(mockReporter.error).toHaveBeenCalled()
   })
 
+  it('ignores Vue-generated scoped data attributes', async () => {
+    const mockValidator = jest.fn().mockImplementation(() => ({ valid: true, results: [] }))
+    const checker = useChecker({ validateString: mockValidator } as any, false, mockReporter as any)
+
+    await checker(
+      'https://test.com/',
+      '<a data-v-35b4e14a data-v-35b4e14a>Link</a>'
+    )
+    expect(mockValidator).toHaveBeenCalledWith(
+      '<a>Link</a>'
+    )
+    expect(mockReporter.error).not.toHaveBeenCalled()
+  })
+
   it('formats HTML with prettier when asked to do so', async () => {
     const mockValidator = jest.fn().mockImplementation(() => ({ valid: false, results: [] }))
     const checker = useChecker({ validateString: mockValidator } as any, true, mockReporter as any)
