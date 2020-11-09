@@ -1,7 +1,7 @@
 import consola from 'consola'
 import prettier from 'prettier'
-import prettierPrinter from 'html-validate/build/formatters/codeframe'
-import normalPrinter from 'html-validate/build/formatters/stylish'
+import prettierPrinter from 'html-validate/dist/formatters/codeframe'
+import normalPrinter from 'html-validate/dist/formatters/stylish'
 
 import { useChecker } from '../src/validator'
 
@@ -16,8 +16,8 @@ jest.mock('prettier', () => ({
 jest.mock('consola', () => ({
   withTag: jest.fn().mockImplementation(() => mockReporter)
 }))
-jest.mock('html-validate/build/formatters/codeframe')
-jest.mock('html-validate/build/formatters/stylish')
+jest.mock('html-validate/dist/formatters/codeframe')
+jest.mock('html-validate/dist/formatters/stylish')
 
 const mockReporter = {
   success: jest.fn(),

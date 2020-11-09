@@ -43,8 +43,8 @@ export const useChecker = (validator: HtmlValidate, usePrettier = false, reporte
   }
 
   const formatter = couldFormat
-    ? await import('html-validate/build/formatters/codeframe').then(r => r.default || /* istanbul ignore next */ r)
-    : await import('html-validate/build/formatters/stylish').then(r => r.default || /* istanbul ignore next */ r)
+    ? await import('html-validate/dist/formatters/codeframe').then(r => r.default || /* istanbul ignore next */ r)
+    : await import('html-validate/dist/formatters/stylish').then(r => r.default || /* istanbul ignore next */ r)
 
   const formattedResult = formatter(results)
   reporter.error(

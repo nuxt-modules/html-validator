@@ -26,7 +26,7 @@ export interface ModuleOptions {
   options?: ConfigData
 }
 
-export const DEFAULTS: ModuleOptions = {
+export const DEFAULTS: Required<ModuleOptions> = {
   usePrettier: false,
   options: defaultHtmlValidateConfig
 }

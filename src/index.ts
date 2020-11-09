@@ -13,7 +13,7 @@ const nuxtModule: Module<ModuleOptions> = function (moduleOptions) {
     `Using ${chalk.bold('html-validate')} to validate server-rendered HTML`
   )
 
-  const { usePrettier, options } = defu<ModuleOptions>(this.options[CONFIG_KEY], moduleOptions, DEFAULTS)
+  const { usePrettier, options } = defu(this.options[CONFIG_KEY] || {}, moduleOptions, DEFAULTS)
   const { validator } = useValidator(options)
 
   const checkHTML = useChecker(validator, usePrettier)
