@@ -1,3 +1,5 @@
+### [0.1.3](https://github.com/nuxt-community/html-validator-module/compare/0.1.2...0.1.3) (2020-11-09)
+
 ### [0.1.2](https://github.com/nuxt-community/html-validator-module/compare/0.1.1...0.1.2) (2020-11-03)
 
 
