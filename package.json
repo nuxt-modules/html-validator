@@ -35,28 +35,28 @@
     "rollup-plugin-esbuild": "2.3.0"
   },
   "dependencies": {
-    "defu": "^3.2.1",
-    "html-validate": "^4.0.0"
+    "defu": "^3.2.2",
+    "html-validate": "^4.0.2"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "latest",
-    "@babel/preset-env": "latest",
-    "@babel/preset-typescript": "latest",
+    "@babel/preset-env": "7.12.7",
+    "@babel/preset-typescript": "7.12.7",
     "@nuxt/test-utils": "0.0.1",
     "@nuxt/types": "latest",
     "@nuxt/typescript-runtime": "latest",
-    "@nuxtjs/eslint-config-typescript": "latest",
+    "@nuxtjs/eslint-config-typescript": "5.0.0",
     "@release-it/conventional-changelog": "^2.0.0",
     "@types/jest": "latest",
     "babel-eslint": "latest",
     "babel-jest": "26.6.3",
-    "eslint": "^7.13.0",
+    "eslint": "^7.14.0",
     "husky": "4.3.0",
     "jest": "26.6.3",
-    "lint-staged": "10.5.1",
-    "nuxt-edge": "2.14.8-26748031.2c6610cf",
-    "release-it": "^14.2.1",
-    "siroc": "latest"
+    "lint-staged": "10.5.2",
+    "nuxt-edge": "2.14.8-26776834.e02fecdf",
+    "release-it": "^14.2.2",
+    "siroc": "0.5.0"
   },
   "peerDependencies": {
     "chalk": "^3.0.0",
