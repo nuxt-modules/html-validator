@@ -65,6 +65,8 @@ This module configures [`html-validate`](https://html-validate.org/) to automati
 
   </code-group>
 
+  <alert type="info">`html-validator` won't be added to your production bundle - it's just used in development and at build/generate time.</alert>
+
 3. **Add configuration** (optional)
 
    `@nuxtjs/html-validator` takes two options.
