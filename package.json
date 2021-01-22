@@ -31,9 +31,6 @@
       "pre-commit": "lint-staged"
     }
   },
-  "resolutions": {
-    "rollup-plugin-esbuild": "2.3.0"
-  },
   "dependencies": {
     "defu": "^3.2.2",
     "html-validate": "^4.3.0"
@@ -67,6 +64,6 @@
     "access": "public"
   },
   "volta": {
-    "node": "10.22.1"
+    "node": "12.20.1"
   }
 }
