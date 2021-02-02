@@ -72,6 +72,9 @@ This module configures [`html-validate`](https://html-validate.org/) to automati
    `@nuxtjs/html-validator` takes two options.
 
    - `usePrettier` enables prettier printing of your source code to show errors in-context.
+
+      <alert>Consider not enabling this if you are using TailwindCSS, as prettier will struggle to cope with parsing the size of your HTML in development mode.</alert>
+
    - `options` allows you to pass in `html-validate` options that will be merged with the default configuration
 
       <alert type="info">You can find more about configuring `html-validate` [here](https://html-validate.org/rules/index.html).</alert>
