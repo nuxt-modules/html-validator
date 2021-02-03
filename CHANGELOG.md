@@ -1,3 +1,19 @@
+## [0.2.0](https://github.com/nuxt-community/html-validator-module/compare/0.1.6...0.2.0) (2021-02-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* change minimum supported node version to 12
+
+### Bug Fixes
+
+* allow overriding `options.extends` ([be0c16c](https://github.com/nuxt-community/html-validator-module/commit/be0c16c32636fe8ef53030dfc5bb44b40948c3bf)), closes [#9](https://github.com/nuxt-community/html-validator-module/issues/9)
+
+
+### Miscellaneous Chores
+
+* change minimum supported node version to 12 ([e0dad18](https://github.com/nuxt-community/html-validator-module/commit/e0dad182b67a8d4dd56ee2143095ee99ee93f859))
+
 ### [0.1.6](https://github.com/nuxt-community/html-validator-module/compare/0.1.5...0.1.6) (2021-01-16)
 
 ### [0.1.5](https://github.com/nuxt-community/html-validator-module/compare/0.1.4...0.1.5) (2020-12-17)
