@@ -33,12 +33,12 @@
   },
   "dependencies": {
     "defu": "^3.2.2",
-    "html-validate": "^4.4.0"
+    "html-validate": "^4.6.0"
   },
   "devDependencies": {
-    "@babel/plugin-transform-runtime": "7.12.13",
-    "@babel/preset-env": "7.12.13",
-    "@babel/preset-typescript": "7.12.13",
+    "@babel/plugin-transform-runtime": "7.12.15",
+    "@babel/preset-env": "7.12.16",
+    "@babel/preset-typescript": "7.12.16",
     "@nuxt/test-utils": "0.1.2",
     "@nuxt/types": "2.14.12",
     "@nuxt/typescript-runtime": "2.0.1",
@@ -47,13 +47,13 @@
     "@types/jest": "26.0.20",
     "babel-eslint": "latest",
     "babel-jest": "26.6.3",
-    "eslint": "^7.19.0",
+    "eslint": "^7.20.0",
     "husky": "4.3.8",
     "jest": "26.6.3",
-    "lint-staged": "10.5.3",
-    "nuxt-edge": "2.15.0-26871876.6a8339e4",
-    "release-it": "^14.3.0",
-    "siroc": "0.6.3"
+    "lint-staged": "10.5.4",
+    "nuxt-edge": "2.15.0-26886273.e277bb28",
+    "release-it": "^14.4.0",
+    "siroc": "0.6.5"
   },
   "peerDependencies": {
     "chalk": "^3.0.0",
