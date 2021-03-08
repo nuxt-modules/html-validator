@@ -47,8 +47,23 @@ export const useChecker = (validator: HtmlValidate, usePrettier = false, reporte
     : await import('html-validate/dist/formatters/stylish').then(r => r.default || /* istanbul ignore next */ r)
 
   const formattedResult = formatter(results)
+
+  let additionalInfo = ''
+
+  const messages = results[0].messages
+
+  messages.forEach(({ ruleId }: any) => {
+    const url = `https://html-validate.org/rules/${ruleId}.html`
+    additionalInfo = additionalInfo + url + '\n '
+  })
+
   reporter.error(
       `HTML validation errors found for ${chalk.bold(url)}`,
-      formattedResult
+      '\n',
+      formattedResult,
+      '\n',
+      `${chalk.bold('More information:')}`,
+      '\n',
+      additionalInfo
   )
 }
