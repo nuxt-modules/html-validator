@@ -19,7 +19,7 @@
   ],
   "scripts": {
     "build": "siroc build",
-    "dev": "nuxt-ts example",
+    "dev": "nuxt example",
     "lint": "eslint --ext .js,.ts,.vue .",
     "prepare": "yarn build",
     "prepublishOnly": "yarn test",
@@ -41,7 +41,6 @@
     "@babel/preset-typescript": "7.13.0",
     "@nuxt/test-utils": "0.1.3",
     "@nuxt/types": "2.15.2",
-    "@nuxt/typescript-runtime": "2.0.2",
     "@nuxtjs/eslint-config-typescript": "6.0.0",
     "@release-it/conventional-changelog": "^2.0.1",
     "@types/jest": "26.0.20",
@@ -51,9 +50,9 @@
     "husky": "4.3.8",
     "jest": "26.6.3",
     "lint-staged": "10.5.4",
-    "nuxt-edge": "2.16.0-26917958.908d2522",
+    "nuxt-edge": "2.16.0-26919398.c610d955",
     "release-it": "^14.4.1",
-    "siroc": "0.7.0"
+    "siroc": "0.8.0"
   },
   "peerDependencies": {
     "chalk": "^3.0.0",
