@@ -94,12 +94,13 @@ This module configures [`html-validate`](https://html-validate.org/) to automati
          rules: {
            'svg-focusable': 'off',
            'no-unknown-elements': 'error',
-           // Conflicts or not needed when using prettier formatting
+           // Conflicts or not needed as we use prettier formatting
            'void-style': 'off',
            'no-trailing-whitespace': 'off',
            // Conflict with Nuxt defaults
            'require-sri': 'off',
            'attribute-boolean-style': 'off',
+           'doctype-style': 'off',
            // Unreasonable rule
            'no-inline-style': 'off'
          }

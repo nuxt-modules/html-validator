@@ -16,6 +16,7 @@ export const defaultHtmlValidateConfig: ConfigData = {
     // Conflict with Nuxt defaults
     'require-sri': 'off',
     'attribute-boolean-style': 'off',
+    'doctype-style': 'off',
     // Unreasonable rule
     'no-inline-style': 'off'
   }
