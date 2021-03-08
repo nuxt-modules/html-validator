@@ -1,3 +1,10 @@
+### [0.2.2](https://github.com/nuxt-community/html-validator-module/compare/0.2.1...0.2.2) (2021-03-08)
+
+
+### Bug Fixes
+
+* don't require capitalised DOCTYPE ([a639aec](https://github.com/nuxt-community/html-validator-module/commit/a639aeceba980e6928781075427227968a8f2ca8))
+
 ### [0.2.1](https://github.com/nuxt-community/html-validator-module/compare/0.2.0...0.2.1) (2021-02-13)
 
 ## [0.2.0](https://github.com/nuxt-community/html-validator-module/compare/0.1.6...0.2.0) (2021-02-03)
