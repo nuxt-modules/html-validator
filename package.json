@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "defu": "3.2.2",
-    "html-validate": "4.6.1"
+    "html-validate": "4.7.0"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "7.13.10",
