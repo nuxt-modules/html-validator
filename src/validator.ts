@@ -18,7 +18,11 @@ export const useValidator = (options: ConfigData = defaultOptions) => {
   return { validator }
 }
 
-export const useChecker = (validator: HtmlValidate, usePrettier = false, reporter = consola.withTag('html-validate')) => async (url: string, html: string) => {
+export const useChecker = (
+  validator: HtmlValidate,
+  usePrettier = false,
+  reporter = consola.withTag('html-validate')
+) => async (url: string, html: string) => {
   let couldFormat = false
   try {
     if (usePrettier) {
@@ -26,7 +30,7 @@ export const useChecker = (validator: HtmlValidate, usePrettier = false, reporte
       html = format(html, { parser: 'html' })
       couldFormat = true
     }
-  // eslint-disable-next-line
+    // eslint-disable-next-line
   } catch (e) {
     reporter.error(e)
   }
@@ -38,7 +42,7 @@ export const useChecker = (validator: HtmlValidate, usePrettier = false, reporte
 
   if (valid) {
     return reporter.success(
-        `No HTML validation errors found for ${chalk.bold(url)}`
+      `No HTML validation errors found for ${chalk.bold(url)}`
     )
   }
 
@@ -48,22 +52,17 @@ export const useChecker = (validator: HtmlValidate, usePrettier = false, reporte
 
   const formattedResult = formatter(results)
 
-  let additionalInfo = ''
-
-  const messages = results[0].messages
-
-  messages.forEach(({ ruleId }: any) => {
-    const url = `https://html-validate.org/rules/${ruleId}.html`
-    additionalInfo = additionalInfo + url + '\n '
-  })
+  const urls =
+    results[0]?.messages.map(
+      ({ ruleId }: any) => `https://html-validate.org/rules/${ruleId}.html`
+    ) || []
 
   reporter.error(
+    [
       `HTML validation errors found for ${chalk.bold(url)}`,
-      '\n',
       formattedResult,
-      '\n',
-      `${chalk.bold('More information:')}`,
-      '\n',
-      additionalInfo
+      urls.length ? `${chalk.bold('More information:')}` : '',
+      ...urls
+    ].join('\n')
   )
 }
