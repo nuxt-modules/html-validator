@@ -1,6 +1,6 @@
 {
   "name": "@nuxtjs/html-validator",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "html-validator integration for Nuxt.js",
   "keywords": [
     "nuxt",

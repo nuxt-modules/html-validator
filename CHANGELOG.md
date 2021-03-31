@@ -1,3 +1,10 @@
+## [0.3.0](https://github.com/nuxt-community/html-validator-module/compare/0.2.2...0.3.0) (2021-03-31)
+
+
+### Features
+
+* add additional information to error reporting ([#12](https://github.com/nuxt-community/html-validator-module/issues/12)) ([6f671b2](https://github.com/nuxt-community/html-validator-module/commit/6f671b2e2ca213bd64f03b09f5135c397601255a))
+
 ### [0.2.2](https://github.com/nuxt-community/html-validator-module/compare/0.2.1...0.2.2) (2021-03-08)
 
 
