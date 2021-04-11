@@ -1,3 +1,10 @@
+### [0.3.1](https://github.com/nuxt-community/html-validator-module/compare/0.3.0...0.3.1) (2021-04-11)
+
+
+### Bug Fixes
+
+* display validation links inline ([1f82e78](https://github.com/nuxt-community/html-validator-module/commit/1f82e786637b23640f7e10ffe0ead25e2ec6645d)), closes [#39](https://github.com/nuxt-community/html-validator-module/issues/39)
+
 ## [0.3.0](https://github.com/nuxt-community/html-validator-module/compare/0.2.2...0.3.0) (2021-03-31)
 
 
