@@ -13,6 +13,7 @@ Array [
         "message": "Element <a> is not permitted as descendant of <a>",
         "offset": 41,
         "ruleId": "element-permitted-content",
+        "ruleUrl": "https://html-validate.org/rules/element-permitted-content.html",
         "selector": "body > a > a",
         "severity": 2,
         "size": 1,

@@ -50,12 +50,7 @@ export const useChecker = (
     ? await import('html-validate/dist/formatters/codeframe').then(r => r.default || /* istanbul ignore next */ r)
     : await import('html-validate/dist/formatters/stylish').then(r => r.default || /* istanbul ignore next */ r)
 
-  const rules = Array.from(new Set(results[0]?.messages.map(({ ruleId }) => ruleId)))
-
-  let formattedResult = formatter(results)
-  rules.forEach((ruleId) => {
-    formattedResult = formattedResult.replace(new RegExp(ruleId, 'g'), `https://html-validate.org/rules/${ruleId}.html`)
-  })
+  const formattedResult = formatter(results)
 
   reporter.error(
     [
