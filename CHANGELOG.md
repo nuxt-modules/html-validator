@@ -1,3 +1,10 @@
+## [0.4.0](https://github.com/nuxt-community/html-validator-module/compare/0.3.1...0.4.0) (2021-04-19)
+
+
+### Features
+
+* upgrade `html-validator` and use native hint links ([23400fc](https://github.com/nuxt-community/html-validator-module/commit/23400fc4fbe483d716156e42f0c41ba6200cbd7b))
+
 ### [0.3.1](https://github.com/nuxt-community/html-validator-module/compare/0.3.0...0.3.1) (2021-04-11)
 
 
