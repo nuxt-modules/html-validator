@@ -28,7 +28,7 @@
     "test": "yarn lint && yarn build && jest"
   },
   "dependencies": {
-    "defu": "3.2.2",
+    "defu": "4.0.1",
     "html-validate": "4.10.0"
   },
   "devDependencies": {
