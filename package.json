@@ -47,7 +47,7 @@
     "jest": "27.0.1",
     "lint-staged": "11.0.0",
     "nuxt-edge": "2.16.0-27017293.a53fd32d",
-    "release-it": "14.6.2",
+    "release-it": "14.7.0",
     "siroc": "0.10.1"
   },
   "peerDependencies": {
