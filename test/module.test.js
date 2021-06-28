@@ -2,6 +2,8 @@ import { readFileSync } from 'fs'
 import { resolve } from 'path'
 import { setupTest, get, generate, getNuxt } from '@nuxt/test-utils'
 
+import * as validator from '../src/validator'
+
 const mockReporter = {
   error: jest.fn(),
   info: jest.fn(),
@@ -46,5 +48,27 @@ describe('Nuxt module', () => {
         'Element <a> is not permitted as descendant of <a>'
       )
     )
+  }, 50000)
+})
+
+describe('custom options', () => {
+  setupTest({
+    testDir: __dirname,
+    fixture: '../example',
+    config: {
+      htmlValidator: {
+        options: {
+          extends: []
+        }
+      }
+    }
+  })
+
+  jest.spyOn(validator, 'useValidator')
+
+  test('overriding extends does not merge array', () => {
+    expect(validator.useValidator).toHaveBeenCalledWith(expect.objectContaining({
+      extends: []
+    }))
   }, 50000)
 })
