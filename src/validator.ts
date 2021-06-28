@@ -1,6 +1,6 @@
 import chalk from 'chalk'
 import consola from 'consola'
-import { ConfigData, HtmlValidate } from 'html-validate'
+import { ConfigData, HtmlValidate, formatterFactory } from 'html-validate'
 
 const validators = new Map<ConfigData, HtmlValidate>()
 
@@ -46,11 +46,9 @@ export const useChecker = (
     )
   }
 
-  const formatter = couldFormat
-    ? await import('html-validate/dist/formatters/codeframe').then(r => r.default || /* istanbul ignore next */ r)
-    : await import('html-validate/dist/formatters/stylish').then(r => r.default || /* istanbul ignore next */ r)
+  const formatter = couldFormat ? formatterFactory('codeframe') : formatterFactory('stylish')
 
-  const formattedResult = formatter(results)
+  const formattedResult = formatter!(results)
 
   reporter.error(
     [

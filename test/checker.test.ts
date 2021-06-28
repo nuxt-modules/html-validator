@@ -1,7 +1,6 @@
 import consola from 'consola'
 import prettier from 'prettier'
-import prettierPrinter from 'html-validate/dist/formatters/codeframe'
-import normalPrinter from 'html-validate/dist/formatters/stylish'
+import * as validate from 'html-validate'
 
 import { useChecker } from '../src/validator'
 
@@ -16,8 +15,7 @@ jest.mock('prettier', () => ({
 jest.mock('consola', () => ({
   withTag: jest.fn().mockImplementation(() => mockReporter)
 }))
-jest.mock('html-validate/dist/formatters/codeframe')
-jest.mock('html-validate/dist/formatters/stylish')
+jest.spyOn(validate, 'formatterFactory')
 
 const mockReporter = {
   success: jest.fn(),
@@ -76,7 +74,7 @@ describe('useChecker', () => {
 
     await checker('https://test.com/', '<a>Link</a>')
     expect(prettier.format).toHaveBeenCalledWith('<a>Link</a>', { parser: 'html' })
-    expect(prettierPrinter).toHaveBeenCalled()
+    expect(validate.formatterFactory).toHaveBeenCalledWith('codeframe')
   })
 
   it('falls back gracefully when prettier cannot format', async () => {
@@ -86,7 +84,7 @@ describe('useChecker', () => {
     await checker('https://test.com/', Symbol as any)
     expect(prettier.format).toHaveBeenCalledWith(Symbol, { parser: 'html' })
     expect(mockReporter.error).toHaveBeenCalled()
-    expect(normalPrinter).toHaveBeenCalled()
-    expect(prettierPrinter).not.toHaveBeenCalled()
+    expect(validate.formatterFactory).toHaveBeenCalledWith('stylish')
+    expect(validate.formatterFactory).not.toHaveBeenCalledWith('codeframe')
   })
 })
