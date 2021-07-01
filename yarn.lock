@@ -281,7 +281,7 @@
     "@babel/helper-skip-transparent-expression-wrappers" "^7.14.5"
     "@babel/plugin-proposal-optional-chaining" "^7.14.5"
 
-"@babel/plugin-proposal-async-generator-functions@^7.14.5", "@babel/plugin-proposal-async-generator-functions@^7.14.7":
+"@babel/plugin-proposal-async-generator-functions@^7.14.7":
   version "7.14.7"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-async-generator-functions/-/plugin-proposal-async-generator-functions-7.14.7.tgz#784a48c3d8ed073f65adcf30b57bcbf6c8119ace"
   integrity sha512-RK8Wj7lXLY3bqei69/cc25gwS5puEc3dknoFPFbqfy3XxYQBQFvu4ioWpafMBAB+L9NyptQK4nMOa5Xz16og8Q==
@@ -364,7 +364,7 @@
     "@babel/helper-plugin-utils" "^7.14.5"
     "@babel/plugin-syntax-numeric-separator" "^7.10.4"
 
-"@babel/plugin-proposal-object-rest-spread@^7.14.5", "@babel/plugin-proposal-object-rest-spread@^7.14.7":
+"@babel/plugin-proposal-object-rest-spread@^7.14.7":
   version "7.14.7"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.14.7.tgz#5920a2b3df7f7901df0205974c0641b13fd9d363"
   integrity sha512-082hsZz+sVabfmDWo1Oct1u1AgbKbUAyVgmX4otIc7bdsRgHBXwTwb3DpDmD4Eyyx6DNiuz5UAATT655k+kL5g==
@@ -601,7 +601,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.14.5"
 
-"@babel/plugin-transform-destructuring@^7.14.5", "@babel/plugin-transform-destructuring@^7.14.7":
+"@babel/plugin-transform-destructuring@^7.14.7":
   version "7.14.7"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-destructuring/-/plugin-transform-destructuring-7.14.7.tgz#0ad58ed37e23e22084d109f185260835e5557576"
   integrity sha512-0mDE99nK+kVh3xlc5vKwB6wnP9ecuSj+zQCa/n0voENtP/zymdT4HH6QEb65wjjcbqr1Jb/7z9Qp7TF5FtwYGw==
@@ -698,7 +698,7 @@
     "@babel/helper-module-transforms" "^7.14.5"
     "@babel/helper-plugin-utils" "^7.14.5"
 
-"@babel/plugin-transform-named-capturing-groups-regex@^7.14.5", "@babel/plugin-transform-named-capturing-groups-regex@^7.14.7":
+"@babel/plugin-transform-named-capturing-groups-regex@^7.14.7":
   version "7.14.7"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-named-capturing-groups-regex/-/plugin-transform-named-capturing-groups-regex-7.14.7.tgz#60c06892acf9df231e256c24464bfecb0908fd4e"
   integrity sha512-DTNOTaS7TkW97xsDMrp7nycUVh6sn/eq22VaxWfEdzuEbRsiaOU0pqU7DlyUGHVsbQbSghvjKRpEl+nUCKGQSg==
@@ -767,7 +767,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.14.5"
 
-"@babel/plugin-transform-spread@^7.14.5", "@babel/plugin-transform-spread@^7.14.6":
+"@babel/plugin-transform-spread@^7.14.6":
   version "7.14.6"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-spread/-/plugin-transform-spread-7.14.6.tgz#6bd40e57fe7de94aa904851963b5616652f73144"
   integrity sha512-Zr0x0YroFJku7n7+/HH3A2eIrGMjbmAIbJSVv0IZ+t3U2WUQUA64S/oeied2e+MaGSjmt4alzBCsK9E8gh+fag==
@@ -1644,7 +1644,7 @@
     "@octokit/types" "^6.0.3"
     universal-user-agent "^6.0.0"
 
-"@octokit/openapi-types@^7.0.0", "@octokit/openapi-types@^7.3.2":
+"@octokit/openapi-types@^7.3.2":
   version "7.3.2"
   resolved "https://registry.yarnpkg.com/@octokit/openapi-types/-/openapi-types-7.3.2.tgz#065ce49b338043ec7f741316ce06afd4d459d944"
   integrity sha512-oJhK/yhl9Gt430OrZOzAl2wJqR0No9445vmZ9Ey8GjUZUpwuu/vmEFP0TDhDXdpGDoxD6/EIFHJEcY8nHXpDTA==
@@ -1669,7 +1669,7 @@
     "@octokit/types" "^6.16.2"
     deprecation "^2.3.1"
 
-"@octokit/request-error@^2.0.0", "@octokit/request-error@^2.0.5", "@octokit/request-error@^2.1.0":
+"@octokit/request-error@^2.0.5", "@octokit/request-error@^2.1.0":
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/@octokit/request-error/-/request-error-2.1.0.tgz#9e150357831bfc788d13a4fd4b1913d60c74d677"
   integrity sha512-1VIvgXxs9WHSjicsRwq8PlR2LR2x6DwsJAaFgzdi0JfJoGSO8mYI/cHJQ+9FbN21aa+DrgNLnwObmyeSC8Rmpg==
@@ -1700,14 +1700,14 @@
     "@octokit/plugin-request-log" "^1.0.2"
     "@octokit/plugin-rest-endpoint-methods" "5.3.1"
 
-"@octokit/types@^5.0.0", "@octokit/types@^5.0.1":
+"@octokit/types@^5.0.0":
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/@octokit/types/-/types-5.5.0.tgz#e5f06e8db21246ca102aa28444cdb13ae17a139b"
   integrity sha512-UZ1pErDue6bZNjYOotCNveTXArOMZQFG6hKJfOnGnulVCMcVVi7YIIuuR4WfBhjo7zgpmzn/BkPDnUXtNx+PcQ==
   dependencies:
     "@types/node" ">= 8"
 
-"@octokit/types@^6.0.3", "@octokit/types@^6.16.1", "@octokit/types@^6.16.2", "@octokit/types@^6.7.1", "@octokit/types@^6.8.0":
+"@octokit/types@^6.0.3", "@octokit/types@^6.16.1", "@octokit/types@^6.16.2", "@octokit/types@^6.8.0":
   version "6.16.4"
   resolved "https://registry.yarnpkg.com/@octokit/types/-/types-6.16.4.tgz#d24f5e1bacd2fe96d61854b5bda0e88cf8288dfe"
   integrity sha512-UxhWCdSzloULfUyamfOg4dJxV9B+XjgrIZscI0VCbp4eNrjmorGEw+4qdwcpTsu6DIrm9tQsFQS2pK5QkqQ04A==
@@ -6384,10 +6384,10 @@ human-signals@^2.1.0:
   resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-2.1.0.tgz#dc91fcba42e4d06e4abaed33b3e7a3c02f514ea0"
   integrity sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==
 
-husky@6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/husky/-/husky-6.0.0.tgz#810f11869adf51604c32ea577edbc377d7f9319e"
-  integrity sha512-SQS2gDTB7tBN486QSoKPKQItZw97BMOd+Kdb6ghfpBc0yXyzrddI0oDV5MkDAbuB4X2mO3/nj60TRMcYxwzZeQ==
+husky@7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-7.0.0.tgz#3dbd5d28e76234689ee29bb41e048f28e3e46616"
+  integrity sha512-xK7lO0EtSzfFPiw+oQncQVy/XqV7UVVjxBByc+Iv5iK3yhW9boDoWgvZy3OGo48QKg/hUtZkzz0hi2HXa0kn7w==
 
 iconv-lite@0.4.24, iconv-lite@^0.4.24:
   version "0.4.24"
