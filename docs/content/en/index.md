@@ -75,7 +75,7 @@ This module configures [`html-validate`](https://html-validate.org/) to automati
 
       <alert>Consider not enabling this if you are using TailwindCSS, as prettier will struggle to cope with parsing the size of your HTML in development mode.</alert>
 
-   - `failOnError` will make the command ` nuxt generate` failing if an error is met.
+   - `failOnError` will make the command ` nuxt generate` failing if an error is met. 
 
       <alert>Useful in Continuous Integration.</alert>
 
