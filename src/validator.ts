@@ -6,6 +6,14 @@ const validators = new Map<ConfigData, HtmlValidate>()
 
 const defaultOptions = {}
 
+let hasError = false
+
+export const failOnError = (shouldFail : boolean) => {
+  if (shouldFail && hasError) {
+    throw new Error('html-validator found errors!')
+  }
+}
+
 export const useValidator = (options: ConfigData = defaultOptions) => {
   if (validators.has(options)) {
     return { validator: validators.get(options)! }
@@ -45,6 +53,8 @@ export const useChecker = (
       `No HTML validation errors found for ${chalk.bold(url)}`
     )
   }
+
+  hasError = true
 
   const formatter = couldFormat ? formatterFactory('codeframe') : formatterFactory('stylish')
 

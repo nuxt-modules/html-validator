@@ -4,7 +4,7 @@ import consola from 'consola'
 import defu from 'defu'
 
 import { DEFAULTS, ModuleOptions } from './config'
-import { useChecker, useValidator } from './validator'
+import { useChecker, useValidator, failOnError as failIfError } from './validator'
 
 const CONFIG_KEY = 'htmlValidator'
 
@@ -14,7 +14,7 @@ const nuxtModule: Module<ModuleOptions> = function (moduleOptions) {
   )
 
   const providedOptions = defu(this.options[CONFIG_KEY] || {}, moduleOptions)
-  const { usePrettier, options } = defu(providedOptions, DEFAULTS)
+  const { usePrettier, failOnError, options } = defu(providedOptions, DEFAULTS)
   if (options && providedOptions.options && providedOptions.options.extends) {
     options.extends = providedOptions.options.extends
   }
@@ -24,6 +24,7 @@ const nuxtModule: Module<ModuleOptions> = function (moduleOptions) {
 
   this.nuxt.hook('render:route', (url: string, result: { html: string }) => checkHTML(url, result.html))
   this.nuxt.hook('generate:page', ({ path, html }: { path: string, html: string }) => checkHTML(path, html))
+  this.nuxt.hook('generate:done', () => failIfError(failOnError))
 }
 
 ;(nuxtModule as any).meta = { name: '@nuxtjs/html-validator' }
