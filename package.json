@@ -45,7 +45,7 @@
     "eslint": "7.30.0",
     "husky": "7.0.1",
     "jest": "27.0.6",
-    "lint-staged": "11.0.0",
+    "lint-staged": "11.0.1",
     "nuxt-edge": "2.16.0-27099371.356de80e",
     "release-it": "14.10.0",
     "siroc": "0.13.0"
