@@ -4,7 +4,7 @@ import consola from 'consola'
 import defu from 'defu'
 
 import { DEFAULTS, ModuleOptions } from './config'
-import { useChecker, useValidator, failOnError as failIfError } from './validator'
+import { useChecker, useValidator } from './validator'
 
 const CONFIG_KEY = 'htmlValidator'
 
@@ -20,11 +20,15 @@ const nuxtModule: Module<ModuleOptions> = function (moduleOptions) {
   }
   const { validator } = useValidator(options)
 
-  const checkHTML = useChecker(validator, usePrettier)
+  const { checkHTML, invalidPages } = useChecker(validator, usePrettier)
 
   this.nuxt.hook('render:route', (url: string, result: { html: string }) => checkHTML(url, result.html))
   this.nuxt.hook('generate:page', ({ path, html }: { path: string, html: string }) => checkHTML(path, html))
-  this.nuxt.hook('generate:done', () => failIfError(failOnError))
+  this.nuxt.hook('generate:done', () => {
+    if (failOnError && invalidPages.length) {
+      throw new Error('html-validator found errors')
+    }
+  })
 }
 
 ;(nuxtModule as any).meta = { name: '@nuxtjs/html-validator' }
