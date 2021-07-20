@@ -48,7 +48,7 @@
     "lint-staged": "11.0.1",
     "nuxt-edge": "2.16.0-27099371.356de80e",
     "release-it": "14.10.0",
-    "siroc": "0.13.0"
+    "siroc": "0.14.0"
   },
   "peerDependencies": {
     "chalk": "^3.0.0 || ^4.0.0",
