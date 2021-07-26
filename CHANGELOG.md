@@ -1,3 +1,10 @@
+## [0.5.0](https://github.com/nuxt-community/html-validator-module/compare/0.4.1...0.5.0) (2021-07-26)
+
+
+### Features
+
+* allow throwing an error in ci if validation fails ([#96](https://github.com/nuxt-community/html-validator-module/issues/96)) ([5f7d650](https://github.com/nuxt-community/html-validator-module/commit/5f7d6501ac16e22735f684c21f95b02661f94ed6))
+
 ### [0.4.1](https://github.com/nuxt-community/html-validator-module/compare/0.4.0...0.4.1) (2021-06-28)
 
 ## [0.4.0](https://github.com/nuxt-community/html-validator-module/compare/0.3.1...0.4.0) (2021-04-19)
