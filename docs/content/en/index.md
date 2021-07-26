@@ -75,6 +75,10 @@ This module configures [`html-validate`](https://html-validate.org/) to automati
 
       <alert>Consider not enabling this if you are using TailwindCSS, as prettier will struggle to cope with parsing the size of your HTML in development mode.</alert>
 
+   - `failOnError` will throw an error after running `nuxt generate` if there are any validation errors with the generated pages.
+
+      <alert>Useful in continuous integration.</alert>
+
    - `options` allows you to pass in `html-validate` options that will be merged with the default configuration
 
       <alert type="info">You can find more about configuring `html-validate` [here](https://html-validate.org/rules/index.html).</alert>
@@ -85,6 +89,7 @@ This module configures [`html-validate`](https://html-validate.org/) to automati
    {
      htmlValidator: {
        usePrettier: false,
+       failOnError: false,
        options: {
          extends: [
            'html-validate:document',

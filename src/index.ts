@@ -14,16 +14,21 @@ const nuxtModule: Module<ModuleOptions> = function (moduleOptions) {
   )
 
   const providedOptions = defu(this.options[CONFIG_KEY] || {}, moduleOptions)
-  const { usePrettier, options } = defu(providedOptions, DEFAULTS)
+  const { usePrettier, failOnError, options } = defu(providedOptions, DEFAULTS)
   if (options && providedOptions.options && providedOptions.options.extends) {
     options.extends = providedOptions.options.extends
   }
   const { validator } = useValidator(options)
 
-  const checkHTML = useChecker(validator, usePrettier)
+  const { checkHTML, invalidPages } = useChecker(validator, usePrettier)
 
   this.nuxt.hook('render:route', (url: string, result: { html: string }) => checkHTML(url, result.html))
   this.nuxt.hook('generate:page', ({ path, html }: { path: string, html: string }) => checkHTML(path, html))
+  this.nuxt.hook('generate:done', () => {
+    if (failOnError && invalidPages.length) {
+      throw new Error('html-validator found errors')
+    }
+  })
 }
 
 ;(nuxtModule as any).meta = { name: '@nuxtjs/html-validator' }

@@ -24,10 +24,12 @@ export const defaultHtmlValidateConfig: ConfigData = {
 
 export interface ModuleOptions {
   usePrettier?: boolean
+  failOnError?: boolean
   options?: ConfigData
 }
 
 export const DEFAULTS: Required<ModuleOptions> = {
   usePrettier: false,
+  failOnError: false,
   options: defaultHtmlValidateConfig
 }

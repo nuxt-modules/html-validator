@@ -29,7 +29,7 @@ describe('useChecker', () => {
 
   it('works with a consola reporter', async () => {
     const mockValidator = jest.fn().mockImplementation(() => ({ valid: false, results: [] }))
-    const checker = useChecker({ validateString: mockValidator } as any)
+    const { checkHTML: checker } = useChecker({ validateString: mockValidator } as any)
 
     await checker('https://test.com/', '<a>Link</a>')
     expect(mockValidator).toHaveBeenCalled()
@@ -38,7 +38,7 @@ describe('useChecker', () => {
 
   it('calls the provided validator', async () => {
     const mockValidator = jest.fn().mockImplementation(() => ({ valid: true, results: [] }))
-    const checker = useChecker({ validateString: mockValidator } as any, false, mockReporter as any)
+    const { checkHTML: checker } = useChecker({ validateString: mockValidator } as any, false, mockReporter as any)
 
     await checker('https://test.com/', '<a>Link</a>')
     expect(mockValidator).toHaveBeenCalled()
@@ -47,16 +47,24 @@ describe('useChecker', () => {
 
   it('prints an error message when invalid html is provided', async () => {
     const mockValidator = jest.fn().mockImplementation(() => ({ valid: false, results: [] }))
-    const checker = useChecker({ validateString: mockValidator } as any, false, mockReporter as any)
+    const { checkHTML: checker } = useChecker({ validateString: mockValidator } as any, false, mockReporter as any)
 
     await checker('https://test.com/', '<a>Link</a>')
     expect(mockValidator).toHaveBeenCalled()
     expect(mockReporter.error).toHaveBeenCalled()
   })
 
+  it('records urls when invalid html is provided', async () => {
+    const mockValidator = jest.fn().mockImplementation(() => ({ valid: false, results: [] }))
+    const { checkHTML: checker, invalidPages } = useChecker({ validateString: mockValidator } as any, false, mockReporter as any)
+
+    await checker('https://test.com/', '<a>Link</a>')
+    expect(invalidPages).toContain('https://test.com/')
+  })
+
   it('ignores Vue-generated scoped data attributes', async () => {
     const mockValidator = jest.fn().mockImplementation(() => ({ valid: true, results: [] }))
-    const checker = useChecker({ validateString: mockValidator } as any, false, mockReporter as any)
+    const { checkHTML: checker } = useChecker({ validateString: mockValidator } as any, false, mockReporter as any)
 
     await checker(
       'https://test.com/',
@@ -70,7 +78,7 @@ describe('useChecker', () => {
 
   it('formats HTML with prettier when asked to do so', async () => {
     const mockValidator = jest.fn().mockImplementation(() => ({ valid: false, results: [] }))
-    const checker = useChecker({ validateString: mockValidator } as any, true, mockReporter as any)
+    const { checkHTML: checker } = useChecker({ validateString: mockValidator } as any, true, mockReporter as any)
 
     await checker('https://test.com/', '<a>Link</a>')
     expect(prettier.format).toHaveBeenCalledWith('<a>Link</a>', { parser: 'html' })
@@ -79,7 +87,7 @@ describe('useChecker', () => {
 
   it('falls back gracefully when prettier cannot format', async () => {
     const mockValidator = jest.fn().mockImplementation(() => ({ valid: false, results: [] }))
-    const checker = useChecker({ validateString: mockValidator } as any, true, mockReporter as any)
+    const { checkHTML: checker } = useChecker({ validateString: mockValidator } as any, true, mockReporter as any)
 
     await checker('https://test.com/', Symbol as any)
     expect(prettier.format).toHaveBeenCalledWith(Symbol, { parser: 'html' })
