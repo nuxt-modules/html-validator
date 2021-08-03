@@ -69,7 +69,7 @@ This module configures [`html-validate`](https://html-validate.org/) to automati
 
 3. **Add configuration** (optional)
 
-   `@nuxtjs/html-validator` takes two options.
+   `@nuxtjs/html-validator` takes three options.
 
    - `usePrettier` enables prettier printing of your source code to show errors in-context.
 
