@@ -5373,7 +5373,12 @@ es-to-primitive@^1.2.1:
     is-date-object "^1.0.1"
     is-symbol "^1.0.2"
 
-esbuild@^0.12.18, esbuild@^0.12.9:
+esbuild@^0.12.22:
+  version "0.12.25"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.12.25.tgz#c2131cef022cf9fe94aaa5e00110b27fc976221a"
+  integrity sha512-woie0PosbRSoN8gQytrdCzUbS2ByKgO8nD1xCZkEup3D9q92miCze4PqEI9TZDYAuwn6CruEnQpJxgTRWdooAg==
+
+esbuild@^0.12.9:
   version "0.12.20"
   resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.12.20.tgz#4d3c9d83c99a4031e027b42a4c398c23b6827cb0"
   integrity sha512-u7+0qTo9Z64MD9PhooEngCmzyEYJ6ovFhPp8PLNh3UasR5Ihjv6HWVXqm8uHmasdQlpsAf0IsY4U0YVUfCpt4Q==
@@ -10905,10 +10910,10 @@ rollup-plugin-esbuild@4.5.0:
     joycon "^3.0.1"
     jsonc-parser "^3.0.0"
 
-rollup@^2.56.0:
-  version "2.56.2"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.56.2.tgz#a045ff3f6af53ee009b5f5016ca3da0329e5470f"
-  integrity sha512-s8H00ZsRi29M2/lGdm1u8DJpJ9ML8SUOpVVBd33XNeEeL3NVaTiUcSBHzBdF3eAyR0l7VSpsuoVUGrRHq7aPwQ==
+rollup@^2.56.3:
+  version "2.56.3"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.56.3.tgz#b63edadd9851b0d618a6d0e6af8201955a77aeff"
+  integrity sha512-Au92NuznFklgQCUcV96iXlxUbHuB1vQMaH76DHl5M11TotjOHwqk9CwcrT78+Tnv4FN9uTBxq6p4EJoYkpyekg==
   optionalDependencies:
     fsevents "~2.3.2"
 
@@ -11204,10 +11209,10 @@ simple-swizzle@^0.2.2:
   dependencies:
     is-arrayish "^0.3.1"
 
-siroc@0.15.0:
-  version "0.15.0"
-  resolved "https://registry.yarnpkg.com/siroc/-/siroc-0.15.0.tgz#d745c40a2c0eb31cafb01bd3e918cce33cc4944c"
-  integrity sha512-8YGxI1J2WCXVP4IZJzkbDyUrTA7JFIY6pM0wsEsgveMTlIjEcMZtKyzA0DdsGhUqp/HexgYDcCBYXxkY1u5EGA==
+siroc@0.16.0:
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/siroc/-/siroc-0.16.0.tgz#29808c3e589b5b9c362fb5de16e247e9f92c6e40"
+  integrity sha512-BOK6Ih10CFSdq1bvvWt1ZGkvYGdKmCxPxuExYogg8lcOtsMr6ZFBuW7/U4oUJkdgXsXxFE55KCmJF1vSvOSYwA==
   dependencies:
     "@rollup/plugin-alias" "^3.1.5"
     "@rollup/plugin-commonjs" "^20.0.0"
@@ -11219,13 +11224,13 @@ siroc@0.15.0:
     consola "^2.15.3"
     defu "^5.0.0"
     detect-indent "^6.1.0"
-    esbuild "^0.12.18"
+    esbuild "^0.12.22"
     execa "^5.1.1"
     fs-extra "^10.0.0"
     glob "^7.1.7"
     jiti "^1.11.0"
     mkdist "^0.3.3"
-    rollup "^2.56.0"
+    rollup "^2.56.3"
     rollup-plugin-dts "^3.0.2"
     rollup-plugin-esbuild "4.5.0"
     sort-package-json "^1.50.0"
