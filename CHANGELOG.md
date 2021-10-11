@@ -1,3 +1,14 @@
+## [0.6.0](https://github.com/nuxt-community/html-validator-module/compare/0.5.0...0.6.0) (2021-10-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* bump html-validate version
+
+### Miscellaneous Chores
+
+* bump html-validate version ([3b8245c](https://github.com/nuxt-community/html-validator-module/commit/3b8245ce0104e95d5ccb7a83914219310b721f1f)), closes [/html-validate.org/changelog/index.html#6-0-0](https://github.com/nuxt-community//html-validate.org/changelog/index.html/issues/6-0-0)
+
 ## [0.5.0](https://github.com/nuxt-community/html-validator-module/compare/0.4.1...0.5.0) (2021-07-26)
 
 
