@@ -1,3 +1,16 @@
+
+
+## [0.7.0](https://github.com/nuxt-community/html-validator-module/compare/0.6.0...0.7.0) (2022-05-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* requires node 14
+
+### Miscellaneous Chores
+
+* upgrade `html-validate` to v7 ([ece459b](https://github.com/nuxt-community/html-validator-module/commit/ece459beec0a63dea77e4af4cdd65fc76ffafd71))
+
 ## [0.6.0](https://github.com/nuxt-community/html-validator-module/compare/0.5.0...0.6.0) (2021-10-11)
 
 
@@ -80,4 +93,3 @@
 * ignore scoped data attributes ([d51da80](https://github.com/nuxt-community/html-validator-module/commit/d51da807e44ab521715cfb6c10b27ed23f21bdf9)), closes [#3](https://github.com/nuxt-community/html-validator-module/issues/3)
 
 ### 0.1.1 (2020-10-29)
-
