@@ -6,6 +6,6 @@
   },
   "devDependencies": {
     "@nuxt/content-theme-docs": "latest",
-    "nuxt-edge": "latest"
+    "nuxt": "latest"
   }
 }
