@@ -32,9 +32,9 @@
     "html-validate": "7.1.1"
   },
   "devDependencies": {
-    "@babel/plugin-transform-runtime": "7.17.12",
-    "@babel/preset-env": "7.17.12",
-    "@babel/preset-typescript": "7.16.7",
+    "@babel/plugin-transform-runtime": "7.18.5",
+    "@babel/preset-env": "7.18.2",
+    "@babel/preset-typescript": "7.17.12",
     "@nuxt/test-utils": "0.2.2",
     "@nuxt/types": "2.15.8",
     "@nuxtjs/eslint-config-typescript": "10.0.0",
