@@ -42,10 +42,10 @@
     "@types/jest": "27.5.2",
     "babel-eslint": "latest",
     "babel-jest": "28.1.1",
-    "eslint": "8.16.0",
+    "eslint": "8.17.0",
     "husky": "8.0.1",
     "jest": "28.1.1",
-    "lint-staged": "12.4.3",
+    "lint-staged": "12.5.0",
     "nuxt-edge": "2.16.0-27226092.034b9901",
     "release-it": "15.0.0",
     "siroc": "0.16.0"
