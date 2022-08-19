@@ -36,7 +36,7 @@ export default defineNuxtModule<ModuleOptions>({
     }
 
     if (!nuxt.options.dev || isNuxt2()) {
-      const { useChecker, getValidator } = await import('#validator') as typeof import('./runtime/validator')
+      const { useChecker, getValidator } = await import('#validator') as typeof import('./runtime/validator.mjs')
       const validator = getValidator(options)
       const { checkHTML, invalidPages } = useChecker(validator, usePrettier)
 

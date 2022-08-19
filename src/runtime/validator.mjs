@@ -1,17 +1,26 @@
 import chalk from 'chalk'
-import { ConfigData, HtmlValidate, formatterFactory } from 'html-validate'
+import { HtmlValidate, formatterFactory } from 'html-validate'
 
-export const getValidator = (options: ConfigData = {}) => {
+/** @param {import('html-validate').ConfigData} options */
+export const getValidator = (options = {}) => {
   return new HtmlValidate(options)
 }
 
+/**
+ * @param {import('html-validate').HtmlValidate} validator
+ */
 export const useChecker = (
-  validator: HtmlValidate,
+  validator,
   usePrettier = false
 ) => {
-  const invalidPages: string[] = []
+  /** @type {string[]} */
+  const invalidPages = []
 
-  const checkHTML = async (url: string, html: string) => {
+  /**
+   * @param {string} url
+   * @param {string} html
+   */
+  const checkHTML = async (url, html) => {
     let couldFormat = false
     try {
       if (usePrettier) {

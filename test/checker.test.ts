@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, afterEach } from 'vitest'
-import { useChecker } from '../src/runtime/validator'
+import { useChecker } from '../src/runtime/validator.mjs'
 
 vi.mock('prettier', () => ({
   format: vi.fn().mockImplementation((str: string) => {

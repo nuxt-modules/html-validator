@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { defaultHtmlValidateConfig } from '../src/config'
-import { getValidator } from '../src/runtime/validator'
+import { getValidator } from '../src/runtime/validator.mjs'
 
 describe('useValidator', () => {
   it('generates a new validator for each set of options', () => {
