@@ -1,11 +1,3 @@
 {
   "extends": "./playground/tsconfig.json",
-  "compilerOptions": {
-    "paths": {
-      "#validator": [
-        "src/runtime/validator.mjs"
-      ]
-    },
-    "baseUrl": "."
-  },
 }

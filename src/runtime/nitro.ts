@@ -1,5 +1,5 @@
 import type { NitroAppPlugin, RenderResponse } from 'nitropack'
-import { useChecker, getValidator } from './validator.mjs'
+import { useChecker, getValidator } from './validator'
 // @ts-expect-error virtual module
 import config from '#html-validator-config'
 

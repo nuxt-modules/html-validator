@@ -19,9 +19,6 @@
       "require": "./dist/module.cjs"
     }
   },
-  "imports": {
-    "#validator": "./dist/runtime/validator.mjs"
-  },
   "main": "./dist/module.cjs",
   "types": "./dist/module.d.ts",
   "files": [
