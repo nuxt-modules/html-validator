@@ -10,7 +10,7 @@
     "validation",
     "html"
   ],
-  "repository": "nuxt-community/html-validator-module",
+  "repository": "nuxt-modules/html-validator",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
