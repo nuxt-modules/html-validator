@@ -45,7 +45,7 @@ describe('Nuxt module', () => {
     )
     expect(mockReporter.error).toHaveBeenCalledWith(
       expect.stringContaining(
-        'Element <a> is not permitted as descendant of <a>'
+        '<a> element is not permitted as a descendant of <a>'
       )
     )
   }, 50000)
