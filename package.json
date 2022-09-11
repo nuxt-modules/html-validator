@@ -38,7 +38,7 @@
     "@nuxt/test-utils": "0.2.2",
     "@nuxt/types": "2.15.8",
     "@nuxtjs/eslint-config-typescript": "10.0.0",
-    "@release-it/conventional-changelog": "5.0.0",
+    "@release-it/conventional-changelog": "5.1.0",
     "@types/jest": "28.1.6",
     "babel-eslint": "latest",
     "babel-jest": "28.1.3",
