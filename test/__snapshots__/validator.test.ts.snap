@@ -8,9 +8,13 @@ Array [
     "messages": Array [
       Object {
         "column": 42,
-        "context": undefined,
+        "context": Object {
+          "ancestor": "<a>",
+          "child": "<a>",
+          "kind": "descendant",
+        },
         "line": 1,
-        "message": "Element <a> is not permitted as descendant of <a>",
+        "message": "<a> element is not permitted as a descendant of <a>",
         "offset": 41,
         "ruleId": "element-permitted-content",
         "ruleUrl": "https://html-validate.org/rules/element-permitted-content.html",
