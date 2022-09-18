@@ -9,7 +9,7 @@ export default <NitroAppPlugin> function (nitro) {
 
   nitro.hooks.hook('render:response', (response: RenderResponse, { event }) => {
     if (typeof response.body === 'string' && (response.headers['Content-Type'] || response.headers['content-type'])?.includes('html')) {
-      // We deliberately do not await response
+      // We deliberately do not await so as not to block the response
       checkHTML(event.req.url, response.body)
     }
   })
