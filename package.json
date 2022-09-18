@@ -38,7 +38,8 @@
   "dependencies": {
     "@nuxt/kit": "^3.0.0-rc.10",
     "chalk": "^5.0.1",
-    "html-validate": "7.4.1"
+    "html-validate": "7.4.1",
+    "prettier": "^2.7.1"
   },
   "devDependencies": {
     "@nuxt/module-builder": "latest",
@@ -51,20 +52,11 @@
     "husky": "8.0.1",
     "lint-staged": "13.0.3",
     "nuxt": "npm:nuxt3@3.0.0-rc.11-27722816.abd0feb",
-    "prettier": "^2.7.1",
     "release-it": "15.4.2",
     "vitest": "^0.21.0"
   },
   "resolutions": {
     "@nuxtjs/html-validator": "link:./"
-  },
-  "peerDependencies": {
-    "prettier": "^2.1.2"
-  },
-  "peerDependenciesMeta": {
-    "prettier": {
-      "optional": true
-    }
   },
   "volta": {
     "node": "16.17.0"
