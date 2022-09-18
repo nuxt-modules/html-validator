@@ -1,7 +1,7 @@
 import { fileURLToPath } from 'url'
 import chalk from 'chalk'
 
-import { defineNuxtModule, isNuxt2, logger } from '@nuxt/kit'
+import { defineNuxtModule, isNuxt2, logger, resolveModule } from '@nuxt/kit'
 import { DEFAULTS, ModuleOptions } from './config'
 
 export type { ModuleOptions }
@@ -36,7 +36,8 @@ export default defineNuxtModule<ModuleOptions>({
     }
 
     if (!nuxt.options.dev || isNuxt2()) {
-      const { useChecker, getValidator } = await import(`./runtime/val${''}idator`)
+      const validatorPath = fileURLToPath(new URL('./runtime/validator', import.meta.url))
+      const { useChecker, getValidator } = await import(resolveModule(validatorPath))
       const validator = getValidator(options)
       const { checkHTML, invalidPages } = useChecker(validator, usePrettier)
 
