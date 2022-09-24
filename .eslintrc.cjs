@@ -1,7 +1,11 @@
 module.exports = {
   extends: ['@nuxtjs/eslint-config-typescript'],
-  rules: {
-    'vue/multi-word-component-names': 'off',
-    'import/named': 'off'
-  }
+  overrides: [
+    {
+      files: ['*.test.ts', 'validator.ts'],
+      rules: {
+        'no-console': 'off'
+      }
+    }
+  ]
 }
