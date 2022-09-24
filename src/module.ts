@@ -9,7 +9,11 @@ export type { ModuleOptions }
 export default defineNuxtModule<ModuleOptions>({
   meta: {
     name: '@nuxtjs/html-validator',
-    configKey: 'htmlValidator'
+    configKey: 'htmlValidator',
+    compatibility: {
+      nuxt: '^2.0.0 || ^3.0.0-rc.7',
+      bridge: true
+    }
   },
   defaults: DEFAULTS,
   async setup (_options, nuxt) {
