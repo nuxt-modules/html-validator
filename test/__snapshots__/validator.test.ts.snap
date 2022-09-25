@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`useValidator returns a valid htmlValidate instance 1`] = `
+exports[`useValidator > returns a valid htmlValidate instance 1`] = `
 [
   {
     "errorCount": 1,
