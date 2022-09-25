@@ -1,5 +1,12 @@
 
 
+## [1.0.0](https://github.com/nuxt-modules/html-validator/compare/0.7.1...1.0.0) (2022-09-25)
+
+
+### Features
+
+* add compatibility with nitro (nuxt 3 + nuxt bridge) ([#206](https://github.com/nuxt-modules/html-validator/issues/206)) ([b134043](https://github.com/nuxt-modules/html-validator/commit/b134043606a652fe266d014394c47a637a554091))
+
 ### [0.7.1](https://github.com/nuxt-modules/html-validator/compare/0.7.0...0.7.1) (2022-09-11)
 
 ## [0.7.0](https://github.com/nuxt-modules/html-validator/compare/0.6.0...0.7.0) (2022-05-15)
