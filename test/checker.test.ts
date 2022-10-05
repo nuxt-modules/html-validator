@@ -84,4 +84,22 @@ describe('useChecker', () => {
     const validate = await import('html-validate')
     expect(validate.formatterFactory).not.toHaveBeenCalledWith('codeframe')
   })
+
+  it('logs valid output', async () => {
+    const mockValidator = vi.fn().mockImplementation(() => ({ valid: true, results: [] }))
+    const { checkHTML: checker } = useChecker({ validateString: mockValidator } as any, false, true)
+
+    await checker('https://test.com/', Symbol as any)
+    expect(console.log).toHaveBeenCalledWith(
+      'No HTML validation errors found for [1mhttps://test.com/[22m'
+    )
+  })
+
+  it('does not log valid output when verbosity is off', async () => {
+    const mockValidator = vi.fn().mockImplementation(() => ({ valid: true, results: [] }))
+    const { checkHTML: checker } = useChecker({ validateString: mockValidator } as any, false, false)
+
+    await checker('https://test.com/', Symbol as any)
+    expect(console.log).not.toHaveBeenCalled()
+  })
 })

@@ -18,7 +18,7 @@ export default defineNuxtModule<ModuleOptions>({
   async setup (_options, nuxt) {
     logger.info(`Using ${chalk.bold('html-validate')} to validate server-rendered HTML`)
 
-    const { usePrettier, failOnError, options } = _options as Required<ModuleOptions>
+    const { usePrettier, failOnError, options, isVerbose } = _options as Required<ModuleOptions>
     if ((nuxt.options as any).htmlValidator?.options?.extends) {
       options.extends = (nuxt.options as any).htmlValidator.options.extends
     }
@@ -42,7 +42,7 @@ export default defineNuxtModule<ModuleOptions>({
       const validatorPath = fileURLToPath(new URL('./runtime/validator', import.meta.url))
       const { useChecker, getValidator } = await import(resolveModule(validatorPath))
       const validator = getValidator(options)
-      const { checkHTML, invalidPages } = useChecker(validator, usePrettier)
+      const { checkHTML, invalidPages } = useChecker(validator, usePrettier, isVerbose)
 
       if (failOnError) {
         const errorIfNeeded = () => {

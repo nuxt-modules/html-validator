@@ -24,12 +24,14 @@ export const defaultHtmlValidateConfig: ConfigData = {
 
 export interface ModuleOptions {
   usePrettier?: boolean
+  isVerbose?: boolean
   failOnError?: boolean
   options?: ConfigData
 }
 
 export const DEFAULTS: Required<ModuleOptions> = {
   usePrettier: false,
+  isVerbose: true,
   failOnError: false,
   options: defaultHtmlValidateConfig
 }

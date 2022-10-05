@@ -75,6 +75,10 @@ This module configures [`html-validate`](https://html-validate.org/) to automati
 
       <alert>Consider not enabling this if you are using TailwindCSS, as prettier will struggle to cope with parsing the size of your HTML in development mode.</alert>
 
+   - `isVerbose` enables output describing sources to be valid.
+
+      You can use this configuration option to turn off console logging for the `No HTML validation errors found for ...` message.
+
    - `failOnError` will throw an error after running `nuxt generate` if there are any validation errors with the generated pages.
 
       <alert>Useful in continuous integration.</alert>

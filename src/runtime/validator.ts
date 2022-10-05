@@ -7,7 +7,8 @@ export const getValidator = (options: ConfigData = {}) => {
 
 export const useChecker = (
   validator: HtmlValidate,
-  usePrettier = false
+  usePrettier = false,
+  isVerbose = true
 ) => {
   const invalidPages: string[] = []
 
@@ -27,7 +28,7 @@ export const useChecker = (
     html = typeof html === 'string' ? html.replace(/ ?data-v-[a-z0-9]+\b/g, '') : html
     const { valid, results } = validator.validateString(html)
 
-    if (valid && !results.length) {
+    if (valid && !results.length && isVerbose) {
       return console.log(
         `No HTML validation errors found for ${chalk.bold(url)}`
       )
