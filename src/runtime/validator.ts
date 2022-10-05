@@ -1,6 +1,8 @@
 import chalk from 'chalk'
 import { ConfigData, HtmlValidate, formatterFactory } from 'html-validate'
 
+import { LogLevel } from '../config'
+
 export const getValidator = (options: ConfigData = {}) => {
   return new HtmlValidate(options)
 }
@@ -8,7 +10,7 @@ export const getValidator = (options: ConfigData = {}) => {
 export const useChecker = (
   validator: HtmlValidate,
   usePrettier = false,
-  isVerbose = true
+  logLevel: LogLevel = LogLevel.verbose
 ) => {
   const invalidPages: string[] = []
 
@@ -28,7 +30,7 @@ export const useChecker = (
     html = typeof html === 'string' ? html.replace(/ ?data-v-[a-z0-9]+\b/g, '') : html
     const { valid, results } = validator.validateString(html)
 
-    if (valid && !results.length && isVerbose) {
+    if (valid && !results.length && logLevel <= LogLevel.verbose) {
       return console.log(
         `No HTML validation errors found for ${chalk.bold(url)}`
       )
@@ -40,12 +42,18 @@ export const useChecker = (
     const formatter = couldFormat ? formatterFactory('codeframe') : await import('@html-validate/stylish').then(r => r.default?.default ?? r.default ?? r)
 
     const formattedResult = formatter?.(results)
-    const reporter = valid ? console.warn : console.error
-
-    reporter([
+    const message = [
       `HTML validation errors found for ${chalk.bold(url)}`,
       formattedResult
-    ].join('\n'))
+    ].join('\n')
+
+    if (valid) {
+      if (logLevel <= LogLevel.warning) {
+        console.warn(message)
+      }
+    } else if (logLevel <= LogLevel.error) {
+      console.error(message)
+    }
   }
 
   return { checkHTML, invalidPages }

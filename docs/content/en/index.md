@@ -75,7 +75,7 @@ This module configures [`html-validate`](https://html-validate.org/) to automati
 
       <alert>Consider not enabling this if you are using TailwindCSS, as prettier will struggle to cope with parsing the size of your HTML in development mode.</alert>
 
-   - `isVerbose` enables output describing sources to be valid.
+   - `logLevel` sets the verbosity to one of `verbose`, `warning` or `error`.
 
       <alert>You can use this configuration option to turn off console logging for the `No HTML validation errors found for ...` message.</alert>
 
@@ -93,7 +93,7 @@ This module configures [`html-validate`](https://html-validate.org/) to automati
    {
      htmlValidator: {
        usePrettier: false,
-       isVerbose: true,
+       logLevel: 0,
        failOnError: false,
        options: {
          extends: [

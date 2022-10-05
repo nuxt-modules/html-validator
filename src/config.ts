@@ -22,16 +22,18 @@ export const defaultHtmlValidateConfig: ConfigData = {
   }
 }
 
+export enum LogLevel { verbose = 0, warning = 1, error = 2}
+
 export interface ModuleOptions {
   usePrettier?: boolean
-  isVerbose?: boolean
+  logLevel?: LogLevel
   failOnError?: boolean
   options?: ConfigData
 }
 
 export const DEFAULTS: Required<ModuleOptions> = {
   usePrettier: false,
-  isVerbose: true,
+  logLevel: LogLevel.verbose,
   failOnError: false,
   options: defaultHtmlValidateConfig
 }
