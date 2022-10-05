@@ -129,7 +129,7 @@ describe('useChecker', () => {
     )
   })
 
-  it('does not log valid output when logging on level `warning`', async () => {
+  it('does not log valid output when logging on level warning', async () => {
     const mockValidator = vi.fn().mockImplementation(() => ({ valid: true, results: [] }))
     const { checkHTML: checker } = useChecker({ validateString: mockValidator } as any, false, LogLevel.warning)
 

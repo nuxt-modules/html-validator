@@ -15,10 +15,10 @@ export default defineNuxtModule<ModuleOptions>({
     }
   },
   defaults: DEFAULTS,
-  async setup (_options, nuxt) {
+  async setup (moduleOptions, nuxt) {
     logger.info(`Using ${chalk.bold('html-validate')} to validate server-rendered HTML`)
 
-    const { usePrettier, failOnError, options, logLevel } = _options as Required<ModuleOptions>
+    const { usePrettier, failOnError, options, logLevel } = moduleOptions as Required<ModuleOptions>
     if ((nuxt.options as any).htmlValidator?.options?.extends) {
       options.extends = (nuxt.options as any).htmlValidator.options.extends
     }
@@ -34,7 +34,7 @@ export default defineNuxtModule<ModuleOptions>({
         config.plugins = config.plugins || []
         config.plugins.push(fileURLToPath(new URL('./runtime/nitro', import.meta.url)))
         config.virtual = config.virtual || {}
-        config.virtual['#html-validator-config'] = `export default ${JSON.stringify(_options)}`
+        config.virtual['#html-validator-config'] = `export default ${JSON.stringify(moduleOptions)}`
       })
     }
 
