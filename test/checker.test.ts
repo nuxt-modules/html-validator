@@ -1,3 +1,4 @@
+import chalk from 'chalk'
 import { describe, it, expect, vi, afterEach } from 'vitest'
 import { useChecker } from '../src/runtime/validator'
 
@@ -91,7 +92,7 @@ describe('useChecker', () => {
 
     await checker('https://test.com/', Symbol as any)
     expect(console.log).toHaveBeenCalledWith(
-      'No HTML validation errors found for [1mhttps://test.com/[22m'
+      `No HTML validation errors found for ${chalk.bold('https://test.com/')}`
     )
   })
 
