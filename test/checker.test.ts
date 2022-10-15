@@ -1,4 +1,6 @@
+import chalk from 'chalk'
 import { describe, it, expect, vi, afterEach } from 'vitest'
+
 import { useChecker } from '../src/runtime/validator'
 
 vi.mock('prettier', () => ({
@@ -14,6 +16,7 @@ vi.mock('html-validate')
 
 vi.spyOn(console, 'error')
 vi.spyOn(console, 'log')
+vi.spyOn(console, 'warn')
 
 describe('useChecker', () => {
   afterEach(() => {
@@ -29,13 +32,43 @@ describe('useChecker', () => {
     expect(console.error).toHaveBeenCalled()
   })
 
-  it('prints an error message when invalid html is provided', async () => {
+  it('prints an error when invalid html is provided', async () => {
     const mockValidator = vi.fn().mockImplementation(() => ({ valid: false, results: [] }))
     const { checkHTML: checker } = useChecker({ validateString: mockValidator } as any, false)
 
     await checker('https://test.com/', '<a>Link</a>')
     expect(mockValidator).toHaveBeenCalled()
     expect(console.error).toHaveBeenCalled()
+  })
+
+  it('prints a warning when invalid html is provided and log level is set to verbose', async () => {
+    const mockValidator = vi.fn().mockImplementation(() => ({ valid: true, results: [{ messages: [{ message: '' }] }] }))
+    const { checkHTML: checker } = useChecker({ validateString: mockValidator } as any, false, 'verbose')
+
+    await checker('https://test.com/', '<a>Link</a>')
+    expect(mockValidator).toHaveBeenCalled()
+    expect(console.warn).toHaveBeenCalled()
+    expect(console.error).not.toHaveBeenCalled()
+  })
+
+  it('prints a warning when invalid html is provided and log level is set to warning', async () => {
+    const mockValidator = vi.fn().mockImplementation(() => ({ valid: true, results: [] }))
+    const { checkHTML: checker } = useChecker({ validateString: mockValidator } as any, false, 'warning')
+
+    await checker('https://test.com/', '<a>Link</a>')
+    expect(mockValidator).toHaveBeenCalled()
+    expect(console.warn).toHaveBeenCalled()
+    expect(console.error).not.toHaveBeenCalled()
+  })
+
+  it('prints no warning when invalid html is provided and log level is set to error', async () => {
+    const mockValidator = vi.fn().mockImplementation(() => ({ valid: true, results: [] }))
+    const { checkHTML: checker } = useChecker({ validateString: mockValidator } as any, false, 'error')
+
+    await checker('https://test.com/', '<a>Link</a>')
+    expect(mockValidator).toHaveBeenCalled()
+    expect(console.warn).not.toHaveBeenCalled()
+    expect(console.error).not.toHaveBeenCalled()
   })
 
   it('records urls when invalid html is provided', async () => {
@@ -83,5 +116,23 @@ describe('useChecker', () => {
 
     const validate = await import('html-validate')
     expect(validate.formatterFactory).not.toHaveBeenCalledWith('codeframe')
+  })
+
+  it('logs valid output', async () => {
+    const mockValidator = vi.fn().mockImplementation(() => ({ valid: true, results: [] }))
+    const { checkHTML: checker } = useChecker({ validateString: mockValidator } as any, false, 'verbose')
+
+    await checker('https://test.com/', Symbol as any)
+    expect(console.log).toHaveBeenCalledWith(
+      `No HTML validation errors found for ${chalk.bold('https://test.com/')}`
+    )
+  })
+
+  it('does not log valid output when logging on level warning', async () => {
+    const mockValidator = vi.fn().mockImplementation(() => ({ valid: true, results: [] }))
+    const { checkHTML: checker } = useChecker({ validateString: mockValidator } as any, false, 'warning')
+
+    await checker('https://test.com/', Symbol as any)
+    expect(console.log).not.toHaveBeenCalled()
   })
 })

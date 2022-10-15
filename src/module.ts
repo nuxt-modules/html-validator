@@ -14,11 +14,14 @@ export default defineNuxtModule<ModuleOptions>({
       nuxt: '^2.0.0 || ^3.0.0-rc.7'
     }
   },
-  defaults: DEFAULTS,
-  async setup (_options, nuxt) {
+  defaults: nuxt => ({
+    ...DEFAULTS,
+    logLevel: nuxt.options.dev ? 'verbose' : 'warning'
+  }),
+  async setup (moduleOptions, nuxt) {
     logger.info(`Using ${chalk.bold('html-validate')} to validate server-rendered HTML`)
 
-    const { usePrettier, failOnError, options } = _options as Required<ModuleOptions>
+    const { usePrettier, failOnError, options, logLevel } = moduleOptions as Required<ModuleOptions>
     if ((nuxt.options as any).htmlValidator?.options?.extends) {
       options.extends = (nuxt.options as any).htmlValidator.options.extends
     }
@@ -34,7 +37,7 @@ export default defineNuxtModule<ModuleOptions>({
         config.plugins = config.plugins || []
         config.plugins.push(fileURLToPath(new URL('./runtime/nitro', import.meta.url)))
         config.virtual = config.virtual || {}
-        config.virtual['#html-validator-config'] = `export default ${JSON.stringify(_options)}`
+        config.virtual['#html-validator-config'] = `export default ${JSON.stringify(moduleOptions)}`
       })
     }
 
@@ -42,7 +45,7 @@ export default defineNuxtModule<ModuleOptions>({
       const validatorPath = fileURLToPath(new URL('./runtime/validator', import.meta.url))
       const { useChecker, getValidator } = await import(resolveModule(validatorPath))
       const validator = getValidator(options)
-      const { checkHTML, invalidPages } = useChecker(validator, usePrettier)
+      const { checkHTML, invalidPages } = useChecker(validator, usePrettier, logLevel)
 
       if (failOnError) {
         const errorIfNeeded = () => {

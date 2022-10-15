@@ -75,6 +75,10 @@ This module configures [`html-validate`](https://html-validate.org/) to automati
 
       <alert>Consider not enabling this if you are using TailwindCSS, as prettier will struggle to cope with parsing the size of your HTML in development mode.</alert>
 
+   - `logLevel` sets the verbosity to one of `verbose`, `warning` or `error`. It defaults to `verbose` in dev, and `warning` when generating.
+
+      <alert>You can use this configuration option to turn off console logging for the `No HTML validation errors found for ...` message.</alert>
+
    - `failOnError` will throw an error after running `nuxt generate` if there are any validation errors with the generated pages.
 
       <alert>Useful in continuous integration.</alert>
@@ -89,6 +93,7 @@ This module configures [`html-validate`](https://html-validate.org/) to automati
    {
      htmlValidator: {
        usePrettier: false,
+       logLevel: 'verbose',
        failOnError: false,
        options: {
          extends: [
