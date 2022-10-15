@@ -20,105 +20,103 @@ This module configures [`html-validate`](https://html-validate.org/) to automati
 
 ## Quick start
 
-1. **Install the module**
+### Install
 
-  <code-group>
-    <code-block label="Yarn" active>
+<code-group>
+  <code-block label="Yarn" active>
 
-    ```bash
-    yarn add @nuxtjs/html-validator --dev
-    ```
+  ```bash
+  yarn add @nuxtjs/html-validator --dev
+  ```
 
-    </code-block>
-    <code-block label="NPM">
+  </code-block>
+  <code-block label="NPM">
 
-    ```bash
-    npm install @nuxtjs/html-validator --save-dev
-    ```
+  ```bash
+  npm install @nuxtjs/html-validator --save-dev
+  ```
 
-    </code-block>
+  </code-block>
+</code-group>
 
-  </code-group>
+### nuxt.config.js
 
-2. **Enable module**
+<code-group>
+  <code-block label="Nuxt 2.9+" active>
 
-  <code-group>
-    <code-block label="Nuxt 2.9+" active>
+  ```js{}[nuxt.config.js]
+  {
+    buildModules: ['@nuxtjs/html-validator']
+  }
+  ```
 
-    ```js{}[nuxt.config.js]
-    {
-      buildModules: ['@nuxtjs/html-validator']
+  </code-block>
+  <code-block label="Nuxt < 2.9">
+
+  ```js{}[nuxt.config.js]
+  {
+    // Install @nuxtjs/html-validator as dependency instead of devDependency
+    modules: ['@nuxtjs/html-validator']
+  }
+  ```
+
+  </code-block>
+</code-group>
+
+<alert type="info">`html-validator` won't be added to your production bundle - it's just used in development and at build/generate time.</alert>
+
+### Configuration (optional)
+
+`@nuxtjs/html-validator` takes three options.
+
+- `usePrettier` enables prettier printing of your source code to show errors in-context.
+
+  <alert>Consider not enabling this if you are using TailwindCSS, as prettier will struggle to cope with parsing the size of your HTML in development mode.</alert>
+
+- `logLevel` sets the verbosity to one of `verbose`, `warning` or `error`. It defaults to `verbose` in dev, and `warning` when generating.
+
+  <alert>You can use this configuration option to turn off console logging for the `No HTML validation errors found for ...` message.</alert>
+
+- `failOnError` will throw an error after running `nuxt generate` if there are any validation errors with the generated pages.
+
+  <alert>Useful in continuous integration.</alert>
+
+- `options` allows you to pass in `html-validate` options that will be merged with the default configuration
+
+  <alert type="info">You can find more about configuring `html-validate` [here](https://html-validate.org/rules/index.html).</alert>
+
+**Defaults**
+
+```js{}[nuxt.config.js]
+{
+  htmlValidator: {
+    usePrettier: false,
+    logLevel: 'verbose',
+    failOnError: false,
+    options: {
+      extends: [
+        'html-validate:document',
+        'html-validate:recommended',
+        'html-validate:standard'
+      ],
+      rules: {
+        'svg-focusable': 'off',
+        'no-unknown-elements': 'error',
+        // Conflicts or not needed as we use prettier formatting
+        'void-style': 'off',
+        'no-trailing-whitespace': 'off',
+        // Conflict with Nuxt defaults
+        'require-sri': 'off',
+        'attribute-boolean-style': 'off',
+        'doctype-style': 'off',
+        // Unreasonable rule
+        'no-inline-style': 'off'
+      }
     }
-    ```
+  }
+}
+```
 
-    </code-block>
-    <code-block label="Nuxt < 2.9">
+**You're good to go!**
 
-    ```js{}[nuxt.config.js]
-    {
-      // Install @nuxtjs/html-validator as dependency instead of devDependency
-      modules: ['@nuxtjs/html-validator']
-    }
-    ```
-
-    </code-block>
-
-  </code-group>
-
-  <alert type="info">`html-validator` won't be added to your production bundle - it's just used in development and at build/generate time.</alert>
-
-3. **Add configuration** (optional)
-
-   `@nuxtjs/html-validator` takes three options.
-
-   - `usePrettier` enables prettier printing of your source code to show errors in-context.
-
-      <alert>Consider not enabling this if you are using TailwindCSS, as prettier will struggle to cope with parsing the size of your HTML in development mode.</alert>
-
-   - `logLevel` sets the verbosity to one of `verbose`, `warning` or `error`. It defaults to `verbose` in dev, and `warning` when generating.
-
-      <alert>You can use this configuration option to turn off console logging for the `No HTML validation errors found for ...` message.</alert>
-
-   - `failOnError` will throw an error after running `nuxt generate` if there are any validation errors with the generated pages.
-
-      <alert>Useful in continuous integration.</alert>
-
-   - `options` allows you to pass in `html-validate` options that will be merged with the default configuration
-
-      <alert type="info">You can find more about configuring `html-validate` [here](https://html-validate.org/rules/index.html).</alert>
-
-   **Defaults**
-
-   ```js{}[nuxt.config.js]
-   {
-     htmlValidator: {
-       usePrettier: false,
-       logLevel: 'verbose',
-       failOnError: false,
-       options: {
-         extends: [
-           'html-validate:document',
-           'html-validate:recommended',
-           'html-validate:standard'
-         ],
-         rules: {
-           'svg-focusable': 'off',
-           'no-unknown-elements': 'error',
-           // Conflicts or not needed as we use prettier formatting
-           'void-style': 'off',
-           'no-trailing-whitespace': 'off',
-           // Conflict with Nuxt defaults
-           'require-sri': 'off',
-           'attribute-boolean-style': 'off',
-           'doctype-style': 'off',
-           // Unreasonable rule
-           'no-inline-style': 'off'
-         }
-       }
-     }
-   }
-   ```
-
-4. **You're good to go!**
-
-   Every time you hard-refresh (server-render) a page in Nuxt, you will see any HTML validation issues printed in your server console.
+Every time you hard-refresh (server-render) a page in Nuxt, you will see any HTML validation issues printed in your server console.
