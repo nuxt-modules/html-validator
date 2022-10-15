@@ -22,7 +22,7 @@ export const defaultHtmlValidateConfig: ConfigData = {
   }
 }
 
-export enum LogLevel { verbose = 0, warning = 1, error = 2}
+export type LogLevel = 'verbose' | 'warning' | 'error'
 
 export interface ModuleOptions {
   usePrettier?: boolean
@@ -31,9 +31,8 @@ export interface ModuleOptions {
   options?: ConfigData
 }
 
-export const DEFAULTS: Required<ModuleOptions> = {
+export const DEFAULTS: Required<Omit<ModuleOptions, 'logLevel'>> & { logLevel?: LogLevel } = {
   usePrettier: false,
-  logLevel: LogLevel.verbose,
   failOnError: false,
   options: defaultHtmlValidateConfig
 }

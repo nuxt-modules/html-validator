@@ -14,7 +14,10 @@ export default defineNuxtModule<ModuleOptions>({
       nuxt: '^2.0.0 || ^3.0.0-rc.7'
     }
   },
-  defaults: DEFAULTS,
+  defaults: nuxt => ({
+    ...DEFAULTS,
+    logLevel: nuxt.options.dev ? 'verbose' : 'warning'
+  }),
   async setup (moduleOptions, nuxt) {
     logger.info(`Using ${chalk.bold('html-validate')} to validate server-rendered HTML`)
 

@@ -1,7 +1,6 @@
 import chalk from 'chalk'
 import { describe, it, expect, vi, afterEach } from 'vitest'
 
-import { LogLevel } from '../src/config'
 import { useChecker } from '../src/runtime/validator'
 
 vi.mock('prettier', () => ({
@@ -44,7 +43,7 @@ describe('useChecker', () => {
 
   it('prints a warning when invalid html is provided and log level is set to verbose', async () => {
     const mockValidator = vi.fn().mockImplementation(() => ({ valid: true, results: [{ messages: [{ message: '' }] }] }))
-    const { checkHTML: checker } = useChecker({ validateString: mockValidator } as any, false, LogLevel.verbose)
+    const { checkHTML: checker } = useChecker({ validateString: mockValidator } as any, false, 'verbose')
 
     await checker('https://test.com/', '<a>Link</a>')
     expect(mockValidator).toHaveBeenCalled()
@@ -54,7 +53,7 @@ describe('useChecker', () => {
 
   it('prints a warning when invalid html is provided and log level is set to warning', async () => {
     const mockValidator = vi.fn().mockImplementation(() => ({ valid: true, results: [] }))
-    const { checkHTML: checker } = useChecker({ validateString: mockValidator } as any, false, LogLevel.warning)
+    const { checkHTML: checker } = useChecker({ validateString: mockValidator } as any, false, 'warning')
 
     await checker('https://test.com/', '<a>Link</a>')
     expect(mockValidator).toHaveBeenCalled()
@@ -64,7 +63,7 @@ describe('useChecker', () => {
 
   it('prints no warning when invalid html is provided and log level is set to error', async () => {
     const mockValidator = vi.fn().mockImplementation(() => ({ valid: true, results: [] }))
-    const { checkHTML: checker } = useChecker({ validateString: mockValidator } as any, false, LogLevel.error)
+    const { checkHTML: checker } = useChecker({ validateString: mockValidator } as any, false, 'error')
 
     await checker('https://test.com/', '<a>Link</a>')
     expect(mockValidator).toHaveBeenCalled()
@@ -121,7 +120,7 @@ describe('useChecker', () => {
 
   it('logs valid output', async () => {
     const mockValidator = vi.fn().mockImplementation(() => ({ valid: true, results: [] }))
-    const { checkHTML: checker } = useChecker({ validateString: mockValidator } as any, false, LogLevel.verbose)
+    const { checkHTML: checker } = useChecker({ validateString: mockValidator } as any, false, 'verbose')
 
     await checker('https://test.com/', Symbol as any)
     expect(console.log).toHaveBeenCalledWith(
@@ -131,7 +130,7 @@ describe('useChecker', () => {
 
   it('does not log valid output when logging on level warning', async () => {
     const mockValidator = vi.fn().mockImplementation(() => ({ valid: true, results: [] }))
-    const { checkHTML: checker } = useChecker({ validateString: mockValidator } as any, false, LogLevel.warning)
+    const { checkHTML: checker } = useChecker({ validateString: mockValidator } as any, false, 'warning')
 
     await checker('https://test.com/', Symbol as any)
     expect(console.log).not.toHaveBeenCalled()
