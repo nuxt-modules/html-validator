@@ -1,5 +1,17 @@
 
 
+## [1.1.0](https://github.com/nuxt-modules/html-validator/compare/1.0.0...1.1.0) (2022-10-15)
+
+
+### Features
+
+* **checker:** add verbosity toggle ([#225](https://github.com/nuxt-modules/html-validator/issues/225)) ([9176daf](https://github.com/nuxt-modules/html-validator/commit/9176daf1903e37d732505d73efb179ca60a23c68))
+
+
+### Bug Fixes
+
+* add hyphen to data attribute regexp ([#231](https://github.com/nuxt-modules/html-validator/issues/231)) ([900dd93](https://github.com/nuxt-modules/html-validator/commit/900dd9358d868cf51af13e234040ec5b5f9c238e))
+
 ## [1.0.0](https://github.com/nuxt-modules/html-validator/compare/0.7.1...1.0.0) (2022-09-25)
 
 
