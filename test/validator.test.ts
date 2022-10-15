@@ -1,14 +1,15 @@
+import { describe, it, expect } from 'vitest'
 import { defaultHtmlValidateConfig } from '../src/config'
-import { useValidator } from '../src/validator'
+import { getValidator } from '../src/runtime/validator'
 
 describe('useValidator', () => {
   it('generates a new validator for each set of options', () => {
     const option1 = { extends: [] }
-    const { validator: validator1 } = useValidator(option1)
-    const { validator: validator2 } = useValidator({ extends: ['html-validate:document'] })
-    const { validator: validator3 } = useValidator(option1)
-    const { validator: validator4 } = useValidator()
-    const { validator: validator5 } = useValidator()
+    const validator1 = getValidator(option1)
+    const validator2 = getValidator({ extends: ['html-validate:document'] })
+    const validator3 = getValidator(option1)
+    const validator4 = getValidator()
+    const validator5 = getValidator()
 
     expect(validator1).not.toEqual(validator2)
     expect(validator1).toEqual(validator3)
@@ -16,7 +17,7 @@ describe('useValidator', () => {
   })
 
   it('returns a valid htmlValidate instance', () => {
-    const { validator } = useValidator({ extends: ['html-validate:standard'] })
+    const validator = getValidator({ extends: ['html-validate:standard'] })
 
     const { valid, results } = validator.validateString('<!DOCTYPE html><title>x</title>')
     expect(valid).toBeTruthy()
@@ -28,7 +29,7 @@ describe('useValidator', () => {
   })
 
   it('works with default config', () => {
-    const { validator } = useValidator(defaultHtmlValidateConfig)
+    const validator = getValidator(defaultHtmlValidateConfig)
     const { valid, results } = validator.validateString('<!DOCTYPE html><title>x</title>')
     expect(valid).toBeTruthy()
     expect(results).toEqual([])

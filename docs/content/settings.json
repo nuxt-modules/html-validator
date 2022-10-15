@@ -1,6 +1,6 @@
 {
   "title": "@nuxtjs/html-validator",
-  "github": "nuxt-community/html-validator-module",
+  "github": "nuxt-modules/html-validator",
   "url": "https://html-validator.nuxtjs.org",
   "logo": {
     "light": "/logo-light.svg",

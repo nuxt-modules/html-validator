@@ -1,16 +1,20 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`useValidator returns a valid htmlValidate instance 1`] = `
-Array [
-  Object {
+exports[`useValidator > returns a valid htmlValidate instance 1`] = `
+[
+  {
     "errorCount": 1,
     "filePath": "inline",
-    "messages": Array [
-      Object {
+    "messages": [
+      {
         "column": 42,
-        "context": undefined,
+        "context": {
+          "ancestor": "<a>",
+          "child": "<a>",
+          "kind": "descendant",
+        },
         "line": 1,
-        "message": "Element <a> is not permitted as descendant of <a>",
+        "message": "<a> element is not permitted as a descendant of <a>",
         "offset": 41,
         "ruleId": "element-permitted-content",
         "ruleUrl": "https://html-validate.org/rules/element-permitted-content.html",
