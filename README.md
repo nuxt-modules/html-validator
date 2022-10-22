@@ -39,6 +39,10 @@ yarn add @nuxtjs/html-validator # or npm install @nuxtjs/html-validator
 }
 ```
 
+## How to contribute
+??
+
+
 ## Development
 
 1. Clone this repository
