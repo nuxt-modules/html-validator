@@ -1,5 +1,12 @@
 
 
+### [1.1.1](https://github.com/nuxt-modules/html-validator/compare/1.1.0...1.1.1) (2022-11-02)
+
+
+### Bug Fixes
+
+* normalize nitro plugin path ([47de42b](https://github.com/nuxt-modules/html-validator/commit/47de42b63dc5188a7a00b3a544b6705b710d67ef))
+
 ## [1.1.0](https://github.com/nuxt-modules/html-validator/compare/1.0.0...1.1.0) (2022-10-15)
 
 
