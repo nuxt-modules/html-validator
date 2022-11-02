@@ -3,6 +3,7 @@ import { resolve } from 'path'
 import { fileURLToPath } from 'url'
 import { describe, it, expect, vi } from 'vitest'
 import { setup, useTestContext } from '@nuxt/test-utils'
+import { useNuxt } from '@nuxt/kit'
 
 vi.spyOn(console, 'error')
 
@@ -11,8 +12,9 @@ await setup({
   build: true,
   nuxtConfig: {
     hooks: {
-      'modules:before' (ctx) {
-        ctx.nuxt.options.nitro.prerender = { routes: ['/'] }
+      'modules:before' () {
+        const nuxt = useNuxt()
+        nuxt.options.nitro.prerender = { routes: ['/'] }
       }
     }
   }
