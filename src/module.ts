@@ -1,5 +1,6 @@
-import { fileURLToPath } from 'url'
+import { fileURLToPath } from 'node:url'
 import chalk from 'chalk'
+import { normalize } from 'pathe'
 
 import { defineNuxtModule, isNuxt2, logger, resolveModule } from '@nuxt/kit'
 import { DEFAULTS, ModuleOptions } from './config'
@@ -35,7 +36,7 @@ export default defineNuxtModule<ModuleOptions>({
 
         // Add a nitro plugin that will run the validator for us on each request
         config.plugins = config.plugins || []
-        config.plugins.push(fileURLToPath(new URL('./runtime/nitro', import.meta.url)))
+        config.plugins.push(normalize(fileURLToPath(new URL('./runtime/nitro', import.meta.url))))
         config.virtual = config.virtual || {}
         config.virtual['#html-validator-config'] = `export default ${JSON.stringify(moduleOptions)}`
       })
