@@ -37,7 +37,6 @@ export const useChecker = (
 
     if (!valid) { invalidPages.push(url) }
 
-    // TODO: investigate the many levels of default
     const formatter = couldFormat ? formatterFactory('codeframe') : await import('@html-validate/stylish').then(r => r.default?.default ?? r.default ?? r)
 
     const formattedResult = formatter?.(results)
