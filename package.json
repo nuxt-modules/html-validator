@@ -49,7 +49,7 @@
     "c8": "^7.12.0",
     "eslint": "8.27.0",
     "eslint-config-prettier": "8.5.0",
-    "husky": "8.0.1",
+    "husky": "8.0.2",
     "lint-staged": "13.0.3",
     "nuxt": "npm:nuxt3@3.0.0-rc.14-27796957.b60f136",
     "release-it": "15.5.0",
