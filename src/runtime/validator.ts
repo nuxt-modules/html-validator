@@ -29,10 +29,12 @@ export const useChecker = (
     html = typeof html === 'string' ? html.replace(/ ?data-v-[-a-z0-9]+\b/g, '') : html
     const { valid, results } = validator.validateString(html)
 
-    if (valid && !results.length && logLevel === 'verbose') {
-      return console.log(
-        `No HTML validation errors found for ${chalk.bold(url)}`
-      )
+    if (valid && !results.length) {
+      if (logLevel === 'verbose') {
+        console.log(`No HTML validation errors found for ${chalk.bold(url)}`)
+      }
+
+      return
     }
 
     if (!valid) { invalidPages.push(url) }
@@ -43,16 +45,10 @@ export const useChecker = (
     const formattedResult = formatter?.(results)
     const message = [
       `HTML validation errors found for ${chalk.bold(url)}`,
-      formattedResult
+      ...(formattedResult ? [formattedResult] : [])
     ].join('\n')
 
-    if (valid) {
-      if (logLevel === 'verbose' || logLevel === 'warning') {
-        console.warn(message)
-      }
-    } else {
-      console.error(message)
-    }
+    console.error(message)
   }
 
   return { checkHTML, invalidPages }
