@@ -55,6 +55,7 @@ export default defineNuxtModule<ModuleOptions>({
           }
         }
 
+        // @ts-expect-error TODO: use @nuxt/bridge-schema
         nuxt.hook('generate:done', errorIfNeeded)
         nuxt.hook('close', errorIfNeeded)
       }
@@ -71,7 +72,9 @@ export default defineNuxtModule<ModuleOptions>({
       // Nuxt 2
 
       if (isNuxt2()) {
+        // @ts-expect-error TODO: use @nuxt/bridge-schema
         nuxt.hook('render:route', (url: string, result: { html: string }) => checkHTML(url, result.html))
+        // @ts-expect-error TODO: use @nuxt/bridge-schema
         nuxt.hook('generate:page', ({ path, html }: { path: string, html: string }) => checkHTML(path, html))
       }
     }
