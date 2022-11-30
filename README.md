@@ -29,14 +29,12 @@
 yarn add @nuxtjs/html-validator # or npm install @nuxtjs/html-validator
 ```
 
-2. Add `@nuxtjs/html-validator` to the `buildModules` section of `nuxt.config.js`
+2. Add `@nuxtjs/html-validator` to the `modules` section of `nuxt.config.ts`
 
 ```js
-{
-  buildModules: [
-    '@nuxtjs/html-validator',
-  ],
-}
+export default defineNuxtConfig({
+  modules: ['@nuxtjs/html-validator'],
+})
 ```
 
 ## Development
