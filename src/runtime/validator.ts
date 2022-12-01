@@ -48,7 +48,13 @@ export const useChecker = (
       ...(formattedResult ? [formattedResult] : [])
     ].join('\n')
 
-    console.error(message)
+    if (valid) {
+      if (logLevel === 'verbose' || logLevel === 'warning') {
+        console.warn(message)
+      }
+    } else {
+      console.error(message)
+    }
   }
 
   return { checkHTML, invalidPages }
