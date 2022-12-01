@@ -45,8 +45,8 @@ export const useChecker = (
     const formattedResult = formatter?.(results)
     const message = [
       `HTML validation errors found for ${chalk.bold(url)}`,
-      ...(formattedResult ? [formattedResult] : [])
-    ].join('\n')
+      formattedResult
+    ].filter(Boolean).join('\n')
 
     if (valid) {
       if (logLevel === 'verbose' || logLevel === 'warning') {
