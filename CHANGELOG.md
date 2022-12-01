@@ -1,5 +1,12 @@
 
 
+### [1.2.1](https://github.com/nuxt-modules/html-validator/compare/1.2.0...1.2.1) (2022-12-01)
+
+
+### Bug Fixes
+
+* **validator:** do not log non-existent errors on higher log levels ([#247](https://github.com/nuxt-modules/html-validator/issues/247)) ([f1a2c36](https://github.com/nuxt-modules/html-validator/commit/f1a2c3672e7a3aa2dbb13484e549c4e4875a8e42))
+
 ## [1.2.0](https://github.com/nuxt-modules/html-validator/compare/1.1.1...1.2.0) (2022-11-30)
 
 ### [1.1.1](https://github.com/nuxt-modules/html-validator/compare/1.1.0...1.1.1) (2022-11-02)
