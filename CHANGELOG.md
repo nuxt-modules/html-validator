@@ -1,5 +1,7 @@
 
 
+### [1.2.2](https://github.com/nuxt-modules/html-validator/compare/1.2.1...1.2.2) (2022-12-04)
+
 ### [1.2.1](https://github.com/nuxt-modules/html-validator/compare/1.2.0...1.2.1) (2022-12-01)
 
 
