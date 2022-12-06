@@ -1,5 +1,12 @@
 
 
+### [1.2.3](https://github.com/nuxt-modules/html-validator/compare/1.2.2...1.2.3) (2022-12-06)
+
+
+### Bug Fixes
+
+* dynamic import validator with file url on windows ([03408d2](https://github.com/nuxt-modules/html-validator/commit/03408d229292567d3ab9a5361c5fd852bdb74bb9)), closes [#232](https://github.com/nuxt-modules/html-validator/issues/232)
+
 ### [1.2.2](https://github.com/nuxt-modules/html-validator/compare/1.2.1...1.2.2) (2022-12-04)
 
 ### [1.2.1](https://github.com/nuxt-modules/html-validator/compare/1.2.0...1.2.1) (2022-12-01)
