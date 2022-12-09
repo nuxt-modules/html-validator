@@ -55,7 +55,7 @@
     "lint-staged": "13.1.0",
     "nuxt": "3.0.0",
     "release-it": "15.5.1",
-    "vitest": "0.25.5"
+    "vitest": "0.25.6"
   },
   "resolutions": {
     "@nuxtjs/html-validator": "link:./"

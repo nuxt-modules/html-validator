@@ -21,7 +21,7 @@ specifiers:
   prettier: ^2.7.1
   release-it: 15.5.1
   std-env: ^3.3.1
-  vitest: 0.25.5
+  vitest: 0.25.6
 
 dependencies:
   '@nuxt/kit': 3.0.0
@@ -43,7 +43,7 @@ devDependencies:
   lint-staged: 13.1.0
   nuxt: 3.0.0_eslint@8.29.0
   release-it: 15.5.1
-  vitest: 0.25.5
+  vitest: 0.25.6
 
 packages:
 
@@ -7978,8 +7978,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitest/0.25.5:
-    resolution: {integrity: sha512-lFKSTZV+AjuL44/yNC0aDPKTiasYSqOQ97Gg2G4P2LnjyzQ21ZUs4rQOscHK3lrSnVuir3+1QavHzbDgH4tWQA==}
+  /vitest/0.25.6:
+    resolution: {integrity: sha512-jdPgmZ7BcDnm1+hmMPIl9BZjSy+b8Y8V0tQMsv7ECO90Qic7EZ5/+traILXLpsXgqK5KgVrUJmchevAUuKL/1w==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
     peerDependencies:
