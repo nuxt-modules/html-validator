@@ -13,7 +13,7 @@ specifiers:
   chalk: ^5.1.2
   eslint: 8.30.0
   eslint-config-prettier: 8.5.0
-  html-validate: ~7.11.0
+  html-validate: ~7.12.0
   husky: 8.0.2
   lint-staged: 13.1.0
   nuxt: 3.0.0
@@ -26,7 +26,7 @@ specifiers:
 dependencies:
   '@nuxt/kit': 3.0.0
   chalk: 5.1.2
-  html-validate: 7.11.0
+  html-validate: 7.12.0
   pathe: 1.0.0
   prettier: 2.8.0
   std-env: 3.3.1
@@ -4227,8 +4227,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /html-validate/7.11.0:
-    resolution: {integrity: sha512-kJJVMYVS/xhB+eVFH43LqTsgpl6kI/Zy6qanROqF9FizaTyBbb7UkVNrux6inbCNNV1ONZtPbdQL+X2Ol1+ZZA==}
+  /html-validate/7.12.0:
+    resolution: {integrity: sha512-GO4sX6dmbAjHQxQOW9WvFImz76EFHmSNNNSrwX5ZwzoSLaNyFavFvfKdDABQagKfSdc1J2GzdPfMX5SQWqCYGA==}
     engines: {node: '>= 14.0'}
     hasBin: true
     peerDependencies:
