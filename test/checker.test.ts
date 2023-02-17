@@ -122,6 +122,24 @@ describe('useChecker', () => {
     expect(console.error).not.toHaveBeenCalled()
   })
 
+  it('ignores vite-plugin-inspect generated data attributes', async () => {
+    const mockValidator = vi.fn().mockImplementation(() => ({ valid: true, results: [] }))
+    const { checkHTML: checker } = useChecker({ validateString: mockValidator } as any, false)
+
+    await checker(
+      'https://test.com/',
+      '<a style="color:red" class="xxx" data-v-inspector="xxxx/xxx.vue:2:3">Link</a>'
+    )
+    expect(mockValidator).toHaveBeenCalledWith(
+      '<a style="color:red" class="xxx">Link</a>'
+    )
+    expect(console.log).toHaveBeenCalledWith(
+      `No HTML validation errors found for ${chalk.bold('https://test.com/')}`
+    )
+    expect(console.warn).not.toHaveBeenCalled()
+    expect(console.error).not.toHaveBeenCalled()
+  })
+
   it('formats HTML with prettier when asked to do so', async () => {
     const mockValidator = vi.fn().mockImplementation(() => ({ valid: false, results: [] }))
     const { checkHTML: checker } = useChecker({ validateString: mockValidator } as any, true)
