@@ -61,7 +61,7 @@
     "@nuxtjs/html-validator": "link:./"
   },
   "volta": {
-    "node": "18.14.0"
+    "node": "18.14.1"
   },
   "publishConfig": {
     "access": "public"
