@@ -54,7 +54,7 @@
     "husky": "8.0.3",
     "lint-staged": "13.1.2",
     "nuxt": "3.0.0",
-    "release-it": "15.6.0",
+    "release-it": "15.7.0",
     "vitest": "0.29.2"
   },
   "resolutions": {
