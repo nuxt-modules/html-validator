@@ -1,3 +1,7 @@
 {
-  "name": "html-validator-playground"
+  "name": "html-validator-playground",
+  "dependencies": {
+    "@nuxtjs/html-validator": "latest",
+    "nuxt": "latest"
+  }
 }

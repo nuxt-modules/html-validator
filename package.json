@@ -31,12 +31,12 @@
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
     "lint": "eslint --ext .js,.ts,.vue",
-    "lint:all": "yarn lint .",
-    "release": "yarn test && release-it",
-    "test": "yarn vitest run"
+    "lint:all": "pnpm lint .",
+    "release": "pnpm test && bumpp && npm publish",
+    "test": "pnpm vitest run"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.0.0",
+    "@nuxt/kit": "^3.2.3",
     "chalk": "^5.1.2",
     "html-validate": "~7.13.0",
     "pathe": "^1.0.0",
@@ -45,25 +45,22 @@
   },
   "devDependencies": {
     "@nuxt/module-builder": "0.2.1",
-    "@nuxt/test-utils": "3.0.0",
+    "@nuxt/test-utils": "3.2.3",
     "@nuxtjs/eslint-config-typescript": "12.0.0",
-    "@release-it/conventional-changelog": "5.1.1",
+    "bumpp": "^9.0.0",
     "c8": "7.13.0",
     "eslint": "8.35.0",
     "eslint-config-prettier": "8.6.0",
     "husky": "8.0.3",
     "lint-staged": "13.1.2",
-    "nuxt": "3.0.0",
-    "release-it": "15.7.0",
+    "nuxt": "3.2.3",
     "vitest": "0.29.2"
   },
   "resolutions": {
     "@nuxtjs/html-validator": "link:./"
   },
-  "volta": {
-    "node": "18.14.2"
-  },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "packageManager": "pnpm@7.1.0"
 }
