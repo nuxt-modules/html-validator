@@ -5,7 +5,13 @@ import { describe, it, expect, vi } from 'vitest'
 import { setup, useTestContext } from '@nuxt/test-utils'
 import { useNuxt } from '@nuxt/kit'
 
-vi.spyOn(console, 'error')
+const error = vi.fn()
+Object.defineProperty(console, 'error', {
+  get () {
+    return error
+  },
+  set () {}
+})
 
 await setup({
   rootDir: fileURLToPath(new URL('../playground', import.meta.url)),
