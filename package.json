@@ -59,9 +59,6 @@
   "resolutions": {
     "@nuxtjs/html-validator": "link:./"
   },
-  "volta": {
-    "node": "18.14.2"
-  },
   "publishConfig": {
     "access": "public"
   },
