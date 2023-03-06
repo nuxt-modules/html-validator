@@ -11,7 +11,7 @@ importers:
       '@nuxt/module-builder': 0.2.1
       '@nuxt/test-utils': 3.2.3
       '@nuxtjs/eslint-config-typescript': 12.0.0
-      bumpp: ^9.0.0
+      bumpp: 9.0.0
       c8: 7.13.0
       chalk: ^5.1.2
       eslint: 8.35.0
@@ -46,7 +46,7 @@ importers:
 
   docs:
     specifiers:
-      '@nuxt-themes/docus': ^1.9.0
+      '@nuxt-themes/docus': 1.9.1
       '@nuxt/eslint-config': ^0.1.1
       eslint: ^8.35.0
       nuxt: ^3.2.2
