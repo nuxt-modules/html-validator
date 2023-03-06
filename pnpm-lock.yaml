@@ -47,9 +47,9 @@ importers:
   docs:
     specifiers:
       '@nuxt-themes/docus': 1.9.1
-      '@nuxt/eslint-config': ^0.1.1
+      '@nuxt/eslint-config': 0.1.1
       eslint: ^8.35.0
-      nuxt: ^3.2.2
+      nuxt: 3.2.3
       pinceau: ^0.18.8
     dependencies:
       pinceau: 0.18.8
