@@ -13,7 +13,7 @@
     "@nuxt-themes/docus": "1.9.10",
     "@nuxt/eslint-config": "0.1.1",
     "eslint": "8.36.0",
-    "nuxt": "3.2.3"
+    "nuxt": "3.3.2"
   },
   "dependencies": {
     "pinceau": "^0.18.8"
