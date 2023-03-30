@@ -54,7 +54,7 @@
     "husky": "8.0.3",
     "lint-staged": "13.2.0",
     "nuxt": "3.3.2",
-    "vitest": "0.29.7"
+    "vitest": "0.29.8"
   },
   "resolutions": {
     "@nuxtjs/html-validator": "link:./"
