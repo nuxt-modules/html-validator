@@ -128,7 +128,7 @@ describe('useChecker', () => {
 
     await checker(
       'https://test.com/',
-      '<a style="color:red" class="xxx" data-v-inspector="xxxx/xxx.vue:2:3">Link</a>'
+      '<a style="color:red" class="xxx" data-v-inspector="Xxxx/Xxx.vue:2:3">Link</a>'
     )
     expect(mockValidator).toHaveBeenCalledWith(
       '<a style="color:red" class="xxx">Link</a>'
