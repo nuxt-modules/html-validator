@@ -39,7 +39,7 @@ export const useChecker = (
 
     if (!valid) { invalidPages.push(url) }
 
-    const formatter = couldFormat ? formatterFactory('codeframe') : await import('@html-validate/stylish').then(r => r.default?.default ?? r.default ?? r)
+    const formatter = couldFormat ? formatterFactory('codeframe') : formatterFactory('stylish')
 
     const formattedResult = formatter?.(results)
     const message = [
