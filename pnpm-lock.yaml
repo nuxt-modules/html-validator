@@ -2,6 +2,7 @@ lockfileVersion: '6.0'
 
 overrides:
   '@nuxtjs/html-validator': link:./
+  consola: ^3.0.0
 
 importers:
 
@@ -904,7 +905,7 @@ packages:
     dependencies:
       '@nuxt/schema': 3.2.3(rollup@3.21.8)
       c12: 1.4.1
-      consola: 2.15.3
+      consola: 3.1.0
       defu: 6.1.2
       globby: 13.1.4
       hash-sum: 2.0.0
@@ -2763,9 +2764,6 @@ packages:
       semver: 7.5.1
       well-known-symbols: 2.0.0
     dev: true
-
-  /consola@2.15.3:
-    resolution: {integrity: sha512-9vAdYbHj6x2fLKC4+oPH0kFzY/orMZyG2Aj+kNylHxKGJ/Ed4dpNyAQYwJOdqO4zdM7XpVHmyejQDcQHrnuXbw==}
 
   /consola@3.1.0:
     resolution: {integrity: sha512-rrrJE6rP0qzl/Srg+C9x/AE5Kxfux7reVm1Wh0wCjuXvih6DqZgqDZe8auTD28fzJ9TF0mHlSDrPpWlujQRo1Q==}
@@ -6201,7 +6199,7 @@ packages:
       '@volar/vue-language-core': 1.2.1
       acorn: 8.8.2
       chroma-js: 2.4.2
-      consola: 2.15.3
+      consola: 3.1.0
       csstype: 3.1.1
       defu: 6.1.2
       magic-string: 0.30.0
@@ -7335,7 +7333,7 @@ packages:
       chalk: 4.1.2
       change-case: 4.1.2
       commander: 10.0.0
-      consola: 2.15.3
+      consola: 3.1.0
       glob: 8.1.0
       jiti: 1.18.2
       json5: 2.2.3
