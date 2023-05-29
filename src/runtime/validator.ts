@@ -34,7 +34,7 @@ export const useChecker = (
         console.log(`No HTML validation errors found for ${chalk.bold(url)}`)
       }
 
-      return
+      return { valid, results }
     }
 
     if (!valid) { invalidPages.push(url) }
@@ -54,6 +54,8 @@ export const useChecker = (
     } else {
       console.error(message)
     }
+
+    return { valid, results }
   }
 
   return { checkHTML, invalidPages }

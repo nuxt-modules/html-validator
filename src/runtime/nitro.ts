@@ -7,10 +7,13 @@ export default <NitroAppPlugin> function (nitro) {
   const validator = getValidator(config.options)
   const { checkHTML } = useChecker(validator, config.usePrettier, config.logLevel)
 
-  nitro.hooks.hook('render:response', (response: RenderResponse, { event }) => {
+  nitro.hooks.hook('render:response', async (response: RenderResponse, { event }) => {
     if (typeof response.body === 'string' && (response.headers['Content-Type'] || response.headers['content-type'])?.includes('html')) {
-      // We deliberately do not await so as not to block the response
-      checkHTML(event.req.url, response.body)
+      // Block the response only if it's not hookable
+      const promise = checkHTML(event.req.url, response.body)
+      if (config.hookable) {
+        await nitro.hooks.callHook('html-validator', await promise, response, { event })
+      }
     }
   })
 }
