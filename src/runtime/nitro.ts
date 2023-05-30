@@ -12,7 +12,7 @@ export default <NitroAppPlugin> function (nitro) {
       // Block the response only if it's not hookable
       const promise = checkHTML(event.req.url, response.body)
       if (config.hookable) {
-        await nitro.hooks.callHook('html-validator', await promise, response, { event })
+        await nitro.hooks.callHook('html-validator:check', await promise, response, { event })
       }
     }
   })
