@@ -29,10 +29,18 @@ export interface ModuleOptions {
   logLevel?: LogLevel
   failOnError?: boolean
   options?: ConfigData
+  /**
+   * allow to hook into `html-validator`
+   * enabling this option block the response until the HTML check and the hook has finished
+   *
+   * @default false
+   */
+  hookable: boolean
 }
 
 export const DEFAULTS: Required<Omit<ModuleOptions, 'logLevel'>> & { logLevel?: LogLevel } = {
   usePrettier: false,
   failOnError: false,
-  options: defaultHtmlValidateConfig
+  options: defaultHtmlValidateConfig,
+  hookable: false
 }
