@@ -1,4 +1,5 @@
 import chalk from 'chalk'
+// eslint-disable-next-line import/named
 import { ConfigData, HtmlValidate, formatterFactory } from 'html-validate'
 import type { LogLevel } from '../config'
 
