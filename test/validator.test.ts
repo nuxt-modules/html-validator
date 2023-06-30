@@ -16,21 +16,21 @@ describe('useValidator', () => {
     expect(validator4).toEqual(validator5)
   })
 
-  it('returns a valid htmlValidate instance', () => {
+  it('returns a valid htmlValidate instance', async () => {
     const validator = getValidator({ extends: ['html-validate:standard'] })
 
-    const { valid, results } = validator.validateString('<!DOCTYPE html><title>x</title>')
+    const { valid, results } = await validator.validateString('<!DOCTYPE html><title>x</title>')
     expect(valid).toBeTruthy()
     expect(results).toEqual([])
 
-    const { valid: invalid, results: invalidResults } = validator.validateString('<!DOCTYPE html><title>x</title><body><a><a>Test</a></a></body>')
+    const { valid: invalid, results: invalidResults } = await validator.validateString('<!DOCTYPE html><title>x</title><body><a><a>Test</a></a></body>')
     expect(invalid).toBeFalsy()
     expect(invalidResults).toMatchSnapshot()
   })
 
-  it('works with default config', () => {
+  it('works with default config', async () => {
     const validator = getValidator(defaultHtmlValidateConfig)
-    const { valid, results } = validator.validateString('<!DOCTYPE html><title>x</title>')
+    const { valid, results } = await validator.validateString('<!DOCTYPE html><title>x</title>')
     expect(valid).toBeTruthy()
     expect(results).toEqual([])
   })
