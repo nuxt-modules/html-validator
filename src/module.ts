@@ -3,7 +3,7 @@ import chalk from 'chalk'
 import { normalize } from 'pathe'
 import { isWindows } from 'std-env'
 
-import { defineNuxtModule, isNuxt2, logger, resolvePath } from '@nuxt/kit'
+import { createResolver, defineNuxtModule, isNuxt2, logger, resolvePath } from '@nuxt/kit'
 import { DEFAULTS, ModuleOptions } from './config'
 
 export type { ModuleOptions }
@@ -28,6 +28,8 @@ export default defineNuxtModule<ModuleOptions>({
       options.extends = (nuxt.options as any).htmlValidator.options.extends
     }
 
+    const { resolve } = createResolver(import.meta.url)
+
     if (nuxt.options.dev) {
       nuxt.hook('nitro:config', (config) => {
         // Transpile the nitro plugin we're injecting
@@ -40,6 +42,11 @@ export default defineNuxtModule<ModuleOptions>({
         config.plugins.push(normalize(fileURLToPath(new URL('./runtime/nitro', import.meta.url))))
         config.virtual = config.virtual || {}
         config.virtual['#html-validator-config'] = `export default ${JSON.stringify(moduleOptions)}`
+      })
+
+      nuxt.hook('prepare:types', ({ references }) => {
+        const types = resolve('./runtime/types.d.ts')
+        references.push({ path: types })
       })
     }
 
