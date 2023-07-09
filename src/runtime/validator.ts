@@ -27,7 +27,7 @@ export const useChecker = (
     }
 
     // Clean up Vue scoped style attributes
-    html = typeof html === 'string' ? html.replace(/ ?data-v-[-A-Za-z0-9]+(=["']([-A-Za-z0-9]|\/|:|\.)*["'])?/g, '') : html
+    html = typeof html === 'string' ? html.replace(/ ?data-v-[-A-Za-z0-9]+(=["'][^"']+["'])?/g, '') : html
     const { valid, results } = await validator.validateString(html)
 
     if (valid && !results.length) {
