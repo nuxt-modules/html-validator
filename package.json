@@ -58,6 +58,7 @@
   },
   "resolutions": {
     "@nuxtjs/html-validator": "link:./",
+    "@nuxt/kit": "3.6.1",
     "consola": "^3.0.0"
   },
   "publishConfig": {
