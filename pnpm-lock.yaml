@@ -20,8 +20,8 @@ importers:
         specifier: ^5.1.2
         version: 5.2.0
       html-validate:
-        specifier: ~8.0.5
-        version: 8.0.5
+        specifier: ~8.1.0
+        version: 8.1.0
       pathe:
         specifier: ^1.0.0
         version: 1.1.1
@@ -34,7 +34,7 @@ importers:
     devDependencies:
       '@nuxt/module-builder':
         specifier: 0.4.0
-        version: 0.4.0(@nuxt/kit@3.6.5)(nuxi@3.6.3)
+        version: 0.4.0(@nuxt/kit@3.6.5)(nuxi@3.6.5)
       '@nuxt/test-utils':
         specifier: 3.6.5
         version: 3.6.5(rollup@3.25.3)(vitest@0.33.0)(vue@3.3.4)
@@ -1128,7 +1128,7 @@ packages:
       - rollup
       - supports-color
 
-  /@nuxt/module-builder@0.4.0(@nuxt/kit@3.6.5)(nuxi@3.6.3):
+  /@nuxt/module-builder@0.4.0(@nuxt/kit@3.6.5)(nuxi@3.6.5):
     resolution: {integrity: sha512-B+UAYgFV1Hkc2ZcD7GaiKZ3SNHhyxFlXzZoBWTc9ulE0Z/+rq6RTa9fNm13BZyGhVhDCl5FN/wF/yYa1O/D2iw==}
     hasBin: true
     peerDependencies:
@@ -1139,7 +1139,7 @@ packages:
       consola: 3.2.2
       mlly: 1.4.0
       mri: 1.2.0
-      nuxi: 3.6.3
+      nuxi: 3.6.5
       pathe: 1.1.1
       unbuild: 1.2.1
     transitivePeerDependencies:
@@ -4419,8 +4419,8 @@ packages:
     resolution: {integrity: sha512-ztqyC3kLto0e9WbNp0aeP+M3kTt+nbaIveGmUxAtZa+8iFgKLUOD4YKM5j+f3QD89bra7UeumolZHKuOXnTmeQ==}
     engines: {node: '>=8'}
 
-  /html-validate@8.0.5:
-    resolution: {integrity: sha512-8IBayugyDTiH49JjxSEq+A0UFQzuyG9m0382aHMrPoHVNQcr3IypjuKcjn150ahAwAqO0o4NgMbkC1LezQU1mw==}
+  /html-validate@8.1.0:
+    resolution: {integrity: sha512-vXXHzG/Kto8wUhaCKQAZsHA20VG2Y/il58VnFdeg25jV46ZSMGPajZ6nFW+0Xv0S+R7qGu16bFmUo50W7iaO1g==}
     engines: {node: '>= 16.0'}
     hasBin: true
     peerDependencies:
@@ -5900,14 +5900,6 @@ packages:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
     dependencies:
       boolbase: 1.0.0
-
-  /nuxi@3.6.3:
-    resolution: {integrity: sha512-UVokD+9Pq0EoPp2nmkS5K96g/P1BWYEpYCmtX4XW5oZqvkPlEBBdellOWPEb9wgSCBjWYVNpxA2uIRb4yhg1Nw==}
-    engines: {node: ^14.18.0 || >=16.10.0}
-    hasBin: true
-    optionalDependencies:
-      fsevents: 2.3.2
-    dev: true
 
   /nuxi@3.6.5:
     resolution: {integrity: sha512-4XEXYz71UiWWiKC1/cJCzqRSUEImYRmjcvKpSsBKMU58ALYVSx5KIoas5SwLO8tEKO5BS4DAe4u7MYix7hfuHQ==}
