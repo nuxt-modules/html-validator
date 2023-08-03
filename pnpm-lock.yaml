@@ -73,8 +73,8 @@ importers:
         version: 0.19.0(postcss@8.4.24)
     devDependencies:
       '@nuxt-themes/docus':
-        specifier: 1.14.4
-        version: 1.14.4(nuxt@3.6.5)(postcss@8.4.24)(rollup@3.25.3)(vue@3.3.4)
+        specifier: 1.14.6
+        version: 1.14.6(nuxt@3.6.5)(postcss@8.4.24)(rollup@3.25.3)(vue@3.3.4)
       '@nuxt/eslint-config':
         specifier: 0.1.1
         version: 0.1.1(eslint@8.46.0)
@@ -947,8 +947,8 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
 
-  /@nuxt-themes/docus@1.14.4(nuxt@3.6.5)(postcss@8.4.24)(rollup@3.25.3)(vue@3.3.4):
-    resolution: {integrity: sha512-weZrPh7EBvjZZ3KY/83sB+ps64Fc6T35mqJtrf2XF8sWf0pgwLOMs+0OLdG6vcSKy1bcc8ov4Jr2qMFbK5MLFA==}
+  /@nuxt-themes/docus@1.14.6(nuxt@3.6.5)(postcss@8.4.24)(rollup@3.25.3)(vue@3.3.4):
+    resolution: {integrity: sha512-tkSG7j0jhVo53wEpK9V48hIvaK0XEzVU64hXhFfnIMv6LJu99cKOC//boebPbN9qLbJmkBdo4IAIJ0tN5MD0qw==}
     dependencies:
       '@nuxt-themes/elements': 0.9.4(postcss@8.4.24)(rollup@3.25.3)(vue@3.3.4)
       '@nuxt-themes/tokens': 1.9.1(postcss@8.4.24)(rollup@3.25.3)(vue@3.3.4)
@@ -1298,7 +1298,7 @@ packages:
       defu: 6.1.2
       nuxt-component-meta: 0.5.2(rollup@3.25.3)
       nuxt-config-schema: 0.4.6(rollup@3.25.3)
-      socket.io-client: 4.6.2
+      socket.io-client: 4.7.1
       ufo: 1.1.2
     transitivePeerDependencies:
       - bufferutil
@@ -1574,7 +1574,7 @@ packages:
   /@types/hast@2.3.4:
     resolution: {integrity: sha512-wLEm0QvaoawEDoTRwzTXp4b4jpwiJDvR5KMnFnVodm3scufTlBOWRD6N1OBf9TZMhjlNsSfcO5V+7AF4+Vy+9g==}
     dependencies:
-      '@types/unist': 2.0.6
+      '@types/unist': 3.0.0
     dev: true
 
   /@types/http-proxy@1.17.11:
@@ -1597,7 +1597,7 @@ packages:
   /@types/mdast@3.0.11:
     resolution: {integrity: sha512-Y/uImid8aAwrEA24/1tcRZwpxX3pIFTSilcNDKSPn+Y2iDywSEachzRuvgAYYLR3wpGXAsMbv5lvKLDZLeYPAw==}
     dependencies:
-      '@types/unist': 2.0.6
+      '@types/unist': 3.0.0
     dev: true
 
   /@types/ms@0.7.31:
@@ -3292,20 +3292,6 @@ packages:
     dependencies:
       once: 1.4.0
 
-  /engine.io-client@6.4.0:
-    resolution: {integrity: sha512-GyKPDyoEha+XZ7iEqam49vz6auPnNJ9ZBfy89f+rMMas8AuiMWOZ9PVzu8xb9ZC6rafUqiGHSCfu22ih66E+1g==}
-    dependencies:
-      '@socket.io/component-emitter': 3.1.0
-      debug: 4.3.4
-      engine.io-parser: 5.0.6
-      ws: 8.11.0
-      xmlhttprequest-ssl: 2.0.0
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - utf-8-validate
-    dev: true
-
   /engine.io-client@6.5.1:
     resolution: {integrity: sha512-hE5wKXH8Ru4L19MbM1GgYV/2Qo54JSMh1rlJbfpa40bEWkCKNo3ol2eOtGmowcr+ysgbI7+SGL+by42Q3pt/Ng==}
     dependencies:
@@ -3318,11 +3304,6 @@ packages:
       - bufferutil
       - supports-color
       - utf-8-validate
-    dev: true
-
-  /engine.io-parser@5.0.6:
-    resolution: {integrity: sha512-tjuoZDMAdEhVnSFleYPCtdL2GXwVTGtNjoeJd9IhIG3C1xs9uwxqRNEu5WpnDZCaozwVlK/nuQhpodhXSIMaxw==}
-    engines: {node: '>=10.0.0'}
     dev: true
 
   /engine.io-parser@5.1.0:
@@ -7379,20 +7360,6 @@ packages:
     dependencies:
       dot-case: 3.0.4
       tslib: 2.5.3
-
-  /socket.io-client@4.6.2:
-    resolution: {integrity: sha512-OwWrMbbA8wSqhBAR0yoPK6EdQLERQAYjXb3A0zLpgxfM1ZGLKoxHx8gVmCHA6pcclRX5oA/zvQf7bghAS11jRA==}
-    engines: {node: '>=10.0.0'}
-    dependencies:
-      '@socket.io/component-emitter': 3.1.0
-      debug: 4.3.4
-      engine.io-client: 6.4.0
-      socket.io-parser: 4.2.4
-    transitivePeerDependencies:
-      - bufferutil
-      - supports-color
-      - utf-8-validate
-    dev: true
 
   /socket.io-client@4.7.1:
     resolution: {integrity: sha512-Qk3Xj8ekbnzKu3faejo4wk2MzXA029XppiXtTF/PkbTg+fcwaTw1PlDrTrrrU4mKoYC4dvlApOnSeyLCKwek2w==}
