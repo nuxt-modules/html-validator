@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "@nuxt-themes/docus": "1.14.6",
-    "@nuxt/eslint-config": "0.1.1",
+    "@nuxt/eslint-config": "0.2.0",
     "eslint": "8.47.0",
     "nuxt": "3.6.5"
   },
