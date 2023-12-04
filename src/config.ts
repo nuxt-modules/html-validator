@@ -35,7 +35,7 @@ export interface ModuleOptions {
    *
    * @default false
    */
-  hookable: boolean
+  hookable?: boolean
 }
 
 export const DEFAULTS: Required<Omit<ModuleOptions, 'logLevel'>> & { logLevel?: LogLevel } = {
