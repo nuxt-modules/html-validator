@@ -20,8 +20,8 @@ importers:
         specifier: ^5.1.2
         version: 5.3.0
       html-validate:
-        specifier: ~8.8.0
-        version: 8.8.0(vitest@1.0.4)
+        specifier: ~8.9.0
+        version: 8.9.1(vitest@1.0.4)
       pathe:
         specifier: ^1.0.0
         version: 1.1.1
@@ -5349,8 +5349,8 @@ packages:
     resolution: {integrity: sha512-ztqyC3kLto0e9WbNp0aeP+M3kTt+nbaIveGmUxAtZa+8iFgKLUOD4YKM5j+f3QD89bra7UeumolZHKuOXnTmeQ==}
     engines: {node: '>=8'}
 
-  /html-validate@8.8.0(vitest@1.0.4):
-    resolution: {integrity: sha512-apL6TzpP9LHylv86V/WCVEmRXMMhNeZVdd2P5p10cD4ZPGC7Gb1fzUOTeGWaKC82RIslHLPW3cenQ8dsrFmeLQ==}
+  /html-validate@8.9.1(vitest@1.0.4):
+    resolution: {integrity: sha512-2tWa2FtFALooZ5wMDbY+HS0BieoiRfS5IeiG2XeM6bb3Jx4dmN1HFPFt0v3j7r3SpNxEVKiXYLdkBZI3kkca/g==}
     engines: {node: '>= 16.14'}
     hasBin: true
     peerDependencies:
