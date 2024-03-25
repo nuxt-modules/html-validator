@@ -39,7 +39,7 @@
   "dependencies": {
     "@nuxt/kit": "^3.6.1",
     "chalk": "^5.1.2",
-    "html-validate": "~8.15.0",
+    "html-validate": "~8.18.0",
     "pathe": "^1.0.0",
     "prettier": "^3.0.0",
     "std-env": "^3.3.1"
