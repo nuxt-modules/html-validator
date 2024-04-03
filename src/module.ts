@@ -4,7 +4,8 @@ import { normalize } from 'pathe'
 import { isWindows } from 'std-env'
 
 import { createResolver, defineNuxtModule, isNuxt2, logger, resolvePath } from '@nuxt/kit'
-import { DEFAULTS, ModuleOptions } from './config'
+import { DEFAULTS } from './config'
+import type { ModuleOptions } from './config'
 
 export type { ModuleOptions }
 
