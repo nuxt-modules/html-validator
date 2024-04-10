@@ -50,7 +50,7 @@
     "@nuxtjs/eslint-config-typescript": "12.1.0",
     "@vitest/coverage-v8": "1.0.4",
     "bumpp": "9.3.0",
-    "eslint": "8.56.0",
+    "eslint": "9.0.0",
     "eslint-config-prettier": "9.1.0",
     "husky": "9.0.11",
     "lint-staged": "15.2.2",
