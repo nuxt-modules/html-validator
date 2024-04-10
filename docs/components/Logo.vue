@@ -1,6 +1,12 @@
 <template>
-  <img class="dark-img" src="/logo-dark.svg">
-  <img class="light-img" src="/logo-light.svg">
+  <img
+    class="dark-img"
+    src="/logo-dark.svg"
+  >
+  <img
+    class="light-img"
+    src="/logo-light.svg"
+  >
 </template>
 
 <style lang="ts">

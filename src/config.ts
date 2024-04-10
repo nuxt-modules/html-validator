@@ -4,7 +4,7 @@ export const defaultHtmlValidateConfig: ConfigData = {
   extends: [
     'html-validate:document',
     'html-validate:recommended',
-    'html-validate:standard'
+    'html-validate:standard',
   ],
   rules: {
     //
@@ -18,8 +18,8 @@ export const defaultHtmlValidateConfig: ConfigData = {
     'attribute-boolean-style': 'off',
     'doctype-style': 'off',
     // Unreasonable rule
-    'no-inline-style': 'off'
-  }
+    'no-inline-style': 'off',
+  },
 }
 
 export type LogLevel = 'verbose' | 'warning' | 'error'
@@ -42,5 +42,5 @@ export const DEFAULTS: Required<Omit<ModuleOptions, 'logLevel'>> & { logLevel?: 
   usePrettier: false,
   failOnError: false,
   options: defaultHtmlValidateConfig,
-  hookable: false
+  hookable: false,
 }
