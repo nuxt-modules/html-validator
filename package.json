@@ -54,7 +54,7 @@
     "lint-staged": "15.2.2",
     "nuxt": "3.11.1",
     "vitest": "1.0.4",
-    "@nuxt/eslint-config": "0.3.5"
+    "@nuxt/eslint-config": "0.3.6"
   },
   "resolutions": {
     "@nuxtjs/html-validator": "link:./",
