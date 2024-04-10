@@ -40,7 +40,9 @@ export const useChecker = (
       return { valid, results }
     }
 
-    if (!valid) { invalidPages.push(url) }
+    if (!valid) {
+      invalidPages.push(url)
+    }
 
     const formatter = couldFormat ? formatterFactory('codeframe') : formatterFactory('stylish')
 

@@ -25,7 +25,9 @@ export default defineNuxtModule<ModuleOptions>({
     logger.info(`Using ${chalk.bold('html-validate')} to validate server-rendered HTML`)
 
     const { usePrettier, failOnError, options, logLevel } = moduleOptions as Required<ModuleOptions>
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     if ((nuxt.options as any).htmlValidator?.options?.extends) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       options.extends = (nuxt.options as any).htmlValidator.options.extends
     }
 
@@ -73,7 +75,9 @@ export default defineNuxtModule<ModuleOptions>({
 
       nuxt.hook('nitro:init', (nitro) => {
         nitro.hooks.hook('prerender:generate', (route) => {
-          if (!route.contents || !route.fileName?.endsWith('.html')) { return }
+          if (!route.contents || !route.fileName?.endsWith('.html')) {
+            return
+          }
           checkHTML(route.route, route.contents)
         })
       })
