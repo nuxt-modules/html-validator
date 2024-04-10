@@ -9,7 +9,7 @@ vi.mock('prettier', () => ({
       throw new TypeError('invalid')
     }
     return 'valid'
-  })
+  }),
 }))
 
 vi.mock('html-validate')
@@ -29,7 +29,7 @@ describe('useChecker', () => {
 
     await checker('https://test.com/', Symbol as any)
     expect(console.log).toHaveBeenCalledWith(
-      `No HTML validation errors found for ${chalk.bold('https://test.com/')}`
+      `No HTML validation errors found for ${chalk.bold('https://test.com/')}`,
     )
     expect(console.warn).not.toHaveBeenCalled()
     expect(console.error).not.toHaveBeenCalled()
@@ -41,7 +41,7 @@ describe('useChecker', () => {
 
     await checker('https://test.com/', Symbol as any)
     expect(console.log).toHaveBeenCalledWith(
-      `No HTML validation errors found for ${chalk.bold('https://test.com/')}`
+      `No HTML validation errors found for ${chalk.bold('https://test.com/')}`,
     )
     expect(console.warn).not.toHaveBeenCalled()
     expect(console.error).not.toHaveBeenCalled()
@@ -91,7 +91,7 @@ describe('useChecker', () => {
       expect(console.log).not.toHaveBeenCalled()
       expect(console.warn).not.toHaveBeenCalled()
       expect(console.error).toHaveBeenCalledWith(
-        `HTML validation errors found for ${chalk.bold('https://test.com/')}`
+        `HTML validation errors found for ${chalk.bold('https://test.com/')}`,
       )
     })
   }
@@ -110,13 +110,13 @@ describe('useChecker', () => {
 
     await checker(
       'https://test.com/',
-      '<a data-v-35b4e14a data-v-35b4e14a>Link</a>'
+      '<a data-v-35b4e14a data-v-35b4e14a>Link</a>',
     )
     expect(mockValidator).toHaveBeenCalledWith(
-      '<a>Link</a>'
+      '<a>Link</a>',
     )
     expect(console.log).toHaveBeenCalledWith(
-      `No HTML validation errors found for ${chalk.bold('https://test.com/')}`
+      `No HTML validation errors found for ${chalk.bold('https://test.com/')}`,
     )
     expect(console.warn).not.toHaveBeenCalled()
     expect(console.error).not.toHaveBeenCalled()
@@ -128,13 +128,13 @@ describe('useChecker', () => {
 
     await checker(
       'https://test.com/',
-      '<a style="color:red" class="xxx" data-v-inspector="Xxxx/Xxx.vue:2:3">Link</a>'
+      '<a style="color:red" class="xxx" data-v-inspector="Xxxx/Xxx.vue:2:3">Link</a>',
     )
     expect(mockValidator).toHaveBeenCalledWith(
-      '<a style="color:red" class="xxx">Link</a>'
+      '<a style="color:red" class="xxx">Link</a>',
     )
     expect(console.log).toHaveBeenCalledWith(
-      `No HTML validation errors found for ${chalk.bold('https://test.com/')}`
+      `No HTML validation errors found for ${chalk.bold('https://test.com/')}`,
     )
     expect(console.warn).not.toHaveBeenCalled()
     expect(console.error).not.toHaveBeenCalled()
@@ -162,7 +162,7 @@ describe('useChecker', () => {
     expect(console.log).not.toHaveBeenCalled()
     expect(console.warn).not.toHaveBeenCalled()
     expect(console.error).toHaveBeenCalledWith(
-      `HTML validation errors found for ${chalk.bold('https://test.com/')}`
+      `HTML validation errors found for ${chalk.bold('https://test.com/')}`,
     )
 
     const validate = await import('html-validate')

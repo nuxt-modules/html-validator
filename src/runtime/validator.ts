@@ -1,6 +1,7 @@
 import chalk from 'chalk'
-// eslint-disable-next-line import/named
-import { ConfigData, HtmlValidate, formatterFactory } from 'html-validate'
+
+import type { ConfigData } from 'html-validate'
+import { HtmlValidate, formatterFactory } from 'html-validate'
 import type { LogLevel } from '../config'
 
 export const getValidator = (options: ConfigData = {}) => {
@@ -10,7 +11,7 @@ export const getValidator = (options: ConfigData = {}) => {
 export const useChecker = (
   validator: HtmlValidate,
   usePrettier = false,
-  logLevel: LogLevel = 'verbose'
+  logLevel: LogLevel = 'verbose',
 ) => {
   const invalidPages: string[] = []
 
@@ -22,7 +23,8 @@ export const useChecker = (
         html = format(html, { parser: 'html' })
         couldFormat = true
       }
-    } catch (e) {
+    }
+    catch (e) {
       console.error(e)
     }
 
@@ -45,14 +47,15 @@ export const useChecker = (
     const formattedResult = formatter?.(results)
     const message = [
       `HTML validation errors found for ${chalk.bold(url)}`,
-      formattedResult
+      formattedResult,
     ].filter(Boolean).join('\n')
 
     if (valid) {
       if (logLevel === 'verbose' || logLevel === 'warning') {
         console.warn(message)
       }
-    } else {
+    }
+    else {
       console.error(message)
     }
 

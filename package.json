@@ -31,7 +31,7 @@
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
-    "lint": "eslint --ext .js,.ts,.vue",
+    "lint": "eslint",
     "lint:all": "pnpm lint .",
     "release": "pnpm test && bumpp && npm publish",
     "test": "pnpm vitest run"
@@ -47,15 +47,14 @@
   "devDependencies": {
     "@nuxt/module-builder": "0.5.5",
     "@nuxt/test-utils": "3.12.0",
-    "@nuxtjs/eslint-config-typescript": "12.1.0",
     "@vitest/coverage-v8": "1.0.4",
     "bumpp": "9.3.0",
-    "eslint": "8.56.0",
-    "eslint-config-prettier": "9.1.0",
+    "eslint": "9.0.0",
     "husky": "9.0.11",
     "lint-staged": "15.2.2",
     "nuxt": "3.11.1",
-    "vitest": "1.0.4"
+    "vitest": "1.0.4",
+    "@nuxt/eslint-config": "0.3.5"
   },
   "resolutions": {
     "@nuxtjs/html-validator": "link:./",

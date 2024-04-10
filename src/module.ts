@@ -14,14 +14,14 @@ export default defineNuxtModule<ModuleOptions>({
     name: '@nuxtjs/html-validator',
     configKey: 'htmlValidator',
     compatibility: {
-      nuxt: '^2.0.0 || ^3.0.0-rc.7'
-    }
+      nuxt: '^2.0.0 || ^3.0.0-rc.7',
+    },
   },
   defaults: nuxt => ({
     ...DEFAULTS,
-    logLevel: nuxt.options.dev ? 'verbose' : 'warning'
+    logLevel: nuxt.options.dev ? 'verbose' : 'warning',
   }),
-  async setup (moduleOptions, nuxt) {
+  async setup(moduleOptions, nuxt) {
     logger.info(`Using ${chalk.bold('html-validate')} to validate server-rendered HTML`)
 
     const { usePrettier, failOnError, options, logLevel } = moduleOptions as Required<ModuleOptions>
@@ -87,5 +87,5 @@ export default defineNuxtModule<ModuleOptions>({
         nuxt.hook('generate:page', ({ path, html }: { path: string, html: string }) => checkHTML(path, html))
       }
     }
-  }
+  },
 })
