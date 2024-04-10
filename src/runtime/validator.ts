@@ -20,7 +20,7 @@ export const useChecker = (
     try {
       if (usePrettier) {
         const { format } = await import('prettier')
-        html = format(html, { parser: 'html' })
+        html = await format(html, { parser: 'html' })
         couldFormat = true
       }
     }
