@@ -66,3 +66,7 @@ export const useChecker = (
 
   return { checkHTML, invalidPages }
 }
+
+export function isIgnored(path: string, ignore: Array<string | RegExp> = []) {
+  return ignore.some(ignore => typeof ignore === 'string' ? path === ignore : ignore.test(path))
+}

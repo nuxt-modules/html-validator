@@ -30,6 +30,11 @@ export interface ModuleOptions {
   failOnError?: boolean
   options?: ConfigData
   /**
+   * A list of routes to ignore (that is, not check validity for)
+   * @default [/\.(xml|rss|json)$/]
+   */
+  ignore?: Array<string | RegExp>
+  /**
    * allow to hook into `html-validator`
    * enabling this option block the response until the HTML check and the hook has finished
    *
@@ -43,4 +48,5 @@ export const DEFAULTS: Required<Omit<ModuleOptions, 'logLevel'>> & { logLevel?: 
   failOnError: false,
   options: defaultHtmlValidateConfig,
   hookable: false,
+  ignore: [/\.(xml|rss|json)$/],
 }
