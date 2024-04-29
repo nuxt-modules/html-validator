@@ -10,7 +10,10 @@
     "validation",
     "html"
   ],
-  "repository": "nuxt-modules/html-validator",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nuxt-modules/html-validator.git"
+  },
   "license": "MIT",
   "type": "module",
   "exports": {
