@@ -2,6 +2,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url'
 import chalk from 'chalk'
 import { normalize } from 'pathe'
 import { isWindows } from 'std-env'
+import { genArrayFromRaw, genObjectFromRawEntries } from 'knitwork'
 
 import { createResolver, defineNuxtModule, isNuxt2, logger, resolvePath } from '@nuxt/kit'
 import { DEFAULTS } from './config'
@@ -44,7 +45,13 @@ export default defineNuxtModule<ModuleOptions>({
         config.plugins = config.plugins || []
         config.plugins.push(normalize(fileURLToPath(new URL('./runtime/nitro', import.meta.url))))
         config.virtual = config.virtual || {}
-        config.virtual['#html-validator-config'] = `export default ${JSON.stringify(moduleOptions)}`
+        const serialisedOptions = genObjectFromRawEntries(Object.entries(moduleOptions).map(([key, value]) => {
+          if (key !== 'ignore') return [key, JSON.stringify(value, null, 2)]
+          const ignore = value as ModuleOptions['ignore'] || []
+          return [key, genArrayFromRaw(ignore.map(v => typeof v === 'string' ? JSON.stringify(v) : v.toString()))]
+        }))
+        console.log(serialisedOptions)
+        config.virtual['#html-validator-config'] = `export default ${serialisedOptions}`
       })
 
       nuxt.hook('prepare:types', ({ references }) => {
