@@ -68,5 +68,5 @@ export const useChecker = (
 }
 
 export function isIgnored(path: string, ignore: Array<string | RegExp> = []) {
-  return ignore.some(ignore => typeof ignore === 'string' ? path === ignore : ignore.test(path))
+  return ignore.some(i => typeof i === 'string' ? path === i : i.test(path))
 }
