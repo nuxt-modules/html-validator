@@ -50,7 +50,6 @@ export default defineNuxtModule<ModuleOptions>({
           const ignore = value as ModuleOptions['ignore'] || []
           return [key, genArrayFromRaw(ignore.map(v => typeof v === 'string' ? JSON.stringify(v) : v.toString()))]
         }))
-        console.log(serialisedOptions)
         config.virtual['#html-validator-config'] = `export default ${serialisedOptions}`
       })
 
