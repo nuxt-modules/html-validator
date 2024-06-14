@@ -2,9 +2,11 @@ import { fileURLToPath, pathToFileURL } from 'node:url'
 import chalk from 'chalk'
 import { normalize } from 'pathe'
 import { isWindows } from 'std-env'
+import { genArrayFromRaw, genObjectFromRawEntries } from 'knitwork'
 
 import { createResolver, defineNuxtModule, isNuxt2, logger, resolvePath } from '@nuxt/kit'
-import { DEFAULTS, ModuleOptions } from './config'
+import { DEFAULTS } from './config'
+import type { ModuleOptions } from './config'
 
 export type { ModuleOptions }
 
@@ -13,18 +15,20 @@ export default defineNuxtModule<ModuleOptions>({
     name: '@nuxtjs/html-validator',
     configKey: 'htmlValidator',
     compatibility: {
-      nuxt: '>=2.0.0 || ^3.0.0-rc.7'
+      nuxt: '^2.0.0 || >=3.0.0-rc.7'
     }
   },
   defaults: nuxt => ({
     ...DEFAULTS,
-    logLevel: nuxt.options.dev ? 'verbose' : 'warning'
+    logLevel: nuxt.options.dev ? 'verbose' : 'warning',
   }),
-  async setup (moduleOptions, nuxt) {
+  async setup(moduleOptions, nuxt) {
     logger.info(`Using ${chalk.bold('html-validate')} to validate server-rendered HTML`)
 
     const { usePrettier, failOnError, options, logLevel } = moduleOptions as Required<ModuleOptions>
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     if ((nuxt.options as any).htmlValidator?.options?.extends) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       options.extends = (nuxt.options as any).htmlValidator.options.extends
     }
 
@@ -41,7 +45,12 @@ export default defineNuxtModule<ModuleOptions>({
         config.plugins = config.plugins || []
         config.plugins.push(normalize(fileURLToPath(new URL('./runtime/nitro', import.meta.url))))
         config.virtual = config.virtual || {}
-        config.virtual['#html-validator-config'] = `export default ${JSON.stringify(moduleOptions)}`
+        const serialisedOptions = genObjectFromRawEntries(Object.entries(moduleOptions).map(([key, value]) => {
+          if (key !== 'ignore') return [key, JSON.stringify(value, null, 2)]
+          const ignore = value as ModuleOptions['ignore'] || []
+          return [key, genArrayFromRaw(ignore.map(v => typeof v === 'string' ? JSON.stringify(v) : v.toString()))]
+        }))
+        config.virtual['#html-validator-config'] = `export default ${serialisedOptions}`
       })
 
       nuxt.hook('prepare:types', ({ references }) => {
@@ -72,7 +81,9 @@ export default defineNuxtModule<ModuleOptions>({
 
       nuxt.hook('nitro:init', (nitro) => {
         nitro.hooks.hook('prerender:generate', (route) => {
-          if (!route.contents || !route.fileName?.endsWith('.html')) { return }
+          if (!route.contents || !route.fileName?.endsWith('.html')) {
+            return
+          }
           checkHTML(route.route, route.contents)
         })
       })
@@ -86,5 +97,5 @@ export default defineNuxtModule<ModuleOptions>({
         nuxt.hook('generate:page', ({ path, html }: { path: string, html: string }) => checkHTML(path, html))
       }
     }
-  }
+  },
 })

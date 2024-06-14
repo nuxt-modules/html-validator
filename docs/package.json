@@ -9,13 +9,9 @@
     "preview": "nuxi preview",
     "lint": "eslint ."
   },
-  "devDependencies": {
-    "@nuxt-themes/docus": "1.15.0",
-    "@nuxt/eslint-config": "0.2.0",
-    "eslint": "8.55.0",
-    "nuxt": "3.8.2"
-  },
   "dependencies": {
-    "pinceau": "^0.20.0"
+    "@nuxt-themes/docus": "1.15.0",
+    "nuxt": "3.11.2",
+    "pinceau": "^0.20.1"
   }
 }

@@ -23,18 +23,10 @@
 
 ## Quick setup
 
-1. Add `@nuxtjs/html-validator` as a dev dependency to your project
+Add `@nuxtjs/html-validator` to your project
 
 ```bash
-yarn add @nuxtjs/html-validator --dev # or npm install @nuxtjs/html-validator --save-dev
-```
-
-2. Add `@nuxtjs/html-validator` to the `modules` section of `nuxt.config.ts`
-
-```js
-export default defineNuxtConfig({
-  modules: ['@nuxtjs/html-validator'],
-})
+npx nuxi@latest module add html-validator
 ```
 
 ## Development

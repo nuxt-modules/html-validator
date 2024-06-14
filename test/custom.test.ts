@@ -1,13 +1,13 @@
-import { fileURLToPath } from 'url'
+import { fileURLToPath } from 'node:url'
 import { describe, it, expect, vi } from 'vitest'
 import { setup, $fetch } from '@nuxt/test-utils'
 
 const error = vi.fn()
 Object.defineProperty(console, 'error', {
-  get () {
+  get() {
     return error
   },
-  set () {}
+  set() {},
 })
 
 await setup({
@@ -15,10 +15,10 @@ await setup({
   nuxtConfig: {
     htmlValidator: {
       options: {
-        extends: []
-      }
-    }
-  }
+        extends: [],
+      },
+    },
+  },
 })
 
 describe('custom options', () => {

@@ -1,16 +1,16 @@
-import { promises as fsp } from 'fs'
-import { resolve } from 'path'
-import { fileURLToPath } from 'url'
+import { promises as fsp } from 'node:fs'
+import { resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { describe, it, expect, vi } from 'vitest'
 import { setup, useTestContext } from '@nuxt/test-utils'
 import { useNuxt } from '@nuxt/kit'
 
 const error = vi.fn()
 Object.defineProperty(console, 'error', {
-  get () {
+  get() {
     return error
   },
-  set () {}
+  set() {},
 })
 
 await setup({
@@ -18,12 +18,12 @@ await setup({
   build: true,
   nuxtConfig: {
     hooks: {
-      'modules:before' () {
+      'modules:before'() {
         const nuxt = useNuxt()
         nuxt.options.nitro.prerender = { routes: ['/'] }
-      }
-    }
-  }
+      },
+    },
+  },
 })
 
 describe('Nuxt prerender', () => {
@@ -31,17 +31,17 @@ describe('Nuxt prerender', () => {
     const ctx = useTestContext()
     const html = await fsp.readFile(
       resolve(ctx.nuxt!.options.nitro.output?.dir || '', 'public/index.html'),
-      'utf-8'
+      'utf-8',
     )
 
     expect(html).toContain('This is an invalid nested anchor tag')
     expect(console.error).toHaveBeenCalledWith(
-      expect.stringContaining('HTML validation errors')
+      expect.stringContaining('HTML validation errors'),
     )
     expect(console.error).toHaveBeenCalledWith(
       expect.stringContaining(
-        '<a> element is not permitted as a descendant of <a>'
-      )
+        '<a> element is not permitted as a descendant of <a>',
+      ),
     )
   })
 })

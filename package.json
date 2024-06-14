@@ -1,6 +1,6 @@
 {
   "name": "@nuxtjs/html-validator",
-  "version": "1.6.0",
+  "version": "1.8.2",
   "description": "html-validate integration for Nuxt",
   "keywords": [
     "nuxt",
@@ -10,7 +10,10 @@
     "validation",
     "html"
   ],
-  "repository": "nuxt-modules/html-validator",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nuxt-modules/html-validator.git"
+  },
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -27,43 +30,43 @@
     "validator.d.ts"
   ],
   "scripts": {
-    "prepack": "nuxt-module-build",
+    "prepack": "nuxt-module-build build",
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
-    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
-    "lint": "eslint --ext .js,.ts,.vue",
+    "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
+    "lint": "eslint",
     "lint:all": "pnpm lint .",
     "release": "pnpm test && bumpp && npm publish",
     "test": "pnpm vitest run"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.6.1",
-    "chalk": "^5.1.2",
-    "html-validate": "~8.7.0",
-    "pathe": "^1.0.0",
-    "prettier": "^3.0.0",
-    "std-env": "^3.3.1"
+    "@nuxt/kit": "^3.11.2",
+    "chalk": "^5.3.0",
+    "html-validate": "~8.18.2",
+    "knitwork": "^1.1.0",
+    "pathe": "^1.1.2",
+    "prettier": "^3.2.5",
+    "std-env": "^3.7.0"
   },
   "devDependencies": {
-    "@nuxt/module-builder": "0.5.4",
-    "@nuxt/test-utils": "3.8.1",
-    "@nuxtjs/eslint-config-typescript": "12.1.0",
-    "@vitest/coverage-v8": "0.34.6",
-    "bumpp": "9.2.0",
-    "eslint": "8.55.0",
-    "eslint-config-prettier": "9.1.0",
-    "husky": "8.0.3",
-    "lint-staged": "15.2.0",
-    "nuxt": "3.8.2",
-    "vitest": "0.34.6"
+    "@nuxt/eslint-config": "0.3.13",
+    "@nuxt/module-builder": "0.7.0",
+    "@nuxt/test-utils": "3.13.1",
+    "@vitest/coverage-v8": "1.6.0",
+    "bumpp": "9.4.1",
+    "eslint": "9.4.0",
+    "husky": "9.0.11",
+    "lint-staged": "15.2.5",
+    "nuxt": "3.11.2",
+    "vitest": "1.6.0"
   },
   "resolutions": {
-    "@nuxtjs/html-validator": "link:./",
-    "@nuxt/kit": "3.8.2",
-    "consola": "^3.0.0"
+    "@nuxt/content": "2.12.1",
+    "@nuxt/kit": "3.11.2",
+    "@nuxtjs/html-validator": "link:./"
   },
   "publishConfig": {
     "access": "public"
   },
-  "packageManager": "pnpm@8.11.0"
+  "packageManager": "pnpm@9.0.6"
 }

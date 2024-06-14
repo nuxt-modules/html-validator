@@ -1,6 +1,7 @@
 import chalk from 'chalk'
-// eslint-disable-next-line import/named
-import { ConfigData, HtmlValidate, formatterFactory } from 'html-validate'
+
+import type { ConfigData } from 'html-validate'
+import { HtmlValidate, formatterFactory } from 'html-validate'
 import type { LogLevel } from '../config'
 
 export const getValidator = (options: ConfigData = {}) => {
@@ -10,7 +11,7 @@ export const getValidator = (options: ConfigData = {}) => {
 export const useChecker = (
   validator: HtmlValidate,
   usePrettier = false,
-  logLevel: LogLevel = 'verbose'
+  logLevel: LogLevel = 'verbose',
 ) => {
   const invalidPages: string[] = []
 
@@ -19,15 +20,16 @@ export const useChecker = (
     try {
       if (usePrettier) {
         const { format } = await import('prettier')
-        html = format(html, { parser: 'html' })
+        html = await format(html, { parser: 'html' })
         couldFormat = true
       }
-    } catch (e) {
+    }
+    catch (e) {
       console.error(e)
     }
 
     // Clean up Vue scoped style attributes
-    html = typeof html === 'string' ? html.replace(/ ?data-v-[-A-Za-z0-9]+(=["'][^"']+["'])?/g, '') : html
+    html = typeof html === 'string' ? html.replace(/ ?data-v-[-A-Za-z0-9]+(=["'][^"']*["'])?/g, '') : html
     const { valid, results } = await validator.validateString(html)
 
     if (valid && !results.length) {
@@ -38,21 +40,24 @@ export const useChecker = (
       return { valid, results }
     }
 
-    if (!valid) { invalidPages.push(url) }
+    if (!valid) {
+      invalidPages.push(url)
+    }
 
     const formatter = couldFormat ? formatterFactory('codeframe') : formatterFactory('stylish')
 
     const formattedResult = formatter?.(results)
     const message = [
       `HTML validation errors found for ${chalk.bold(url)}`,
-      formattedResult
+      formattedResult,
     ].filter(Boolean).join('\n')
 
     if (valid) {
       if (logLevel === 'verbose' || logLevel === 'warning') {
         console.warn(message)
       }
-    } else {
+    }
+    else {
       console.error(message)
     }
 
@@ -60,4 +65,8 @@ export const useChecker = (
   }
 
   return { checkHTML, invalidPages }
+}
+
+export function isIgnored(path: string, ignore: Array<string | RegExp> = []) {
+  return ignore.some(i => typeof i === 'string' ? path === i : i.test(path))
 }

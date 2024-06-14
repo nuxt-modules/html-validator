@@ -9,18 +9,18 @@ export default defineAppConfig({
     image: 'https://html-validator.nuxtjs.org/preview.png',
     aside: {
       level: 0,
-      exclude: []
+      exclude: [],
     },
     header: {
-      logo: true
+      logo: true,
     },
     footer: {
       iconLinks: [
         {
           href: 'https://nuxt.com',
-          icon: 'simple-icons:nuxtdotjs'
-        }
-      ]
-    }
-  }
+          icon: 'simple-icons:nuxtdotjs',
+        },
+      ],
+    },
+  },
 })

@@ -14,8 +14,7 @@ jobs:
 
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
-        node: [18]
+        os: [ubuntu-latest, windows-latest]
 
     steps:
 
@@ -23,7 +22,7 @@ jobs:
       - run: corepack enable
       - uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 18
           cache: "pnpm"
 
       - name: 📦 Install dependencies
@@ -39,4 +38,7 @@ jobs:
         run: pnpm run test --coverage
 
       - name: Coverage
-        uses: codecov/codecov-action@v3
+        if: ${{ matrix.os == 'ubuntu-latest' }}
+        uses: codecov/codecov-action@v4
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
