@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@nuxt-themes/docus": "1.15.0",
-    "nuxt": "3.12.2",
+    "nuxt": "3.12.3",
     "pinceau": "^0.20.1"
   }
 }
