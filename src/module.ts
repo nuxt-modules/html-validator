@@ -23,6 +23,10 @@ export default defineNuxtModule<ModuleOptions>({
     logLevel: nuxt.options.dev ? 'verbose' : 'warning',
   }),
   async setup(moduleOptions, nuxt) {
+    if (nuxt.options._prepare) {
+      return
+    }
+
     logger.info(`Using ${chalk.bold('html-validate')} to validate server-rendered HTML`)
 
     const { usePrettier, failOnError, options, logLevel } = moduleOptions as Required<ModuleOptions>
