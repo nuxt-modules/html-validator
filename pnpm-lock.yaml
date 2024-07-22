@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  '@nuxt/content': 2.13.1
+  '@nuxt/content': 2.13.2
   '@nuxt/kit': 3.12.4
   '@nuxtjs/html-validator': link:./
 
@@ -1114,8 +1114,8 @@ packages:
   '@nuxt-themes/typography@0.11.0':
     resolution: {integrity: sha512-TqyvD7sDWnqGmL00VtuI7JdmNTPL5/g957HCAWNzcNp+S20uJjW/FXSdkM76d4JSVDHvBqw7Wer3RsqVhqvA4w==}
 
-  '@nuxt/content@2.13.1':
-    resolution: {integrity: sha512-s33sjNCYhFBQxTaWt+NuaCKmnDlYawyYjge8aR+VnCse8jJNRrUM5Rjl38YLF+kH6VqC8yS6zmOIBylDB04nOA==}
+  '@nuxt/content@2.13.2':
+    resolution: {integrity: sha512-9AmX7iG8+1MaWia8XLe1TyzoLrTaIhchas19w6VxqZI0dEoQCGslEcdOxy8xLrdGVFuy6MObBwU8SZgpQB9pyA==}
 
   '@nuxt/devalue@2.0.2':
     resolution: {integrity: sha512-GBzP8zOc7CGWyFQS6dv1lQz8VVpz5C2yRszbXufwG/9zhStTIH50EtD87NmWbTMwXDvZLNg8GIpb1UFdH93JCA==}
@@ -3720,8 +3720,8 @@ packages:
     resolution: {integrity: sha512-qOOzS1cBTWYF4BH8fVePDBOO9iptMnGUEZwNc/cMWnTV2nVLZ7VoNWEPHkYczZA0pdoA7dl6e7FL659nX9S2aw==}
     engines: {node: '>=16 || 14 >=14.17'}
 
-  minisearch@6.3.0:
-    resolution: {integrity: sha512-ihFnidEeU8iXzcVHy74dhkxh/dn8Dc08ERl0xwoMMGqp4+LvRSCgicb+zGqWthVokQKvCSxITlh3P08OzdTYCQ==}
+  minisearch@7.0.2:
+    resolution: {integrity: sha512-Pf0sFXaCgRpOBDr4G8wTbVAEH9o9rvJzCMwj0TMe3L/NfUuG188xabfx6Vm3vD/Dv5L500n7JeiMB9Mq3sWMfQ==}
 
   minizlib@2.1.2:
     resolution: {integrity: sha512-bAxsR8BVfj60DWXHE3u30oHzfl4G7khkSuPW+qvpd7jFRHm7dLxOjUk1EHACJ/hxLY8phGJ0YhYHZo7jil7Qdg==}
@@ -3874,8 +3874,8 @@ packages:
     engines: {node: ^16.10.0 || >=18.0.0}
     hasBin: true
 
-  nuxt-component-meta@0.6.3:
-    resolution: {integrity: sha512-GdqnSMC1vqabry7WSj3GWA2LZ1gBiWeS2lj943c9TjkL9SN/rABEFXVZA6RO4sOTKF1qV947UGi27PdRd7u+tA==}
+  nuxt-component-meta@0.6.6:
+    resolution: {integrity: sha512-Y5/tuZuZOlD4GluAjcTU6JlhtEeg7/92VEfoV814t2uTuZK+b9RokJeGtrMotXuCJ4vuT1Is7M+pkPm+vY/tXA==}
     hasBin: true
 
   nuxt-config-schema@0.4.6:
@@ -5345,7 +5345,7 @@ packages:
   vue@3.4.32:
     resolution: {integrity: sha512-9mCGIAi/CAq7GtaLLLp2J92pEic+HArstG+pq6F+H7+/jB9a0Z7576n4Bh4k79/50L1cKMIhZC3MC0iGpl+1IA==}
     peerDependencies:
-      typescript: 5.5.3
+      typescript: '*'
     peerDependenciesMeta:
       typescript:
         optional: true
@@ -6234,7 +6234,7 @@ snapshots:
       '@nuxt-themes/elements': 0.9.5(magicast@0.3.4)(postcss@8.4.39)(rollup@3.29.4)(vue@3.4.32(typescript@5.5.3))
       '@nuxt-themes/tokens': 1.9.1(magicast@0.3.4)(postcss@8.4.39)(rollup@3.29.4)(vue@3.4.32(typescript@5.5.3))
       '@nuxt-themes/typography': 0.11.0(magicast@0.3.4)(postcss@8.4.39)(rollup@3.29.4)(vue@3.4.32(typescript@5.5.3))
-      '@nuxt/content': 2.13.1(ioredis@5.4.1)(magicast@0.3.4)(nuxt@3.12.4(@parcel/watcher@2.4.1)(@types/node@20.14.10)(eslint@9.7.0)(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.4)(rollup@3.29.4)(terser@5.31.1)(typescript@5.5.3)(vite@5.3.4(@types/node@20.14.10)(terser@5.31.1)))(rollup@3.29.4)(vue@3.4.32(typescript@5.5.3))
+      '@nuxt/content': 2.13.2(ioredis@5.4.1)(magicast@0.3.4)(nuxt@3.12.4(@parcel/watcher@2.4.1)(@types/node@20.14.10)(eslint@9.7.0)(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.4)(rollup@3.29.4)(terser@5.31.1)(typescript@5.5.3)(vite@5.3.4(@types/node@20.14.10)(terser@5.31.1)))(rollup@3.29.4)(vue@3.4.32(typescript@5.5.3))
       '@nuxthq/studio': 1.1.2(magicast@0.3.4)(rollup@3.29.4)
       '@vueuse/integrations': 10.11.0(change-case@4.1.2)(focus-trap@7.5.4)(fuse.js@6.6.2)(vue@3.4.32(typescript@5.5.3))
       '@vueuse/nuxt': 10.11.0(magicast@0.3.4)(nuxt@3.12.4(@parcel/watcher@2.4.1)(@types/node@20.14.10)(eslint@9.7.0)(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.4)(rollup@3.29.4)(terser@5.31.1)(typescript@5.5.3)(vite@5.3.4(@types/node@20.14.10)(terser@5.31.1)))(rollup@3.29.4)(vue@3.4.32(typescript@5.5.3))
@@ -6321,7 +6321,7 @@ snapshots:
       - vue
       - vue-tsc
 
-  '@nuxt/content@2.13.1(ioredis@5.4.1)(magicast@0.3.4)(nuxt@3.12.4(@parcel/watcher@2.4.1)(@types/node@20.14.10)(eslint@9.7.0)(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.4)(rollup@3.29.4)(terser@5.31.1)(typescript@5.5.3)(vite@5.3.4(@types/node@20.14.10)(terser@5.31.1)))(rollup@3.29.4)(vue@3.4.32(typescript@5.5.3))':
+  '@nuxt/content@2.13.2(ioredis@5.4.1)(magicast@0.3.4)(nuxt@3.12.4(@parcel/watcher@2.4.1)(@types/node@20.14.10)(eslint@9.7.0)(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.4)(rollup@3.29.4)(terser@5.31.1)(typescript@5.5.3)(vite@5.3.4(@types/node@20.14.10)(terser@5.31.1)))(rollup@3.29.4)(vue@3.4.32(typescript@5.5.3))':
     dependencies:
       '@nuxt/kit': 3.12.4(magicast@0.3.4)(rollup@3.29.4)
       '@nuxtjs/mdc': 0.8.3(magicast@0.3.4)(rollup@3.29.4)
@@ -6339,7 +6339,7 @@ snapshots:
       micromark: 4.0.0
       micromark-util-sanitize-uri: 2.0.0
       micromark-util-types: 2.0.0
-      minisearch: 6.3.0
+      minisearch: 7.0.2
       ohash: 1.1.3
       pathe: 1.1.2
       scule: 1.3.0
@@ -6851,7 +6851,7 @@ snapshots:
       '@nuxt/kit': 3.12.4(magicast@0.3.4)(rollup@3.29.4)
       defu: 6.1.4
       git-url-parse: 14.0.0
-      nuxt-component-meta: 0.6.3(magicast@0.3.4)(rollup@3.29.4)
+      nuxt-component-meta: 0.6.6(magicast@0.3.4)(rollup@3.29.4)
       parse-git-config: 3.0.0
       pkg-types: 1.1.3
       socket.io-client: 4.7.5
@@ -9960,7 +9960,7 @@ snapshots:
 
   minipass@7.1.2: {}
 
-  minisearch@6.3.0: {}
+  minisearch@7.0.2: {}
 
   minizlib@2.1.2:
     dependencies:
@@ -10173,7 +10173,7 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
-  nuxt-component-meta@0.6.3(magicast@0.3.4)(rollup@3.29.4):
+  nuxt-component-meta@0.6.6(magicast@0.3.4)(rollup@3.29.4):
     dependencies:
       '@nuxt/kit': 3.12.4(magicast@0.3.4)(rollup@3.29.4)
       citty: 0.1.6
