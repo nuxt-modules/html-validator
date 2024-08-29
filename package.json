@@ -55,7 +55,7 @@
     "@vitest/coverage-v8": "2.0.5",
     "bumpp": "9.4.2",
     "eslint": "9.7.0",
-    "husky": "9.1.4",
+    "husky": "9.1.5",
     "lint-staged": "15.2.9",
     "nuxt": "3.12.4",
     "vitest": "2.0.5"
