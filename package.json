@@ -54,7 +54,7 @@
     "@nuxt/test-utils": "3.14.1",
     "@vitest/coverage-v8": "2.1.1",
     "bumpp": "9.5.2",
-    "eslint": "9.9.1",
+    "eslint": "9.10.0",
     "husky": "9.1.5",
     "lint-staged": "15.2.10",
     "nuxt": "3.12.4",
