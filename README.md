@@ -44,9 +44,9 @@ npx nuxi@latest module add html-validator
 [npm-version-href]: https://npmjs.com/package/@nuxtjs/html-validator
 
 [npm-downloads-src]: https://img.shields.io/npm/dm/@nuxtjs/html-validator.svg
-[npm-downloads-href]: https://npmjs.com/package/@nuxtjs/html-validator
+[npm-downloads-href]: https://npm.chart.dev/@nuxtjs/html-validator
 
-[github-actions-ci-src]: https://github.com/nuxt-modules/html-validator/workflows/ci/badge.svg
+[github-actions-ci-src]: https:
 [github-actions-ci-href]: https://github.com/nuxt-modules/html-validator/actions?query=workflow%3Aci
 
 [codecov-src]: https://img.shields.io/codecov/c/github/nuxt-modules/html-validator.svg
