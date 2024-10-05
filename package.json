@@ -42,20 +42,20 @@
   "dependencies": {
     "@nuxt/kit": "^3.12.4",
     "chalk": "^5.3.0",
-    "html-validate": "~8.21.0",
+    "html-validate": "~8.24.0",
     "knitwork": "^1.1.0",
     "pathe": "^1.1.2",
     "prettier": "^3.3.3",
     "std-env": "^3.7.0"
   },
   "devDependencies": {
-    "@nuxt/eslint-config": "0.5.6",
+    "@nuxt/eslint-config": "0.5.7",
     "@nuxt/module-builder": "0.8.3",
     "@nuxt/test-utils": "3.14.1",
     "@vitest/coverage-v8": "2.1.1",
-    "bumpp": "9.5.2",
+    "bumpp": "9.6.1",
     "eslint": "9.11.1",
-    "husky": "9.1.5",
+    "husky": "9.1.6",
     "lint-staged": "15.2.10",
     "nuxt": "3.12.4",
     "vitest": "2.1.1"
@@ -68,5 +68,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "packageManager": "pnpm@9.5.0"
+  "packageManager": "pnpm@9.12.0"
 }
