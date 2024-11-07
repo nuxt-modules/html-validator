@@ -10,7 +10,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@nuxt-themes/docus": "1.15.0",
+    "@nuxt-themes/docus": "1.15.1",
     "nuxt": "3.14.159",
     "pinceau": "^0.20.1"
   }
