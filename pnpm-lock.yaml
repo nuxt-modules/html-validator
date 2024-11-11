@@ -20,8 +20,8 @@ importers:
         specifier: ^5.3.0
         version: 5.3.0
       html-validate:
-        specifier: ~8.24.0
-        version: 8.24.2(vitest@2.1.4(@types/node@22.9.0)(terser@5.36.0))
+        specifier: ~8.25.0
+        version: 8.25.0(vitest@2.1.4(@types/node@22.9.0)(terser@5.36.0))
       knitwork:
         specifier: ^1.1.0
         version: 1.1.0
@@ -2994,8 +2994,8 @@ packages:
     resolution: {integrity: sha512-ztqyC3kLto0e9WbNp0aeP+M3kTt+nbaIveGmUxAtZa+8iFgKLUOD4YKM5j+f3QD89bra7UeumolZHKuOXnTmeQ==}
     engines: {node: '>=8'}
 
-  html-validate@8.24.2:
-    resolution: {integrity: sha512-PpZLlH3gpOSBLRBID4QovOyZ97Ka5dCIhHMPjUxQlMGqk5pc+mgG5enCXbC8ngdjG0jpkTvM8AMhnPv1EiU9Pw==}
+  html-validate@8.25.0:
+    resolution: {integrity: sha512-ZMQcxHxQJ7vrj8o9mKGexkCBENfuyXSZOeBop2CanbbyeBgHwKhIKhksmc2TmhT8+chi657O+XqdDWZLAhMCJA==}
     engines: {node: '>= 16.14'}
     hasBin: true
     peerDependencies:
@@ -9048,7 +9048,7 @@ snapshots:
 
   html-tags@3.3.1: {}
 
-  html-validate@8.24.2(vitest@2.1.4(@types/node@22.9.0)(terser@5.36.0)):
+  html-validate@8.25.0(vitest@2.1.4(@types/node@22.9.0)(terser@5.36.0)):
     dependencies:
       '@html-validate/stylish': 4.2.0
       '@sidvind/better-ajv-errors': 3.0.1(ajv@8.17.1)
