@@ -1,5 +1,5 @@
 import { fileURLToPath, pathToFileURL } from 'node:url'
-import chalk from 'chalk'
+import { colors } from 'consola/utils'
 import { normalize } from 'pathe'
 import { isWindows } from 'std-env'
 import { genArrayFromRaw, genObjectFromRawEntries } from 'knitwork'
@@ -27,7 +27,7 @@ export default defineNuxtModule<ModuleOptions>({
       return
     }
 
-    logger.info(`Using ${chalk.bold('html-validate')} to validate server-rendered HTML`)
+    logger.info(`Using ${colors.bold('html-validate')} to validate server-rendered HTML`)
 
     const { usePrettier, failOnError, options, logLevel } = moduleOptions as Required<ModuleOptions>
     // eslint-disable-next-line @typescript-eslint/no-explicit-any

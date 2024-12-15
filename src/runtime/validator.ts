@@ -1,4 +1,4 @@
-import chalk from 'chalk'
+import { colors } from 'consola/utils'
 
 import type { ConfigData } from 'html-validate'
 import { HtmlValidate, formatterFactory } from 'html-validate'
@@ -34,7 +34,7 @@ export const useChecker = (
 
     if (valid && !results.length) {
       if (logLevel === 'verbose') {
-        console.log(`No HTML validation errors found for ${chalk.bold(url)}`)
+        console.log(`No HTML validation errors found for ${colors.bold(url)}`)
       }
 
       return { valid, results }
@@ -48,7 +48,7 @@ export const useChecker = (
 
     const formattedResult = formatter?.(results)
     const message = [
-      `HTML validation errors found for ${chalk.bold(url)}`,
+      `HTML validation errors found for ${colors.bold(url)}`,
       formattedResult,
     ].filter(Boolean).join('\n')
 

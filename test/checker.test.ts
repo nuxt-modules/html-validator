@@ -1,4 +1,4 @@
-import chalk from 'chalk'
+import { colors } from 'consola/utils'
 import { describe, it, expect, vi, afterEach } from 'vitest'
 
 import { useChecker } from '../src/runtime/validator'
@@ -29,7 +29,7 @@ describe('useChecker', () => {
 
     await checker('https://test.com/', Symbol as any)
     expect(console.log).toHaveBeenCalledWith(
-      `No HTML validation errors found for ${chalk.bold('https://test.com/')}`,
+      `No HTML validation errors found for ${colors.bold('https://test.com/')}`,
     )
     expect(console.warn).not.toHaveBeenCalled()
     expect(console.error).not.toHaveBeenCalled()
@@ -41,7 +41,7 @@ describe('useChecker', () => {
 
     await checker('https://test.com/', Symbol as any)
     expect(console.log).toHaveBeenCalledWith(
-      `No HTML validation errors found for ${chalk.bold('https://test.com/')}`,
+      `No HTML validation errors found for ${colors.bold('https://test.com/')}`,
     )
     expect(console.warn).not.toHaveBeenCalled()
     expect(console.error).not.toHaveBeenCalled()
@@ -91,7 +91,7 @@ describe('useChecker', () => {
       expect(console.log).not.toHaveBeenCalled()
       expect(console.warn).not.toHaveBeenCalled()
       expect(console.error).toHaveBeenCalledWith(
-        `HTML validation errors found for ${chalk.bold('https://test.com/')}`,
+        `HTML validation errors found for ${colors.bold('https://test.com/')}`,
       )
     })
   }
@@ -116,7 +116,7 @@ describe('useChecker', () => {
       '<a>Link</a>',
     )
     expect(console.log).toHaveBeenCalledWith(
-      `No HTML validation errors found for ${chalk.bold('https://test.com/')}`,
+      `No HTML validation errors found for ${colors.bold('https://test.com/')}`,
     )
     expect(console.warn).not.toHaveBeenCalled()
     expect(console.error).not.toHaveBeenCalled()
@@ -134,7 +134,7 @@ describe('useChecker', () => {
       '<a style="color:red" class="xxx">Link</a>',
     )
     expect(console.log).toHaveBeenCalledWith(
-      `No HTML validation errors found for ${chalk.bold('https://test.com/')}`,
+      `No HTML validation errors found for ${colors.bold('https://test.com/')}`,
     )
     expect(console.warn).not.toHaveBeenCalled()
     expect(console.error).not.toHaveBeenCalled()
@@ -162,7 +162,7 @@ describe('useChecker', () => {
     expect(console.log).not.toHaveBeenCalled()
     expect(console.warn).not.toHaveBeenCalled()
     expect(console.error).toHaveBeenCalledWith(
-      `HTML validation errors found for ${chalk.bold('https://test.com/')}`,
+      `HTML validation errors found for ${colors.bold('https://test.com/')}`,
     )
 
     const validate = await import('html-validate')
