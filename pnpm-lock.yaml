@@ -18,7 +18,7 @@ importers:
         version: 3.15.0(magicast@0.3.5)(rollup@3.29.5)
       consola:
         specifier: ^3.2.3
-        version: 3.3.2
+        version: 3.3.3
       html-validate:
         specifier: ~9.1.0
         version: 9.1.0(vitest@2.1.8(@types/node@22.10.2)(terser@5.37.0))
@@ -2324,8 +2324,8 @@ packages:
     resolution: {integrity: sha512-GyKnPG3/I+a4RtJxgHquJXWr70g9I3c4NT3dvqh0LPHQP2nZFQBOBszb7a5u/pGzqr40AKplQA6UxM1BSynSXg==}
     engines: {node: ^14.18.0 || >=16.10.0}
 
-  consola@3.3.2:
-    resolution: {integrity: sha512-X3dcWPU+QeEaPrdtX3zBRQ0P0kIeEnmJV49uNtpy4N/TPnzA3grJvHftKjHuFIQNLrqBPzzykmc3fNrkQDl5yA==}
+  consola@3.3.3:
+    resolution: {integrity: sha512-Qil5KwghMzlqd51UXM0b6fyaGHtOC22scxrwrz4A2882LyUMwQjnvaedN1HAeXzphspQ6CpHkzMAWxBTUruDLg==}
     engines: {node: ^14.18.0 || >=16.10.0}
 
   constant-case@3.0.4:
@@ -6464,7 +6464,7 @@ snapshots:
       '@vueuse/core': 11.3.0(vue@3.5.13(typescript@5.7.2))
       '@vueuse/head': 2.0.0(vue@3.5.13(typescript@5.7.2))
       '@vueuse/nuxt': 11.3.0(magicast@0.3.5)(nuxt@3.15.0(@parcel/watcher@2.5.0)(@types/node@22.10.2)(db0@0.2.1)(eslint@9.17.0(jiti@2.4.2))(ioredis@5.4.2)(magicast@0.3.5)(optionator@0.9.4)(rollup@3.29.5)(terser@5.37.0)(typescript@5.7.2)(vite@5.4.11(@types/node@22.10.2)(terser@5.37.0))(yaml@2.6.1))(rollup@3.29.5)(vue@3.5.13(typescript@5.7.2))
-      consola: 3.3.2
+      consola: 3.3.3
       defu: 6.1.4
       destr: 2.0.3
       json5: 2.2.3
@@ -6686,7 +6686,7 @@ snapshots:
     dependencies:
       '@nuxt/schema': 3.15.0(magicast@0.3.5)(rollup@3.29.5)
       c12: 2.0.1(magicast@0.3.5)
-      consola: 3.3.2
+      consola: 3.3.3
       defu: 6.1.4
       destr: 2.0.3
       globby: 14.0.2
@@ -6713,7 +6713,7 @@ snapshots:
     dependencies:
       '@nuxt/schema': 3.15.0(magicast@0.3.5)(rollup@4.29.1)
       c12: 2.0.1(magicast@0.3.5)
-      consola: 3.3.2
+      consola: 3.3.3
       defu: 6.1.4
       destr: 2.0.3
       globby: 14.0.2
@@ -6740,7 +6740,7 @@ snapshots:
     dependencies:
       '@nuxt/kit': 3.15.0(magicast@0.3.5)(rollup@3.29.5)
       citty: 0.1.6
-      consola: 3.3.2
+      consola: 3.3.3
       defu: 6.1.4
       magic-regexp: 0.8.0
       mlly: 1.7.3
@@ -6759,7 +6759,7 @@ snapshots:
     dependencies:
       c12: 2.0.1(magicast@0.3.5)
       compatx: 0.1.8
-      consola: 3.3.2
+      consola: 3.3.3
       defu: 6.1.4
       hookable: 5.5.3
       pathe: 1.1.2
@@ -6862,7 +6862,7 @@ snapshots:
       '@nuxt/kit': 3.15.0(magicast@0.3.5)(rollup@3.29.5)
       '@nuxt/schema': 3.14.1592(magicast@0.3.5)(rollup@3.29.5)
       c12: 2.0.1(magicast@0.3.5)
-      consola: 3.3.2
+      consola: 3.3.3
       defu: 6.1.4
       destr: 2.0.3
       estree-walker: 3.0.3
@@ -7053,7 +7053,7 @@ snapshots:
       '@types/hast': 3.0.4
       '@types/mdast': 4.0.4
       '@vue/compiler-core': 3.5.13
-      consola: 3.3.2
+      consola: 3.3.3
       debug: 4.4.0(supports-color@9.4.0)
       defu: 6.1.4
       destr: 2.0.3
@@ -8276,7 +8276,7 @@ snapshots:
 
   citty@0.1.6:
     dependencies:
-      consola: 3.3.2
+      consola: 3.3.3
 
   clean-regexp@1.0.0:
     dependencies:
@@ -8351,7 +8351,7 @@ snapshots:
 
   consola@3.3.1: {}
 
-  consola@3.3.2: {}
+  consola@3.3.3: {}
 
   constant-case@3.0.4:
     dependencies:
@@ -10968,7 +10968,7 @@ snapshots:
       '@volar/vue-language-core': 1.6.5
       acorn: 8.14.0
       chroma-js: 2.6.0
-      consola: 3.3.2
+      consola: 3.3.3
       csstype: 3.1.3
       defu: 6.1.4
       magic-string: 0.30.17
@@ -11775,7 +11775,7 @@ snapshots:
       chalk: 5.4.1
       change-case: 4.1.2
       commander: 11.1.0
-      consola: 3.3.2
+      consola: 3.3.3
       fast-glob: 3.3.2
       glob: 10.4.5
       jiti: 1.21.7
@@ -11940,7 +11940,7 @@ snapshots:
       '@rollup/plugin-replace': 5.0.7(rollup@3.29.5)
       '@rollup/pluginutils': 5.1.4(rollup@3.29.5)
       chalk: 5.4.1
-      consola: 3.3.2
+      consola: 3.3.3
       defu: 6.1.4
       esbuild: 0.17.19
       globby: 13.2.2
@@ -11973,7 +11973,7 @@ snapshots:
       '@rollup/pluginutils': 5.1.4(rollup@3.29.5)
       chalk: 5.4.1
       citty: 0.1.6
-      consola: 3.3.2
+      consola: 3.3.3
       defu: 6.1.4
       esbuild: 0.19.12
       globby: 13.2.2
