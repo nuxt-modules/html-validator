@@ -44,7 +44,7 @@
     "consola": "^3.2.3",
     "html-validate": "~9.1.0",
     "knitwork": "^1.1.0",
-    "pathe": "^1.1.2",
+    "pathe": "^2.0.0",
     "prettier": "^3.3.3",
     "std-env": "^3.7.0"
   },
