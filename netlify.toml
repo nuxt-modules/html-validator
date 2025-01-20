@@ -6,6 +6,5 @@
 # “publish” is the directory to publish (relative to the root of your repo).
 
 [build]
-  base    = "docs"
-  command = "pnpm i && pnpm -w dev:prepare && pnpm generate"
-  publish = "dist"
+  command = "pnpm i && pnpm dev:prepare && pnpm --filter docs generate"
+  publish = "docs/dist"
