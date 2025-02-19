@@ -5,7 +5,7 @@ import { isWindows } from 'std-env'
 import { genArrayFromRaw, genObjectFromRawEntries } from 'knitwork'
 
 import { createResolver, defineNuxtModule, isNuxt2, logger, resolvePath } from '@nuxt/kit'
-import { DEFAULTS } from './config'
+import { DEFAULTS, NuxtRedirectHtmlRegex } from './config'
 import type { ModuleOptions } from './config'
 
 export type { ModuleOptions }
@@ -86,6 +86,9 @@ export default defineNuxtModule<ModuleOptions>({
       nuxt.hook('nitro:init', (nitro) => {
         nitro.hooks.hook('prerender:generate', (route) => {
           if (!route.contents || !route.fileName?.endsWith('.html')) {
+            return
+          }
+          if (route.contents.match(NuxtRedirectHtmlRegex)) {
             return
           }
           checkHTML(route.route, route.contents)
