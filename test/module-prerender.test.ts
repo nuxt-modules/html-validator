@@ -20,7 +20,7 @@ await setup({
     hooks: {
       'modules:before'() {
         const nuxt = useNuxt()
-        nuxt.options.nitro.prerender = { routes: ['/'] }
+        nuxt.options.nitro.prerender = { routes: ['/', '/redirect'] }
       },
     },
   },
@@ -42,6 +42,19 @@ describe('Nuxt prerender', () => {
       expect.stringContaining(
         '<a> element is not permitted as a descendant of <a>',
       ),
+    )
+  })
+
+  it('ignores redirect pages', async () => {
+    const ctx = useTestContext()
+    const html = await fsp.readFile(
+      resolve(ctx.nuxt!.options.nitro.output?.dir || '', 'public/redirect/index.html'),
+      'utf-8',
+    )
+
+    expect(html).toMatchInlineSnapshot(`"<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=/"></head></html>"`)
+    expect(console.error).not.toHaveBeenCalledWith(
+      expect.stringContaining('<html> element must have <body> as content'),
     )
   })
 })
