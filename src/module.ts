@@ -4,7 +4,7 @@ import { normalize } from 'pathe'
 import { isWindows } from 'std-env'
 import { genArrayFromRaw, genObjectFromRawEntries } from 'knitwork'
 
-import { createResolver, defineNuxtModule, isNuxt2, logger, resolvePath } from '@nuxt/kit'
+import { createResolver, defineNuxtModule, logger, resolvePath } from '@nuxt/kit'
 import { DEFAULTS, NuxtRedirectHtmlRegex } from './config'
 import type { ModuleOptions } from './config'
 
@@ -15,7 +15,7 @@ export default defineNuxtModule<ModuleOptions>({
     name: '@nuxtjs/html-validator',
     configKey: 'htmlValidator',
     compatibility: {
-      nuxt: '^2.0.0 || >=3.0.0-rc.7',
+      nuxt: '>=3.0.0-rc.7',
     },
   },
   defaults: nuxt => ({
@@ -30,10 +30,9 @@ export default defineNuxtModule<ModuleOptions>({
     logger.info(`Using ${colors.bold('html-validate')} to validate server-rendered HTML`)
 
     const { usePrettier, failOnError, options, logLevel } = moduleOptions as Required<ModuleOptions>
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    if ((nuxt.options as any).htmlValidator?.options?.extends) {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      options.extends = (nuxt.options as any).htmlValidator.options.extends
+
+    if (nuxt.options.htmlValidator?.options?.extends) {
+      options.extends = nuxt.options.htmlValidator.options.extends
     }
 
     const { resolve } = createResolver(import.meta.url)
@@ -63,7 +62,7 @@ export default defineNuxtModule<ModuleOptions>({
       })
     }
 
-    if (!nuxt.options.dev || isNuxt2()) {
+    if (!nuxt.options.dev) {
       const validatorPath = await resolvePath(fileURLToPath(new URL('./runtime/validator', import.meta.url)))
       const { useChecker, getValidator } = await import(isWindows ? pathToFileURL(validatorPath).href : validatorPath)
       const validator = getValidator(options)
@@ -75,13 +74,10 @@ export default defineNuxtModule<ModuleOptions>({
             throw new Error('html-validator found errors')
           }
         }
-
-        // @ts-expect-error TODO: use @nuxt/bridge-schema
-        nuxt.hook('generate:done', errorIfNeeded)
         nuxt.hook('close', errorIfNeeded)
       }
 
-      // Nuxt 3/Nuxt Bridge prerendering
+      // Prerendering
 
       nuxt.hook('nitro:init', (nitro) => {
         nitro.hooks.hook('prerender:generate', (route) => {
@@ -94,15 +90,6 @@ export default defineNuxtModule<ModuleOptions>({
           checkHTML(route.route, route.contents)
         })
       })
-
-      // Nuxt 2
-
-      if (isNuxt2()) {
-        // @ts-expect-error TODO: use @nuxt/bridge-schema
-        nuxt.hook('render:route', (url: string, result: { html: string }) => checkHTML(url, result.html))
-        // @ts-expect-error TODO: use @nuxt/bridge-schema
-        nuxt.hook('generate:page', ({ path, html }: { path: string, html: string }) => checkHTML(path, html))
-      }
     }
   },
 })
