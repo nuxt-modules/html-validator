@@ -17,14 +17,16 @@
   "license": "MIT",
   "type": "module",
   "exports": {
-    ".": {
-      "types": "./dist/module.d.ts",
-      "import": "./dist/module.mjs",
-      "require": "./dist/module.cjs"
+    ".": "./dist/module.mjs"
+  },
+  "main": "./dist/module.mjs",
+  "typesVersions": {
+    "*": {
+      ".": [
+        "./dist/module.d.mts"
+      ]
     }
   },
-  "main": "./dist/module.cjs",
-  "types": "./dist/module.d.ts",
   "files": [
     "dist",
     "validator.d.ts"
@@ -50,7 +52,7 @@
   },
   "devDependencies": {
     "@nuxt/eslint-config": "1.1.0",
-    "@nuxt/module-builder": "0.8.4",
+    "@nuxt/module-builder": "1.0.0-alpha.1",
     "@nuxt/test-utils": "3.15.4",
     "@vitest/coverage-v8": "3.0.5",
     "bumpp": "10.0.3",
