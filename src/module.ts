@@ -23,6 +23,12 @@ export default defineNuxtModule<ModuleOptions>({
     logLevel: nuxt.options.dev ? 'verbose' : 'warning',
   }),
   async setup(moduleOptions, nuxt) {
+    const resolver = createResolver(import.meta.url)
+    nuxt.hook('prepare:types', ({ references }) => {
+      const types = resolver.resolve('./runtime/types.d.ts')
+      references.push({ path: types })
+    })
+
     if (nuxt.options._prepare) {
       return
     }
@@ -34,8 +40,6 @@ export default defineNuxtModule<ModuleOptions>({
     if (nuxt.options.htmlValidator?.options?.extends) {
       options.extends = nuxt.options.htmlValidator.options.extends
     }
-
-    const { resolve } = createResolver(import.meta.url)
 
     if (nuxt.options.dev) {
       nuxt.hook('nitro:config', (config) => {
@@ -54,11 +58,6 @@ export default defineNuxtModule<ModuleOptions>({
           return [key, genArrayFromRaw(ignore.map(v => typeof v === 'string' ? JSON.stringify(v) : v.toString()))]
         }))
         config.virtual['#html-validator-config'] = `export default ${serialisedOptions}`
-      })
-
-      nuxt.hook('prepare:types', ({ references }) => {
-        const types = resolve('./runtime/types.d.ts')
-        references.push({ path: types })
       })
     }
 
