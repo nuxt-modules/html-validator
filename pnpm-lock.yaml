@@ -20,8 +20,8 @@ importers:
         specifier: ^3.2.3
         version: 3.4.0
       html-validate:
-        specifier: ~9.3.0
-        version: 9.3.0(vitest@3.0.5(@types/debug@4.1.12)(@types/node@22.13.4)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.0))
+        specifier: ~9.4.0
+        version: 9.4.0(vitest@3.0.5(@types/debug@4.1.12)(@types/node@22.13.4)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.0))
       knitwork:
         specifier: ^1.1.0
         version: 1.2.0
@@ -2779,8 +2779,8 @@ packages:
     resolution: {integrity: sha512-ztqyC3kLto0e9WbNp0aeP+M3kTt+nbaIveGmUxAtZa+8iFgKLUOD4YKM5j+f3QD89bra7UeumolZHKuOXnTmeQ==}
     engines: {node: '>=8'}
 
-  html-validate@9.3.0:
-    resolution: {integrity: sha512-y+OCndJ5MTIje+753oACmVPjQF/W9NwSvP7Fvq173MuXGHATJoYkWsP04uCIB37lhIFUW0SyvlH3qZBfxW5zFA==}
+  html-validate@9.4.0:
+    resolution: {integrity: sha512-Io8vjeAf2JJJTHJDGvozVB6Vv/IZRkNRruSENg9lmLzE1gUcr77sIdtE2rzwLkBsCESDv5+nAAtk2TCer78jxA==}
     engines: {node: ^18.19.0 || >= 20.6.0}
     hasBin: true
     peerDependencies:
@@ -8704,7 +8704,7 @@ snapshots:
 
   html-tags@3.3.1: {}
 
-  html-validate@9.3.0(vitest@3.0.5(@types/debug@4.1.12)(@types/node@22.13.4)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.0)):
+  html-validate@9.4.0(vitest@3.0.5(@types/debug@4.1.12)(@types/node@22.13.4)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.0)):
     dependencies:
       '@html-validate/stylish': 4.2.0
       '@sidvind/better-ajv-errors': 3.0.1(ajv@8.17.1)
