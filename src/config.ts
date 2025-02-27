@@ -25,6 +25,8 @@ export const defaultHtmlValidateConfig: ConfigData = {
 export type LogLevel = 'verbose' | 'warning' | 'error'
 
 export interface ModuleOptions {
+  /** Explicitly set this to false to disable validation. */
+  enabled?: boolean
   usePrettier?: boolean
   logLevel?: LogLevel
   failOnError?: boolean
@@ -45,6 +47,7 @@ export interface ModuleOptions {
 
 export const DEFAULTS: Required<Omit<ModuleOptions, 'logLevel'>> & { logLevel?: LogLevel } = {
   usePrettier: false,
+  enabled: true,
   failOnError: false,
   options: defaultHtmlValidateConfig,
   hookable: false,

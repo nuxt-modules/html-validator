@@ -29,7 +29,7 @@ export default defineNuxtModule<ModuleOptions>({
       references.push({ path: types })
     })
 
-    if (nuxt.options._prepare) {
+    if (nuxt.options._prepare || moduleOptions.enabled === false) {
       return
     }
 
