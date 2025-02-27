@@ -23,7 +23,9 @@ export default defineNuxtModule<ModuleOptions>({
     logLevel: nuxt.options.dev ? 'verbose' : 'warning',
   }),
   async setup(moduleOptions, nuxt) {
-    const resolver = createResolver(import.meta.url)
+    const resolver = createResolver(import.meta.url
+      
+    )
     nuxt.hook('prepare:types', ({ references }) => {
       const types = resolver.resolve('./runtime/types.d.ts')
       references.push({ path: types })
