@@ -21,7 +21,7 @@ importers:
         version: 3.4.0
       html-validate:
         specifier: ~9.4.0
-        version: 9.4.0(vitest@3.0.7(@types/debug@4.1.12)(@types/node@22.13.4)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.0))
+        version: 9.4.1(vitest@3.0.7(@types/debug@4.1.12)(@types/node@22.13.4)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.0))
       knitwork:
         specifier: ^1.2.0
         version: 1.2.0
@@ -2551,8 +2551,8 @@ packages:
     resolution: {integrity: sha512-dKx12eRCVIzqCxFGplyFKJMPvLEWgmNtUrpTiJIR5u97zEhRG8ySrtboPHZXx7daLxQVrl643cTzbab2tkQjxg==}
     engines: {node: '>= 0.4'}
 
-  foreground-child@3.3.0:
-    resolution: {integrity: sha512-Ld2g8rrAyMYFXBhEqMz8ZAHBi4J4uS1i/CxGMDnjyFWddMXLVcDp051DZfu+t7+ab7Wv6SMqpWmyFIj5UbfFvg==}
+  foreground-child@3.3.1:
+    resolution: {integrity: sha512-gIXjKqtFuWEgzFRJA9WCQeSJLZDjgJUOMCMzxtvFq/37KojM1BFGufqsCy0r4qSQmYLsZYMeyRqzIWOMup03sw==}
     engines: {node: '>=14'}
 
   fraction.js@4.3.7:
@@ -2782,8 +2782,8 @@ packages:
     resolution: {integrity: sha512-ztqyC3kLto0e9WbNp0aeP+M3kTt+nbaIveGmUxAtZa+8iFgKLUOD4YKM5j+f3QD89bra7UeumolZHKuOXnTmeQ==}
     engines: {node: '>=8'}
 
-  html-validate@9.4.0:
-    resolution: {integrity: sha512-Io8vjeAf2JJJTHJDGvozVB6Vv/IZRkNRruSENg9lmLzE1gUcr77sIdtE2rzwLkBsCESDv5+nAAtk2TCer78jxA==}
+  html-validate@9.4.1:
+    resolution: {integrity: sha512-eyb/0RdmQFFajSvL1Ak+yxtRY6hBJ5fx3yt9XAQFH6S7+7PWsnEeWsDhKaOo5fdTtljgXNiyvcicB7OS599m3g==}
     engines: {node: ^18.19.0 || >= 20.6.0}
     hasBin: true
     peerDependencies:
@@ -8486,7 +8486,7 @@ snapshots:
     dependencies:
       is-callable: 1.2.7
 
-  foreground-child@3.3.0:
+  foreground-child@3.3.1:
     dependencies:
       cross-spawn: 7.0.6
       signal-exit: 4.1.0
@@ -8593,7 +8593,7 @@ snapshots:
 
   glob@10.4.5:
     dependencies:
-      foreground-child: 3.3.0
+      foreground-child: 3.3.1
       jackspeak: 3.4.3
       minimatch: 9.0.5
       minipass: 7.1.2
@@ -8783,7 +8783,7 @@ snapshots:
 
   html-tags@3.3.1: {}
 
-  html-validate@9.4.0(vitest@3.0.7(@types/debug@4.1.12)(@types/node@22.13.4)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.0)):
+  html-validate@9.4.1(vitest@3.0.7(@types/debug@4.1.12)(@types/node@22.13.4)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.0)):
     dependencies:
       '@html-validate/stylish': 4.2.0
       '@sidvind/better-ajv-errors': 3.0.1(ajv@8.17.1)
