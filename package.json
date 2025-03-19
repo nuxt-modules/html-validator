@@ -59,7 +59,7 @@
     "eslint": "9.22.0",
     "husky": "9.1.7",
     "lint-staged": "15.5.0",
-    "nuxt": "3.16.0",
+    "nuxt": "3.16.1",
     "simple-git-hooks": "2.11.1",
     "vitest": "3.0.9"
   },
@@ -73,7 +73,7 @@
   },
   "resolutions": {
     "@nuxt/content": "2.13.4",
-    "@nuxt/kit": "3.16.0",
+    "@nuxt/kit": "3.16.1",
     "@nuxtjs/html-validator": "link:./"
   },
   "publishConfig": {
