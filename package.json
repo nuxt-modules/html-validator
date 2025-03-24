@@ -60,7 +60,7 @@
     "husky": "9.1.7",
     "lint-staged": "15.5.0",
     "nuxt": "3.16.1",
-    "simple-git-hooks": "2.11.1",
+    "simple-git-hooks": "2.12.1",
     "vitest": "3.0.9"
   },
   "simple-git-hooks": {
@@ -79,5 +79,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "packageManager": "pnpm@10.6.4"
+  "packageManager": "pnpm@10.6.5"
 }
