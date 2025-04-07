@@ -33,7 +33,7 @@ importers:
         version: 3.5.3
       std-env:
         specifier: ^3.8.0
-        version: 3.8.1
+        version: 3.9.0
     devDependencies:
       '@nuxt/eslint-config':
         specifier: 1.3.0
@@ -4665,8 +4665,8 @@ packages:
     resolution: {integrity: sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==}
     engines: {node: '>= 0.8'}
 
-  std-env@3.8.1:
-    resolution: {integrity: sha512-vj5lIj3Mwf9D79hBkltk5qmkFI+biIKWS2IBxEyEU3AX1tUf7AoL8nSazCOiiqQsGKIq01SClsKEzweu34uwvA==}
+  std-env@3.9.0:
+    resolution: {integrity: sha512-UGvjygr6F6tpH7o2qyqR6QYpwraIjKSdtzyBdyytFOHmPZY917kwdwLG0RbOjWOnKmnm3PeHjaoLLMie7kPLQw==}
 
   streamx@2.22.0:
     resolution: {integrity: sha512-sLh1evHOzBy/iWRiR6d1zRcLao4gGZr3C1kzNz4fopCOKJb6xD9ub8Mpi9Mr1R6id5o43S+d93fI48UC5uM9aw==}
@@ -6165,7 +6165,7 @@ snapshots:
       pkg-types: 2.1.0
       scule: 1.3.0
       semver: 7.7.1
-      std-env: 3.8.1
+      std-env: 3.9.0
       tinyexec: 1.0.1
       ufo: 1.5.4
       youch: 4.1.0-beta.6
@@ -6397,7 +6397,7 @@ snapshots:
       pkg-types: 2.1.0
       scule: 1.3.0
       semver: 7.7.1
-      std-env: 3.8.1
+      std-env: 3.9.0
       ufo: 1.5.4
       unctx: 2.4.1
       unimport: 4.1.3
@@ -6431,14 +6431,14 @@ snapshots:
       consola: 3.4.2
       defu: 6.1.4
       pathe: 2.0.3
-      std-env: 3.8.1
+      std-env: 3.9.0
 
   '@nuxt/schema@3.16.2':
     dependencies:
       consola: 3.4.2
       defu: 6.1.4
       pathe: 2.0.3
-      std-env: 3.8.1
+      std-env: 3.9.0
 
   '@nuxt/telemetry@2.6.6(magicast@0.3.5)':
     dependencies:
@@ -6453,7 +6453,7 @@ snapshots:
       package-manager-detector: 1.1.0
       pathe: 2.0.3
       rc9: 2.1.2
-      std-env: 3.8.1
+      std-env: 3.9.0
     transitivePeerDependencies:
       - magicast
 
@@ -6478,7 +6478,7 @@ snapshots:
       perfect-debounce: 1.0.0
       radix3: 1.1.2
       scule: 1.3.0
-      std-env: 3.8.1
+      std-env: 3.9.0
       tinyexec: 0.3.2
       ufo: 1.5.4
       unplugin: 2.2.2
@@ -6529,7 +6529,7 @@ snapshots:
       pkg-types: 2.1.0
       postcss: 8.5.3
       rollup-plugin-visualizer: 5.14.0(rollup@3.29.5)
-      std-env: 3.8.1
+      std-env: 3.9.0
       ufo: 1.5.4
       unenv: 2.0.0-rc.15
       unplugin: 2.2.2
@@ -6590,7 +6590,7 @@ snapshots:
       pkg-types: 2.1.0
       postcss: 8.5.3
       rollup-plugin-visualizer: 5.14.0(rollup@4.38.0)
-      std-env: 3.8.1
+      std-env: 3.9.0
       ufo: 1.5.4
       unenv: 2.0.0-rc.15
       unplugin: 2.2.2
@@ -7309,7 +7309,7 @@ snapshots:
       istanbul-reports: 3.1.7
       magic-string: 0.30.17
       magicast: 0.3.5
-      std-env: 3.8.1
+      std-env: 3.9.0
       test-exclude: 7.0.1
       tinyrainbow: 2.0.0
       vitest: 3.1.1(@types/debug@4.1.12)(jiti@2.4.2)(terser@5.39.0)(yaml@2.7.1)
@@ -9280,7 +9280,7 @@ snapshots:
       mlly: 1.7.4
       node-forge: 1.3.1
       pathe: 1.1.2
-      std-env: 3.8.1
+      std-env: 3.9.0
       ufo: 1.5.4
       untun: 0.1.3
       uqr: 0.1.2
@@ -9882,7 +9882,7 @@ snapshots:
       serve-placeholder: 2.0.2
       serve-static: 1.16.2
       source-map: 0.7.4
-      std-env: 3.8.1
+      std-env: 3.9.0
       ufo: 1.5.4
       ultrahtml: 1.5.3
       uncrypto: 0.1.3
@@ -10059,7 +10059,7 @@ snapshots:
       radix3: 1.1.2
       scule: 1.3.0
       semver: 7.7.1
-      std-env: 3.8.1
+      std-env: 3.9.0
       strip-literal: 3.0.0
       tinyglobby: 0.2.12
       ufo: 1.5.4
@@ -10179,7 +10179,7 @@ snapshots:
       radix3: 1.1.2
       scule: 1.3.0
       semver: 7.7.1
-      std-env: 3.8.1
+      std-env: 3.9.0
       strip-literal: 3.0.0
       tinyglobby: 0.2.12
       ufo: 1.5.4
@@ -10299,7 +10299,7 @@ snapshots:
       radix3: 1.1.2
       scule: 1.3.0
       semver: 7.7.1
-      std-env: 3.8.1
+      std-env: 3.9.0
       strip-literal: 3.0.0
       tinyglobby: 0.2.12
       ufo: 1.5.4
@@ -11385,7 +11385,7 @@ snapshots:
 
   statuses@2.0.1: {}
 
-  std-env@3.8.1: {}
+  std-env@3.9.0: {}
 
   streamx@2.22.0:
     dependencies:
@@ -12086,7 +12086,7 @@ snapshots:
       expect-type: 1.2.0
       magic-string: 0.30.17
       pathe: 2.0.3
-      std-env: 3.8.1
+      std-env: 3.9.0
       tinybench: 2.9.0
       tinyexec: 0.3.2
       tinypool: 1.0.2
