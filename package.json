@@ -58,7 +58,7 @@
     "bumpp": "10.2.3",
     "eslint": "9.34.0",
     "husky": "9.1.7",
-    "lint-staged": "16.1.5",
+    "lint-staged": "16.1.6",
     "nuxt": "4.0.3",
     "simple-git-hooks": "2.13.1",
     "vitest": "3.2.4"
