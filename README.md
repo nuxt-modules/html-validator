@@ -7,6 +7,7 @@
 [![Github Actions CI][github-actions-ci-src]][github-actions-ci-href]
 [![Codecov][codecov-src]][codecov-href]
 [![License][license-src]][license-href]
+[![nuxt.care health](https://img.shields.io/endpoint?url=https://nuxt.care/api/badge/html-validator)](https://nuxt.care/?search=html-validator)
 
 > HTML validation using [html-validate](https://html-validate.org/) for [NuxtJS](https://nuxtjs.org)
 
