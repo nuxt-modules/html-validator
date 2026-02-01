@@ -3,15 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "nuxi dev",
-    "build": "nuxi build",
+    "dev": "nuxt dev --extends docus",
+    "build": "nuxt build --extends docus",
     "generate": "nuxi generate",
     "preview": "nuxi preview",
     "lint": "eslint ."
   },
   "dependencies": {
-    "@nuxt-themes/docus": "1.15.1",
-    "nuxt": "4.3.0",
-    "pinceau": "^0.20.1"
+    "@pinceau/theme": "1.0.0-beta.29",
+    "docus": "^5.4.4",
+    "nuxt": "4.3.0"
   }
 }
