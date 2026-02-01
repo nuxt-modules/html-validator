@@ -2,92 +2,99 @@
 title: Introduction
 description: 'Automatically validate Nuxt server-rendered HTML (SSR and SSG) to detect common issues with HTML that can lead to hydration errors, as well as improve accessibility and best practice.'
 category: Getting started
-
 ---
+::u-container
 
-<img src="/preview.png" class="light-img" />
-<img src="/preview-dark.png" class="dark-img" />
+![Light preview](/preview.png){class="block dark:hidden w-full rounded-xl shadow"}
+![Dark preview](/preview-dark.png){class="hidden dark:block w-full rounded-xl shadow"}
+
+Validate your SSR/SSG HTML automatically to catch hydration and accessibility issues before they ship.
 
 ## Key features
 
-::list
- - Zero-configuration required
- - Helps reduce hydration errors
- - Detects common accessibility mistakes
-::
+- Zero-configuration required
+- Helps reduce hydration errors
+- Detects common accessibility mistakes
 
 This module configures [`html-validate`](https://html-validate.org/) to automatically validate Nuxt server-rendered HTML (SSR and SSG) to detect common issues with HTML that can lead to hydration errors, as well as improve accessibility and best practice.
 
 ## Quick start
 
 ### Install
-```bash
+```bash [Terminal]
 npx nuxi@latest module add html-validator
 ```
 
-### nuxt.config.js
+### Configure Nuxt
 
-::code-group
- ```js [Nuxt 3]
-  defineNuxtConfig({
-    modules: ['@nuxtjs/html-validator']
-  })
-  ```
- ```js {}[Nuxt 2.9+]
-  export default {
-    buildModules: ['@nuxtjs/html-validator']
-  }
-  ```
- ```js [Nuxt < 2.9">
-  export default {
-    // Install @nuxtjs/html-validator as dependency instead of devDependency
-    modules: ['@nuxtjs/html-validator']
-  }
-  ```
+::tabs
+:::tabs-item{label="Nuxt 3"}
+```js
+defineNuxtConfig({
+  modules: ['@nuxtjs/html-validator']
+})
+```
+:::
+:::tabs-item{label="Nuxt 2.9+"}
+```js
+export default {
+  buildModules: ['@nuxtjs/html-validator']
+}
+```
+:::
+:::tabs-item{label="Nuxt < 2.9"}
+```js
+export default {
+  // Install @nuxtjs/html-validator as a dependency instead of devDependency
+  modules: ['@nuxtjs/html-validator']
+}
+```
+:::
 ::
 
-::alert{type="info"}
-`html-validator` won't be added to your production bundle - it's just used in development and at build/generate time.
+
+::note
+`html-validator` won't be added to your production bundle — it's only used in development and at build/generate time.
 ::
 
-### Configuration (optional)
+## Configuration
 
-`@nuxtjs/html-validator` takes four options.
+`@nuxtjs/html-validator` exposes four options:
 
 - `usePrettier` enables prettier printing of your source code to show errors in-context.
 
-  ::alert
+  ::tip
   Consider not enabling this if you are using TailwindCSS, as prettier will struggle to cope with parsing the size of your HTML in development mode.
   ::
 
 - `logLevel` sets the verbosity to one of `verbose`, `warning` or `error`. It defaults to `verbose` in dev, and `warning` when generating.
 
-  ::alert
-  You can use this configuration option to turn off console logging for the `No HTML validation errors found for ...` message.
+  ::note
+  Use this option to turn off console logging for the `No HTML validation errors found for ...` message.
   ::
 
 - `failOnError` will throw an error after running `nuxt generate` if there are any validation errors with the generated pages.
 
-  ::alert
+  ::tip
   Useful in continuous integration.
   ::
 
-- `options` allows you to pass in `html-validate` options that will be merged with the default configuration
+- `options` allows you to pass in `html-validate` options that will be merged with the default configuration.
 
-  ::alert{type="info"}
+  ::note
   You can find more about configuring `html-validate` [here](https://html-validate.org/rules/index.html).
   ::
 
 **Defaults**
 
-```js{}[nuxt.config.js]
+```js [nuxt.config.ts]
 {
   htmlValidator: {
     usePrettier: false,
     logLevel: 'verbose',
     failOnError: false,
     /** A list of routes to ignore (that is, not check validity for). */
-    ignore: [/\.(xml|rss|json)$/],
+    ignore: [/\\.(xml|rss|json)$/],
     options: {
       extends: [
         'html-validate:document',
