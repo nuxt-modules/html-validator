@@ -1,21 +1,10 @@
 <template>
   <img
-    class="dark-img"
-    src="/logo-dark.svg"
-  >
-  <img
-    class="light-img"
+    class="block dark:hidden"
     src="/logo-light.svg"
   >
+  <img
+    class="hidden dark:block"
+    src="/logo-dark.svg"
+  >
 </template>
-
-<style lang="ts">
-css({
-  '.light .dark-img': {
-    display: 'none',
-  },
-  '.dark .light-img': {
-    display: 'none',
-  },
-})
-</style>

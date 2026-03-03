@@ -1,4 +1,4 @@
 export default defineNuxtConfig({
-  extends: '@nuxt-themes/docus',
+  extends: ['docus'],
   compatibilityDate: '2024-08-19',
 })

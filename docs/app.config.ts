@@ -1,24 +1,35 @@
 export default defineAppConfig({
-  docus: {
+  header: {
     title: '@nuxtjs/html-validator',
+    logo: {
+      light: '/logo-light.svg',
+      dark: '/logo-dark.svg',
+      alt: 'HTML Validator Logo',
+    },
+  },
+  socials: {
+    github: 'https://github.com/nuxt-modules/html-validator',
+  },
+  seo: {
     url: 'https://html-validator.nuxtjs.org',
-    description: 'The best place to start your documentation.',
-    socials: {
-      github: 'nuxt-modules/html-validator',
-    },
+    description:
+      'Automatically validate Nuxt server-rendered HTML (SSR and SSG) to detect common issues with HTML that can lead to hydration errors, as well as improve accessibility and best practice.',
     image: 'https://html-validator.nuxtjs.org/preview.png',
-    aside: {
-      level: 0,
-      exclude: [],
+  },
+  ui: {
+    colors: {
+      primary: 'green',
     },
-    header: {
-      logo: true,
-    },
-    footer: {
-      iconLinks: [
+  },
+  toc: {
+    bottom: {
+      title: 'Community',
+      links: [
         {
-          href: 'https://nuxt.com',
-          icon: 'simple-icons:nuxtdotjs',
+          icon: 'i-lucide-book-open',
+          label: 'Nuxt docs',
+          to: 'https://nuxt.com',
+          target: '_blank',
         },
       ],
     },
