@@ -12,6 +12,6 @@
   "dependencies": {
     "@pinceau/theme": "1.0.0-beta.29",
     "docus": "^5.4.4",
-    "nuxt": "4.3.0"
+    "nuxt": "4.3.1"
   }
 }
