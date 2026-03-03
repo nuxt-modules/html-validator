@@ -1,8 +1,9 @@
 ---
 title: Introduction
-description: 'Automatically validate Nuxt server-rendered HTML (SSR and SSG) to detect common issues with HTML that can lead to hydration errors, as well as improve accessibility and best practice.'
+description: "Automatically validate Nuxt server-rendered HTML (SSR and SSG) to detect common issues with HTML that can lead to hydration errors, as well as improve accessibility and best practice."
 category: Getting started
 ---
+
 ::u-container
 
 ![Light preview](/preview.png){class="block dark:hidden w-full rounded-xl shadow"}
@@ -21,6 +22,7 @@ This module configures [`html-validate`](https://html-validate.org/) to automati
 ## Quick start
 
 ### Install
+
 ```bash [Terminal]
 npx nuxi@latest module add html-validator
 ```
@@ -29,29 +31,34 @@ npx nuxi@latest module add html-validator
 
 ::tabs
 :::tabs-item{label="Nuxt 3"}
+
 ```js
 defineNuxtConfig({
-  modules: ['@nuxtjs/html-validator']
-})
+  modules: ["@nuxtjs/html-validator"],
+});
 ```
+
 :::
 :::tabs-item{label="Nuxt 2.9+"}
+
 ```js
 export default {
-  buildModules: ['@nuxtjs/html-validator']
-}
+  buildModules: ["@nuxtjs/html-validator"],
+};
 ```
+
 :::
 :::tabs-item{label="Nuxt < 2.9"}
+
 ```js
 export default {
   // Install @nuxtjs/html-validator as a dependency instead of devDependency
-  modules: ['@nuxtjs/html-validator']
-}
+  modules: ["@nuxtjs/html-validator"],
+};
 ```
+
 :::
 ::
-
 
 ::note
 `html-validator` won't be added to your production bundle — it's only used in development and at build/generate time.
@@ -122,3 +129,5 @@ export default {
 **You're good to go!**
 
 Every time you hard-refresh (server-render) a page in Nuxt, you will see any HTML validation issues printed in your server console.
+
+::
