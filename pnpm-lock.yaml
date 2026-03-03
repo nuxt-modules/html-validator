@@ -20,8 +20,8 @@ importers:
         specifier: ^3.4.0
         version: 3.4.2
       html-validate:
-        specifier: ~10.9.0
-        version: 10.9.0(vitest@4.0.18(jiti@2.6.1)(terser@5.46.0)(yaml@2.8.2))
+        specifier: ~10.10.0
+        version: 10.10.0(vitest@4.0.18(jiti@2.6.1)(terser@5.46.0)(yaml@2.8.2))
       knitwork:
         specifier: ^1.2.0
         version: 1.3.0
@@ -928,9 +928,9 @@ packages:
     resolution: {integrity: sha512-bIZEUzOI1jkhviX2cp5vNyXQc6olzb2ohewQubuYlMXZ2Q/XjBO0x0XhGPvc9fjSIiUN0vw+0hq53BJ4eQSJKQ==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
-  '@html-validate/stylish@4.3.0':
-    resolution: {integrity: sha512-eUfvKpRJg5TvzSfTf2EovrQoTKjkRnPUOUnXVJ2cQ4GbC/bQw98oxN+DdSf+HxOBK00YOhsP52xWdJPV1o4n5w==}
-    engines: {node: '>= 18'}
+  '@html-validate/stylish@5.0.0':
+    resolution: {integrity: sha512-xjhRV9k1mWfgsOcpYlwsjUOFy3w3EnCDrqUrEw+DWdvOStMK59ts2H7GLKWZtmLI5m6Npp3qMSNReafQy9K2sA==}
+    engines: {node: ^20.11 || >= 22.16}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -3651,9 +3651,9 @@ packages:
   html-escaper@2.0.2:
     resolution: {integrity: sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==}
 
-  html-validate@10.9.0:
-    resolution: {integrity: sha512-UILbVSkPEqhnG8ud+cgTtzepGEWyiSBHYp6A51viIm2tAFi6dZrmAXo2Z4W7EZ5qqqMa8Rkk6cTJcDG9Zo8nUg==}
-    engines: {node: ^20.19.0 || >= 22.12.0}
+  html-validate@10.10.0:
+    resolution: {integrity: sha512-yeDwHcREQNJhafpWV7uBfu4nWTp/Ft7MYJ/54m2qo6fqhfw6Cfom1eEsPGrBT0/fyGfJOCrNvVpwVBT9SWeR2Q==}
+    engines: {node: ^20.19.0 || >= 22.16.0}
     hasBin: true
     peerDependencies:
       jest: ^28.1.3 || ^29.0.3 || ^30.0.0
@@ -6619,7 +6619,7 @@ snapshots:
       '@eslint/core': 1.1.0
       levn: 0.4.1
 
-  '@html-validate/stylish@4.3.0':
+  '@html-validate/stylish@5.0.0':
     dependencies:
       kleur: 4.1.5
 
@@ -9928,9 +9928,9 @@ snapshots:
 
   html-escaper@2.0.2: {}
 
-  html-validate@10.9.0(vitest@4.0.18(jiti@2.6.1)(terser@5.46.0)(yaml@2.8.2)):
+  html-validate@10.10.0(vitest@4.0.18(jiti@2.6.1)(terser@5.46.0)(yaml@2.8.2)):
     dependencies:
-      '@html-validate/stylish': 4.3.0
+      '@html-validate/stylish': 5.0.0
       '@sidvind/better-ajv-errors': 4.0.1(ajv@8.17.1)
       ajv: 8.17.1
       glob: 13.0.0
