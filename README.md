@@ -41,10 +41,10 @@ npx nuxi@latest module add html-validator
 [MIT License](./LICENSE)
 
 <!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/v/@nuxtjs/html-validator/latest.svg
-[npm-version-href]: https://npmjs.com/package/@nuxtjs/html-validator
+[npm-version-src]: https://npmx.dev/api/registry/badge/version/@nuxtjs/html-validator
+[npm-version-href]: https://npmx.dev/package/@nuxtjs/html-validator
 
-[npm-downloads-src]: https://img.shields.io/npm/dm/@nuxtjs/html-validator.svg
+[npm-downloads-src]: https://npmx.dev/api/registry/badge/downloads/@nuxtjs/html-validator
 [npm-downloads-href]: https://npm.chart.dev/@nuxtjs/html-validator
 
 [github-actions-ci-src]: https://github.com/nuxt-modules/html-validator/workflows/ci/badge.svg
@@ -53,5 +53,5 @@ npx nuxi@latest module add html-validator
 [codecov-src]: https://img.shields.io/codecov/c/github/nuxt-modules/html-validator.svg
 [codecov-href]: https://codecov.io/gh/nuxt-modules/html-validator
 
-[license-src]: https://img.shields.io/npm/l/@nuxtjs/html-validator.svg
-[license-href]: https://npmjs.com/package/@nuxtjs/html-validator
+[license-src]: https://npmx.dev/api/registry/badge/license/@nuxtjs/html-validator
+[license-href]: https://npmx.dev/package/@nuxtjs/html-validator
