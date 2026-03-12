@@ -11,6 +11,6 @@
   },
   "dependencies": {
     "docus": "^5.4.4",
-    "nuxt": "4.3.1"
+    "nuxt": "4.4.2"
   }
 }
