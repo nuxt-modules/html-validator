@@ -32,8 +32,8 @@ importers:
         specifier: ^3.5.2
         version: 3.8.1
       std-env:
-        specifier: ^3.8.0
-        version: 3.10.0
+        specifier: ^4.0.0
+        version: 4.0.0
     devDependencies:
       '@nuxt/eslint-config':
         specifier: 1.15.2
