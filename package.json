@@ -54,14 +54,14 @@
     "@nuxt/eslint-config": "1.15.2",
     "@nuxt/module-builder": "1.0.2",
     "@nuxt/test-utils": "4.0.0",
-    "@vitest/coverage-v8": "4.1.0",
+    "@vitest/coverage-v8": "4.1.1",
     "bumpp": "11.0.1",
     "eslint": "10.1.0",
     "husky": "9.1.7",
     "lint-staged": "16.4.0",
     "nuxt": "4.4.2",
     "simple-git-hooks": "2.13.1",
-    "vitest": "4.1.0"
+    "vitest": "4.1.1"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
