@@ -71,11 +71,6 @@
       "npx eslint --fix"
     ]
   },
-  "resolutions": {
-    "@nuxt/content": "^3.11.0",
-    "@nuxt/kit": "^4.0.0",
-    "@nuxtjs/html-validator": "link:./"
-  },
   "publishConfig": {
     "access": "public"
   },
