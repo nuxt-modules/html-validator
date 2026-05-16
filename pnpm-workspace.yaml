@@ -2,16 +2,20 @@ packages:
   - docs
   - playground
 
-ignoredBuiltDependencies:
-  - '@parcel/watcher'
-  - esbuild
-  - sharp
-  - vue-demi
-
-onlyBuiltDependencies:
-  - better-sqlite3
-
 overrides:
   "@nuxt/content": "^3.11.0"
   "@nuxt/kit": "^4.0.0"
   "@nuxtjs/html-validator": "link:./"
+
+shamefullyHoist: true
+
+strictPeerDependencies: false
+
+allowBuilds:
+  '@parcel/watcher': false
+  better-sqlite3: true
+  esbuild: false
+  sharp: false
+  simple-git-hooks: true
+  unrs-resolver: false
+  vue-demi: false
