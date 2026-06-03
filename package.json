@@ -59,7 +59,7 @@
     "eslint": "10.4.1",
     "husky": "9.1.7",
     "lint-staged": "17.0.7",
-    "nuxt": "4.4.6",
+    "nuxt": "4.4.7",
     "simple-git-hooks": "2.13.1",
     "vitest": "4.1.7"
   },
