@@ -32,7 +32,8 @@
     "validator.d.ts"
   ],
   "scripts": {
-    "prepack": "nuxt-module-build build",
+    "prepack": "pnpm build",
+    "build": "nuxt-module-build prepare && nuxt-module-build build",
     "dev": "nuxt dev playground",
     "dev:build": "nuxt build playground",
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxt prepare playground",
