@@ -52,7 +52,7 @@
     "std-env": "^4.0.0"
   },
   "devDependencies": {
-    "@nuxt/eslint-config": "1.15.2",
+    "@nuxt/eslint-config": "1.16.0",
     "@nuxt/module-builder": "1.0.2",
     "@nuxt/test-utils": "4.0.3",
     "@vitest/coverage-v8": "4.1.8",
@@ -75,5 +75,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "packageManager": "pnpm@11.5.1"
+  "packageManager": "pnpm@11.5.3"
 }
