@@ -57,8 +57,8 @@ importers:
         specifier: 9.1.7
         version: 9.1.7
       lint-staged:
-        specifier: 17.1.0
-        version: 17.1.0
+        specifier: 17.2.0
+        version: 17.2.0
       nuxt:
         specifier: 4.5.0
         version: 4.5.0(@babel/plugin-syntax-jsx@7.28.6(@babel/core@7.29.0(supports-color@10.2.2)))(@babel/plugin-syntax-typescript@7.29.7(@babel/core@7.29.0(supports-color@10.2.2)))(@modelcontextprotocol/sdk@1.29.0(supports-color@10.2.2)(zod@4.4.3))(@parcel/watcher@2.5.6)(@types/node@26.1.0)(@vue/compiler-sfc@3.5.40)(better-sqlite3@12.6.2)(cac@6.7.14)(crossws@0.4.7(srvx@0.11.22))(db0@0.3.4(better-sqlite3@12.6.2))(esbuild@0.28.1)(eslint@10.8.0(jiti@2.7.0)(supports-color@10.2.2))(ioredis@5.10.1(supports-color@10.2.2))(lightningcss@1.32.0)(magicast@0.5.3)(optionator@0.9.4)(oxc-parser@0.139.0)(rollup-plugin-visualizer@7.0.1(rolldown@1.2.0)(rollup@4.62.2))(rollup@4.62.2)(srvx@0.11.22)(supports-color@10.2.2)(terser@5.46.0)(typescript@5.9.3)(vite@7.3.3(@types/node@26.1.0)(jiti@2.7.0)(lightningcss@1.32.0)(terser@5.46.0)(yaml@2.9.0))(yaml@2.9.0)
@@ -5687,8 +5687,8 @@ packages:
   linkifyjs@4.3.3:
     resolution: {integrity: sha512-P8aEP5U/D1/IlTY2OeYsErdwh9bGuLE30NcXtKEjgdHcahveQoQwM2yZNsioQHsWFz0P7KKudisbrzCgR0sDHg==}
 
-  lint-staged@17.1.0:
-    resolution: {integrity: sha512-d7UQRu/9ZPgfu4+hu/k0wny5GEaIxo+2jb2LJqQDkE7cHRTm1HGqNUDq5UOwsGPpjpaNAFmgAsYo3TR+i9cSJw==}
+  lint-staged@17.2.0:
+    resolution: {integrity: sha512-FchGnFe4i4B1C/a35SPU9bNGPEHSC1+1iV0plLjzBmKVe9klZrlRfSgK6Cw4VeHyqOXbJUXP0vON61uRftNQ0A==}
     engines: {node: '>=22.22.1'}
     hasBin: true
 
@@ -14643,7 +14643,7 @@ snapshots:
 
   linkifyjs@4.3.3: {}
 
-  lint-staged@17.1.0:
+  lint-staged@17.2.0:
     dependencies:
       picomatch: 4.0.5
       string-argv: 0.3.2
