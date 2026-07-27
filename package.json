@@ -59,7 +59,7 @@
     "bumpp": "11.1.0",
     "eslint": "10.8.0",
     "husky": "9.1.7",
-    "lint-staged": "17.1.0",
+    "lint-staged": "17.2.0",
     "nuxt": "4.5.0",
     "simple-git-hooks": "2.13.1",
     "vitest": "4.1.10"
@@ -75,5 +75,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "packageManager": "pnpm@11.15.1"
+  "packageManager": "pnpm@11.17.0"
 }
