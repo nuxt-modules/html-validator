@@ -20,7 +20,8 @@ await setup({
     hooks: {
       'modules:before'() {
         const nuxt = useNuxt()
-        nuxt.options.nitro.prerender = { routes: ['/', '/redirect'] }
+        nuxt.options.htmlValidator = { ignore: ['/ignored'] }
+        nuxt.options.nitro.prerender = { routes: ['/', '/ignored', '/redirect'] }
       },
     },
   },
@@ -55,6 +56,12 @@ describe('Nuxt prerender', () => {
     expect(html).toMatchInlineSnapshot(`"<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=/"></head></html>"`)
     expect(console.error).not.toHaveBeenCalledWith(
       expect.stringContaining('<html> element must have <body> as content'),
+    )
+  })
+
+  it('ignores configured pages', () => {
+    expect(console.error).not.toHaveBeenCalledWith(
+      expect.stringContaining('/ignored'),
     )
   })
 })

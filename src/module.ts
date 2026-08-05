@@ -65,7 +65,7 @@ export default defineNuxtModule<ModuleOptions>({
 
     if (!nuxt.options.dev) {
       const validatorPath = await resolvePath(fileURLToPath(new URL('./runtime/validator', import.meta.url)))
-      const { useChecker, getValidator } = await import(isWindows ? pathToFileURL(validatorPath).href : validatorPath)
+      const { useChecker, getValidator, isIgnored } = await import(isWindows ? pathToFileURL(validatorPath).href : validatorPath)
       const validator = getValidator(options)
       const { checkHTML, invalidPages } = useChecker(validator, usePrettier, logLevel)
 
@@ -86,6 +86,9 @@ export default defineNuxtModule<ModuleOptions>({
             return
           }
           if (route.contents.match(NuxtRedirectHtmlRegex)) {
+            return
+          }
+          if (isIgnored(route.route, moduleOptions.ignore)) {
             return
           }
           checkHTML(route.route, route.contents)
