@@ -2,6 +2,6 @@
   "name": "html-validator-playground",
   "dependencies": {
     "@nuxtjs/html-validator": "latest",
-    "nuxt": "latest"
+    "nuxt": "^4.5.1"
   }
 }
