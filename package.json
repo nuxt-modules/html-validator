@@ -45,7 +45,7 @@
   "dependencies": {
     "@nuxt/kit": "^4.0.0",
     "consola": "^3.4.0",
-    "html-validate": "~11.10.0",
+    "html-validate": "~11.11.0",
     "knitwork": "^1.2.0",
     "pathe": "^2.0.3",
     "prettier": "^3.5.2",
@@ -75,5 +75,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "packageManager": "pnpm@11.24.0"
+  "packageManager": "pnpm@11.25.0"
 }
