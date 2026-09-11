@@ -45,7 +45,7 @@
   "dependencies": {
     "@nuxt/kit": "^4.0.0",
     "consola": "^3.4.0",
-    "html-validate": "~11.11.0",
+    "html-validate": "~11.15.0",
     "knitwork": "^1.2.0",
     "pathe": "^2.0.3",
     "prettier": "^3.5.2",
@@ -56,10 +56,10 @@
     "@nuxt/module-builder": "1.0.3",
     "@nuxt/test-utils": "4.3.2",
     "@vitest/coverage-v8": "4.1.11",
-    "bumpp": "12.2.2",
+    "bumpp": "12.3.0",
     "eslint": "10.10.0",
     "husky": "9.1.7",
-    "lint-staged": "17.4.1",
+    "lint-staged": "17.5.1",
     "nuxt": "4.5.2",
     "simple-git-hooks": "2.14.0",
     "vitest": "4.1.11"
