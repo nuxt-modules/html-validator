@@ -9,3 +9,11 @@ declare module 'nitropack' {
     }) => void
   }
 }
+
+declare module 'nitro/types' {
+  interface NitroRuntimeHooks {
+    'html-validator:check': (result: { valid: boolean, results: Result[] }, response: Response, context: {
+      event: Parameters<NitroRuntimeHooks['response']>[1]
+    }) => void
+  }
+}

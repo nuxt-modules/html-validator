@@ -1,10 +1,11 @@
 packages:
   - docs
   - playground
+  - playground-v5
+  - test/fixtures/*
 
 overrides:
   "@nuxt/content": "^3.11.0"
-  "@nuxt/kit": "^4.0.0"
   "@nuxtjs/html-validator": "workspace:*"
 
 shamefullyHoist: true
@@ -19,3 +20,7 @@ allowBuilds:
   simple-git-hooks: true
   unrs-resolver: false
   vue-demi: false
+
+minimumReleaseAgeExclude:
+  - '@nuxt/*'
+  - nuxt-nightly
