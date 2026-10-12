@@ -4,7 +4,7 @@ import { normalize } from 'pathe'
 import { isWindows } from 'std-env'
 import { genArrayFromRaw, genObjectFromRawEntries } from 'knitwork'
 
-import { createResolver, defineNuxtModule, logger, resolvePath } from '@nuxt/kit'
+import { addNitroPlugin, createResolver, defineNuxtModule, logger, resolvePath } from '@nuxt/kit'
 import { DEFAULTS, NuxtRedirectHtmlRegex } from './config'
 import type { ModuleOptions } from './config'
 
@@ -39,20 +39,23 @@ export default defineNuxtModule<ModuleOptions>({
 
     const { usePrettier, failOnError, options, logLevel } = moduleOptions as Required<ModuleOptions>
 
-    if (nuxt.options.htmlValidator?.options?.extends) {
+    if (nuxt.options.htmlValidator && nuxt.options.htmlValidator.options?.extends) {
       options.extends = nuxt.options.htmlValidator.options.extends
     }
 
     if (nuxt.options.dev) {
+      // Add a nitro plugin that will run the validator for us on each request
+      addNitroPlugin({
+        nitro3: normalize(fileURLToPath(new URL('./runtime/nitro', import.meta.url))),
+        nitro2: normalize(fileURLToPath(new URL('./runtime/nitro.legacy', import.meta.url))),
+      })
+
       nuxt.hook('nitro:config', (config) => {
         // Transpile the nitro plugin we're injecting
         config.externals = config.externals || {}
         config.externals.inline = config.externals.inline || []
         config.externals.inline.push('@nuxtjs/html-validator')
 
-        // Add a nitro plugin that will run the validator for us on each request
-        config.plugins = config.plugins || []
-        config.plugins.push(normalize(fileURLToPath(new URL('./runtime/nitro', import.meta.url))))
         config.virtual = config.virtual || {}
         const serialisedOptions = genObjectFromRawEntries(Object.entries(moduleOptions).map(([key, value]) => {
           if (key !== 'ignore') return [key, JSON.stringify(value, null, 2)]

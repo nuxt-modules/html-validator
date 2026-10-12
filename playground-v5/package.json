@@ -1,0 +1,8 @@
+{
+  "name": "html-validator-playground-v5",
+  "type": "module",
+  "dependencies": {
+    "@nuxtjs/html-validator": "latest",
+    "nuxt": "npm:nuxt-nightly@5x"
+  }
+}

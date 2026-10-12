@@ -66,7 +66,7 @@ export default {
 
 ## Configuration
 
-`@nuxtjs/html-validator` exposes four options:
+`@nuxtjs/html-validator` exposes five options:
 
 - `usePrettier` enables prettier printing of your source code to show errors in-context.
 
@@ -92,6 +92,40 @@ export default {
   You can find more about configuring `html-validate` [here](https://html-validate.org/rules/index.html).
   ::
 
+- `hookable` calls the `html-validator:check` server hook with the result of each check in development. The response is held until the check and the hook have finished.
+
+  ::tabs
+  :::tabs-item{label="Nuxt 5"}
+
+  The hook receives the web `Response`.
+
+  ```ts [server/plugins/html-validator.ts]
+  import type { NitroAppPlugin } from 'nitro/types'
+
+  export default <NitroAppPlugin> function (nitro) {
+    nitro.hooks.hook('html-validator:check', (result, response) => {
+      response.headers.set('x-html-valid', String(result.valid))
+    })
+  }
+  ```
+
+  :::
+  :::tabs-item{label="Nuxt 3 and 4"}
+
+  The hook receives the render response (`body`, `headers`, `statusCode`).
+
+  ```ts [server/plugins/html-validator.ts]
+  export default defineNitroPlugin((nitro) => {
+    nitro.hooks.hook('html-validator:check', (result, response) => {
+      response.headers ||= {}
+      response.headers['x-html-valid'] = String(result.valid)
+    })
+  })
+  ```
+
+  :::
+  ::
+
 **Defaults**
 
 ```js [nuxt.config.ts]
@@ -100,6 +134,7 @@ export default {
     usePrettier: false,
     logLevel: 'verbose',
     failOnError: false,
+    hookable: false,
     /** A list of routes to ignore (that is, not check validity for). */
     ignore: [/\\.(xml|rss|json)$/],
     options: {

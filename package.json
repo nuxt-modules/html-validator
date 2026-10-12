@@ -36,14 +36,15 @@
     "build": "nuxt-module-build prepare && nuxt-module-build build",
     "dev": "nuxt dev playground",
     "dev:build": "nuxt build playground",
-    "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxt prepare playground",
+    "dev:v5": "pnpm --dir playground-v5 exec nuxt dev",
+    "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxt prepare playground && pnpm --dir playground-v5 exec nuxt prepare",
     "prepare": "simple-git-hooks",
     "lint": "eslint .",
     "release": "pnpm test && bumpp && npm publish",
     "test": "pnpm vitest run"
   },
   "dependencies": {
-    "@nuxt/kit": "^4.0.0",
+    "@nuxt/kit": "^4.6.1",
     "consola": "^3.4.0",
     "html-validate": "~11.11.0",
     "knitwork": "^1.2.0",
