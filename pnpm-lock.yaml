@@ -179,7 +179,7 @@ importers:
         version: 3.4.2
       html-validate:
         specifier: ~11.11.0
-        version: 11.11.0(@vitest/expect@4.1.12)(vitest@4.1.12)
+        version: 11.11.0(@vitest/expect@4.1.12)(vitest@5.1.0)
       knitwork:
         specifier: ^1.2.0
         version: 1.3.0
@@ -201,10 +201,10 @@ importers:
         version: 1.0.3(@nuxt/cli@3.37.0(@nuxt/schema@4.6.4)(magicast@0.5.5)(supports-color@10.2.2))(@volar/typescript@2.4.30(typescript@5.9.3))(@vue/compiler-core@3.5.45)(@vue/language-core@3.3.14)(esbuild@0.28.2)(rolldown@1.2.16)(rollup@4.68.0)(typescript@5.9.3)(vite@8.3.6(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))(vue@3.5.45(typescript@5.9.3))
       '@nuxt/test-utils':
         specifier: 4.4.0
-        version: 4.4.0(d4b24f4c41019bd3f010a2de6a8a3590)
+        version: 4.4.0(464f57b241a7c3c07b35f686a05dad1b)
       '@vitest/coverage-v8':
-        specifier: 4.1.12
-        version: 4.1.12(vitest@4.1.12)
+        specifier: 5.1.0
+        version: 5.1.0(vitest@5.1.0)
       bumpp:
         specifier: 12.2.2
         version: 12.2.2
@@ -219,7 +219,7 @@ importers:
         version: 17.4.1
       node:
         specifier: runtime:^26.0.0
-        version: runtime:26.13.0
+        version: runtime:26.13.1
       nuxt:
         specifier: 4.6.4
         version: 4.6.4(@babel/plugin-syntax-jsx@7.29.7(@babel/core@7.29.13(supports-color@10.2.2)))(@babel/plugin-syntax-typescript@7.29.7(@babel/core@7.29.13(supports-color@10.2.2)))(@oxc-project/types@0.156.0)(@types/node@26.6.6)(@vue/compiler-sfc@3.5.45)(acorn@8.19.0)(bare-buffer@3.7.1)(better-sqlite3@12.11.1)(confbox@0.3.2)(db0@0.3.4(better-sqlite3@12.11.1))(dotenv@17.4.2)(esbuild@0.28.2)(eslint@10.14.0(jiti@2.7.0)(supports-color@10.2.2))(giget@3.3.1)(ioredis@5.11.1(supports-color@10.2.2))(lightningcss@1.33.0)(mlly@1.8.2)(optionator@0.9.4)(oxc-parser@0.151.0)(rolldown@1.2.16)(rollup-plugin-visualizer@7.1.2(rolldown@1.2.16)(rollup@4.68.0))(rollup@4.68.0)(srvx@0.11.22)(supports-color@10.2.2)(terser@5.51.2)(typescript@5.9.3)(vite@8.3.6(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))(yaml@2.9.1)
@@ -227,8 +227,8 @@ importers:
         specifier: 2.14.0
         version: 2.14.0
       vitest:
-        specifier: 4.1.12
-        version: 4.1.12(@types/node@26.6.6)(@vitest/coverage-v8@4.1.12)(vite@8.3.6(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))
+        specifier: 5.1.0
+        version: 5.1.0(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(vite@8.3.6(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))
 
   docs:
     dependencies:
@@ -3475,11 +3475,11 @@ packages:
       vite: ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0
       vue: ^3.2.25 || ^3.6.0-rc.10
 
-  '@vitest/coverage-v8@4.1.12':
-    resolution: {integrity: sha512-6S7/iVknKglLAxMFxQGNppBI0iqJS2NgM6FBxavitj7KaDq/vywOWGf6dGu7F2L1Qy0G6S3uTp7aGshHrzK8JA==}
+  '@vitest/coverage-v8@5.1.0':
+    resolution: {integrity: sha512-OY9aShBQG5KOIw2zCo9fDoCHI9RHliNHJ//nM7m6jGg41Hyke9JOGWmeMlK74xYErsxMoK8mIB3gAeEyFVA7LA==}
     peerDependencies:
-      '@vitest/browser': 4.1.12
-      vitest: 4.1.12
+      '@vitest/browser': 5.1.0
+      vitest: 5.1.0
     peerDependenciesMeta:
       '@vitest/browser':
         optional: true
@@ -3487,10 +3487,18 @@ packages:
   '@vitest/expect@4.1.12':
     resolution: {integrity: sha512-vFlTt+YEu9WBpNjdGayNmlMVzrWPi1+sv853/7t2FU7hpO5gAFBKHzQmkCq5Xjpr+evegF2994LQT3hF3mRlqQ==}
 
-  '@vitest/mocker@4.1.12':
-    resolution: {integrity: sha512-fKShNpKZzupWZuY0z7egydvL0sqW4INEZBEExMBMAa6izlENEVHwoXgdaTCaBZ5fwlr4xf2o1wXC83n9RpO+NA==}
+  '@vitest/istanbul-lib-coverage@2.1.0':
+    resolution: {integrity: sha512-WOjuS+xcjSIy7ruYBQ+9BUcV7XZQ0FyVcbWbWxW9TRx/kLGx5SQaeFRIFDJxjNplb6YsT7SpKo2zuXXUo91OIQ==}
+    engines: {node: '>=22'}
+
+  '@vitest/istanbul-lib-report@2.1.0':
+    resolution: {integrity: sha512-+ZFta25nWtGCOBG9/IET8w1RO5Oawsd6H8Uf6AJ9EA/StFuKVtKAEJEJ6uRt84OH+T4YkI0ASmIHAhRA+0KVxw==}
+    engines: {node: '>=22'}
+
+  '@vitest/mocker@5.1.0':
+    resolution: {integrity: sha512-5umB9/jlWcqVS6fsrFmv5Gdnpu6wAUio/lEOwAmvB7v+lFo/IW2B9FhAD0p19GCULTgMzLCdUmuCDCnAzWgppQ==}
     peerDependencies:
-      msw: ^2.4.9
+      msw: ^2.4.9 || ^3.0.0
       vite: ^6.0.0 || ^7.0.0 || ^8.0.0
     peerDependenciesMeta:
       msw:
@@ -3501,14 +3509,11 @@ packages:
   '@vitest/pretty-format@4.1.12':
     resolution: {integrity: sha512-XW9O8+Mxx4VpCtkYdMJLZQQwsVryP9wk7cPKDxtXFfwSak6yRh5+2fep/Y0XF/ElBvJHq8bcYdi6aeuai0opZA==}
 
-  '@vitest/runner@4.1.12':
-    resolution: {integrity: sha512-NKlVKCr5QnCe8jijdMnmkpHHU+WTqiLFR6G0pHji9uRjXK9xJl1k1nTw6F3pOOj2PDcsDt2GKQMI7wIsaT491w==}
-
-  '@vitest/snapshot@4.1.12':
-    resolution: {integrity: sha512-ko1y1Qgb/slzQ9mr+b89Cuqud8WG1TKtsPD8r7ZUBdvVOGt85Af2HwCqHujrhwJq95hs/9RM7fcAPg57o1vlzw==}
-
   '@vitest/spy@4.1.12':
     resolution: {integrity: sha512-RGq9x4JNGNTZHEJxvN0oSiJjeSCExm0n2gZKKJZHY9cX5AVA6M7VJILBT3ZJ/tJ/0J9uWT7fETV9/btoi//vSg==}
+
+  '@vitest/spy@5.1.0':
+    resolution: {integrity: sha512-2DPO5OMHWKrBngC+fCmTQqemNF0gidRhp3lxbBmRhW+M1XJrfgPpqNqWVevXtn2f2ufD5ZaR1B6B641aAlcX5A==}
 
   '@vitest/utils@4.1.12':
     resolution: {integrity: sha512-Q3awXrwOfEV+qc3WmO5ONyE0yO7Q1gQ9/oyHxGLZ/pl7N3NO/ZztqQwKLuwMkV+CA1JYSIeO3gkHnRDIo4AVaA==}
@@ -5018,10 +5023,6 @@ packages:
   h3@1.15.11:
     resolution: {integrity: sha512-L3THSe2MPeBwgIZVSH5zLdBBU90TOxarvhK9d04IDY2AmVS8j2Jz2LIWtwsGOU3lu2I5jCN7FNvVfY2+XyF+mg==}
 
-  has-flag@4.0.0:
-    resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}
-    engines: {node: '>=8'}
-
   has-property-descriptors@1.0.2:
     resolution: {integrity: sha512-55JNKuIW+vq4Ke1BjOTjM2YctQIvCT7GFzHwmfZPGo5wnrgkid0YQtnAleFSqumZm4az3n2BS+erby5ipJdgrg==}
 
@@ -5116,9 +5117,6 @@ packages:
 
   html-entities@2.6.0:
     resolution: {integrity: sha512-kig+rMn/QOVRvr7c86gQ8lWXq+Hkv6CbAH1hLu+RG338StTpE8Z0b44SDVaqVu7HGKf27frdmUYEs9hTUX/cLQ==}
-
-  html-escaper@2.0.2:
-    resolution: {integrity: sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==}
 
   html-validate@11.11.0:
     resolution: {integrity: sha512-ta6WyTPBO6/qj9OdlwW4p9rcArFWaMV4eiiYzfrrypnfSQP+VOHorkJBem1/UBhuahNB4G/YItX9Fkk8eK3rQg==}
@@ -5381,18 +5379,6 @@ packages:
   isomorphic.js@0.2.5:
     resolution: {integrity: sha512-PIeMbHqMt4DnUP3MA/Flc0HElYjMXArsw1qwJZcm9sqR8mq3l8NYizFMty0pWwE/tzIGH3EKK5+jes5mAr85yw==}
 
-  istanbul-lib-coverage@3.2.2:
-    resolution: {integrity: sha512-O8dpsF+r0WV/8MNRKfnmrtCWhuKjxrq2w+jpzBL5UZKTi2LeVWnWOmWRxFlesJONmc+wLAGvKQZEOanko0LFTg==}
-    engines: {node: '>=8'}
-
-  istanbul-lib-report@3.0.1:
-    resolution: {integrity: sha512-GCfE1mtsHGOELCU8e/Z7YWzpmybrx/+dSTfLrvY8qRmaY6zXTKWn6WQIjaAFw069icm6GVMNkgu0NzI4iPZUNw==}
-    engines: {node: '>=10'}
-
-  istanbul-reports@3.2.0:
-    resolution: {integrity: sha512-HGYWWS/ehqTV3xN10i23tkPkpH46MLCIMFNCaaKNavAXTF1RkqxawEPtnjnGZ6XKSInBKkiOA5BKS+aZiY3AvA==}
-    engines: {node: '>=8'}
-
   jiti@1.21.7:
     resolution: {integrity: sha512-/imKNG4EbWNrVjoNC/1H5/9GFy+tqjGBHCaSsN+P2RnPqjsLmv6UD3Ej+Kj8nBWaRAwyk7kK5ZUc+OEatnTR3A==}
     hasBin: true
@@ -5646,10 +5632,6 @@ packages:
   make-asynchronous@1.1.0:
     resolution: {integrity: sha512-ayF7iT+44LXdxJLTrTd3TLQpFDDvPCBxXxbv+pMUSuHA5Q8zyAfwkRP6aHHwNVFBUFWtxAHqwNJxF8vMZLAbVg==}
     engines: {node: '>=18'}
-
-  make-dir@4.0.0:
-    resolution: {integrity: sha512-hXdUTZYIVOt1Ex//jAQi+wTZZpUpwBj/0QsOzqegb3rGMMeJiSEu5xLHnYfBrRV4RH2+OCSOO95Is/7x1WJ4bw==}
-    engines: {node: '>=10'}
 
   markdown-exit@1.1.0-beta.2:
     resolution: {integrity: sha512-8CzMGVlFZ4DEfnc8KU+4ycUW2SIOuiXqCHD7z51ecVEi/weyc0f2ylQbCm4KoKuVlTZSuMUMnWT0hTyquZ7anQ==}
@@ -6001,7 +5983,7 @@ packages:
     resolution: {integrity: sha512-6li2QanLsAXpIH2R6j77MzRyvOyrvdTqlKtO4CgBdHGNvN99ZZfyxszHc5o5+IZBWD5u6Hzwg83JoGXmqZNG9Q==}
     engines: {node: '>=18'}
 
-  node@runtime:26.13.0:
+  node@runtime:26.13.1:
     resolution:
       type: variations
       variants:
@@ -6009,9 +5991,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-wSgCxNSdgeA5B1IPyskKZFXbf0LhVfTpKmv/BtLAbUc=
+            integrity: sha256-ZeVfsT3W2dQ+JhNSbnKssb/8svPxhVmNe3bnjsI3rQM=
             type: binary
-            url: https://nodejs.org/download/release/v26.13.0/node-v26.13.0-aix-ppc64.tar.gz
+            url: https://nodejs.org/download/release/v26.13.1/node-v26.13.1-aix-ppc64.tar.gz
           targets:
             - cpu: ppc64
               os: aix
@@ -6019,9 +6001,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-04vV5aLdzmu7XOReRuIIM32k1R//5hHlZ/0yBz1kOfY=
+            integrity: sha256-rsJRTqHOsrpSRV6exlmG9nSaBt11nl2ypy5oiWaMlzU=
             type: binary
-            url: https://nodejs.org/download/release/v26.13.0/node-v26.13.0-darwin-arm64.tar.gz
+            url: https://nodejs.org/download/release/v26.13.1/node-v26.13.1-darwin-arm64.tar.gz
           targets:
             - cpu: arm64
               os: darwin
@@ -6029,9 +6011,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-UlybKbsCY9aH3mCkzsDiptuHao6wMjaeV5Xspx58NY4=
+            integrity: sha256-gruWB4okylC5yaOPI3nmvm2HFx/NQA/BTIk0s7zpbi8=
             type: binary
-            url: https://nodejs.org/download/release/v26.13.0/node-v26.13.0-darwin-x64.tar.gz
+            url: https://nodejs.org/download/release/v26.13.1/node-v26.13.1-darwin-x64.tar.gz
           targets:
             - cpu: x64
               os: darwin
@@ -6039,9 +6021,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-Q56cQ4rN9qb/5HQY2nCRU9ZsS+2BLjCkc/qssQfdJ5E=
+            integrity: sha256-gKMws1QVOCh43xjUGvvRBuqJv7O+AIfWYI4omhTFzH0=
             type: binary
-            url: https://nodejs.org/download/release/v26.13.0/node-v26.13.0-linux-arm64.tar.gz
+            url: https://nodejs.org/download/release/v26.13.1/node-v26.13.1-linux-arm64.tar.gz
           targets:
             - cpu: arm64
               os: linux
@@ -6049,9 +6031,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-zu5jVLJeb1JcXZK7E48my3vMXvRA3MYw4fax9IsDqPg=
+            integrity: sha256-+Vi7pelENE1N2HMF67q6Vc21vlghGiT09qEqaua9Fu4=
             type: binary
-            url: https://nodejs.org/download/release/v26.13.0/node-v26.13.0-linux-ppc64le.tar.gz
+            url: https://nodejs.org/download/release/v26.13.1/node-v26.13.1-linux-ppc64le.tar.gz
           targets:
             - cpu: ppc64le
               os: linux
@@ -6059,9 +6041,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-SgAJqeiWL/bhpRlKZMKIt+2Si3TiVy61/fYxXd1vs8c=
+            integrity: sha256-8rrre+iCFpfnA4RGvY0GrxZMDo3LxAQ5r+hB3Gjm2N4=
             type: binary
-            url: https://nodejs.org/download/release/v26.13.0/node-v26.13.0-linux-s390x.tar.gz
+            url: https://nodejs.org/download/release/v26.13.1/node-v26.13.1-linux-s390x.tar.gz
           targets:
             - cpu: s390x
               os: linux
@@ -6069,9 +6051,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-m6FRoFEHiUYIN3mPigYyYj7eEhppV1Snahgbr5Uje9I=
+            integrity: sha256-uqI7bs2FVYBL96TocC8WNyA5FqENKG0+4W/Oi/Vje4M=
             type: binary
-            url: https://nodejs.org/download/release/v26.13.0/node-v26.13.0-linux-x64-musl.tar.gz
+            url: https://nodejs.org/download/release/v26.13.1/node-v26.13.1-linux-x64-musl.tar.gz
           targets:
             - cpu: x64
               os: linux
@@ -6080,9 +6062,9 @@ packages:
             archive: tarball
             bin:
               node: bin/node
-            integrity: sha256-WEhVOGi0AtP6u1sJJwZJl3eAo5D4MhVXIQJaCLUQRFU=
+            integrity: sha256-UYZ03itiFyil5EhvX7O30pALs8xKqXlp7apGPbmfl3g=
             type: binary
-            url: https://nodejs.org/download/release/v26.13.0/node-v26.13.0-linux-x64.tar.gz
+            url: https://nodejs.org/download/release/v26.13.1/node-v26.13.1-linux-x64.tar.gz
           targets:
             - cpu: x64
               os: linux
@@ -6090,10 +6072,10 @@ packages:
             archive: zip
             bin:
               node: node.exe
-            integrity: sha256-qUJxOVlRVu9ITh+wiVdnbgnUIyNo3RdDoqn5Pz0kGxQ=
-            prefix: node-v26.13.0-win-arm64
+            integrity: sha256-GB6+QxuQeHETqeT8gNOM6G03iIo1OgOG3kTShy5Iy5c=
+            prefix: node-v26.13.1-win-arm64
             type: binary
-            url: https://nodejs.org/download/release/v26.13.0/node-v26.13.0-win-arm64.zip
+            url: https://nodejs.org/download/release/v26.13.1/node-v26.13.1-win-arm64.zip
           targets:
             - cpu: arm64
               os: win32
@@ -6101,36 +6083,14 @@ packages:
             archive: zip
             bin:
               node: node.exe
-            integrity: sha256-3MYNWaB0aZn5kGSgHAIERdVNhCKMaRzb8ltJrDtZFQo=
-            prefix: node-v26.13.0-win-x64
+            integrity: sha256-4u3adb+wiWVHBc9loTtYkzv9X1cUjo69qRb1iiR08fc=
+            prefix: node-v26.13.1-win-x64
             type: binary
-            url: https://nodejs.org/download/release/v26.13.0/node-v26.13.0-win-x64.zip
+            url: https://nodejs.org/download/release/v26.13.1/node-v26.13.1-win-x64.zip
           targets:
             - cpu: x64
               os: win32
-        - resolution:
-            archive: tarball
-            bin:
-              node: bin/node
-            integrity: sha256-892ncroMHyzW/sRvbsJGh1hHZ/LD+RF6R+3xked4ZyA=
-            type: binary
-            url: https://unofficial-builds.nodejs.org/download/release/v26.13.0/node-v26.13.0-linux-arm64-musl.tar.gz
-          targets:
-            - cpu: arm64
-              os: linux
-              libc: musl
-        - resolution:
-            archive: tarball
-            bin:
-              node: bin/node
-            integrity: sha256-xsc4/lZMPrBTFyv9TKEWbuyLwHb4QjGi6nAWXjFvWAk=
-            type: binary
-            url: https://unofficial-builds.nodejs.org/download/release/v26.13.0/node-v26.13.0-linux-x64-musl.tar.gz
-          targets:
-            - cpu: x64
-              os: linux
-              libc: musl
-    version: 26.13.0
+    version: 26.13.1
     hasBin: true
 
   nopt@8.1.0:
@@ -7110,9 +7070,6 @@ packages:
     resolution: {integrity: sha512-6x6dK6zJdpTzF4sQeNYxwtvBzf6Eg4GtlesS94HOvTudUeyK2WXAaIfmDgsyslYrRBeFIlsi54AYsFGUuhmvrQ==}
     engines: {node: '>= 0.4'}
 
-  siginfo@2.0.0:
-    resolution: {integrity: sha512-ybx0WO1/8bSBLEWXZvEd7gMW3Sn3JFlW3TvX1nREbDLRNQNaeNN8WK0meBwPdAaOI7TtRRRJn/Es1zhrrCHu7g==}
-
   signal-exit@3.0.7:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
 
@@ -7220,9 +7177,6 @@ packages:
     resolution: {integrity: sha512-o3yWv49B/o4QZk5ZcsALc6t0+eCelPc44zZsLtCQnZPDwFpDYSWcDnrv2TtMmMbQ7uKo3J0HTURCqckw23czNQ==}
     engines: {node: '>=12.0.0'}
 
-  stackback@0.0.2:
-    resolution: {integrity: sha512-1XMJE5fQo1jGH6Y/7ebnwPOBEkIEnT4QF32d5R1+VXdXveM0IBMJt8zfaxX1P3QhVwrYe+576+jkANtSS2mBbw==}
-
   standard-as-callback@2.1.0:
     resolution: {integrity: sha512-qoRRSyROncaz1z0mvYqIE4lCd9p2R90i6GxW3uZv5ucSu8tU7B5HXUP1gG8pVZsYNVaXjk8ClXHPttLyxAL48A==}
 
@@ -7295,10 +7249,6 @@ packages:
   supports-color@10.2.2:
     resolution: {integrity: sha512-SS+jx45GF1QjgEXQx4NJZV9ImqmO2NPz5FNsIHrsDjh2YsHnawpan7SNQ1o8NuhrbHZy9AZhIoCUiCeaW/C80g==}
     engines: {node: '>=18'}
-
-  supports-color@7.2.0:
-    resolution: {integrity: sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==}
-    engines: {node: '>=8'}
 
   supports-preserve-symlinks-flag@1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
@@ -7379,8 +7329,9 @@ packages:
   tiny-invariant@1.3.3:
     resolution: {integrity: sha512-+FbBPE1o9QAYvviau/qC5SE3caw21q3xkvWKBtja5vgqOWIHHJ3ioaq1VPfn/Szqctz2bU/oYeKd9/z5BL+PVg==}
 
-  tinybench@2.9.0:
-    resolution: {integrity: sha512-0+DUvqWMValLmha6lr4kD8iAMK1HzV0/aKnCtWb9v9641TnP/MFb7Pc2bxoxQjTXAErryXVgUOfv2YqNllqGeg==}
+  tinybench@6.2.3:
+    resolution: {integrity: sha512-Al01C2JIBnO2CXCAPbpAl6sUiOZHeThGtHYNTa51JRw9PyWOCdr+9Ong05R4qg/Sk3+H645E8ov1h2c58ityNw==}
+    engines: {node: '>=20.0.0'}
 
   tinyclip@0.1.15:
     resolution: {integrity: sha512-uo33abH+Ays0xYaDysoBt494Hb3hsEczMpcC0MwFl773pazORx4fmvKhclhR1wonUbB6vvpRsvVMwnhfqeMc+A==}
@@ -7937,23 +7888,23 @@ packages:
   vitest-environment-nuxt@2.0.0:
     resolution: {integrity: sha512-zEGFRiCAaRR3fHnqISHKMNTRvCzkQEI1XyFeqNgR2IBD0oYkfZ1rUHwi7C+h3Cns3KPykfB0av1B3MtLEbChDw==}
 
-  vitest@4.1.12:
-    resolution: {integrity: sha512-5eWdz2yb3ajxWF3C8C4TjkXl7FGm3n2E/VlazALrQHzK7nYMSGFnCZto0bbPNl77AwkOZVLk0YnBAejUu0NiWA==}
-    engines: {node: ^20.0.0 || ^22.0.0 || >=24.0.0}
+  vitest@5.1.0:
+    resolution: {integrity: sha512-MzmNFnrwa8v8lF1bLxw3UJ4EREwVOVb75VqJZmUDRjJ6EluK/x9th7qTbaeDk41WxE1GxWqmTXcdsfobfH5sOA==}
+    engines: {node: ^22.12.0 || ^24.0.0 || >=26.0.0}
     hasBin: true
     peerDependencies:
       '@edge-runtime/vm': '*'
       '@opentelemetry/api': ^1.9.0
-      '@types/node': ^20.0.0 || ^22.0.0 || >=24.0.0
-      '@vitest/browser-playwright': 4.1.12
-      '@vitest/browser-preview': 4.1.12
-      '@vitest/browser-webdriverio': ^4.1.11
-      '@vitest/coverage-istanbul': 4.1.12
-      '@vitest/coverage-v8': 4.1.12
-      '@vitest/ui': 4.1.12
+      '@types/node': ^22.0.0 || >=24.0.0
+      '@vitest/browser-playwright': 5.1.0
+      '@vitest/browser-preview': 5.1.0
+      '@vitest/browser-webdriverio': ^5.0.0-beta.5 || >=5.0.0
+      '@vitest/coverage-istanbul': 5.1.0
+      '@vitest/coverage-v8': 5.1.0
+      '@vitest/ui': 5.1.0
       happy-dom: '*'
       jsdom: '*'
-      vite: ^6.0.0 || ^7.0.0 || ^8.0.0
+      vite: ^6.4.0 || ^7.0.0 || ^8.0.0
     peerDependenciesMeta:
       '@edge-runtime/vm':
         optional: true
@@ -8117,9 +8068,9 @@ packages:
     engines: {node: ^20.17.0 || >=22.9.0}
     hasBin: true
 
-  why-is-node-running@2.3.0:
-    resolution: {integrity: sha512-hUrmaWBdVDcxvYqnyh09zunKzROWjbZTiNy8dBEjkS7ehEDQibXJ7XvlmtbwuTclUiIyN+CyXQD4Vmko8fNm8w==}
-    engines: {node: '>=8'}
+  why-is-node-running@3.2.1:
+    resolution: {integrity: sha512-Tb2FUhB4vUsGQlfSquQLYkApkuPAFQXGFzxWKHHumVz2dK+X1RUm/HnID4+TfIGYJ1kTcwOaCk/buYCEJr6YjQ==}
+    engines: {node: '>=20.11'}
     hasBin: true
 
   word-wrap@1.2.5:
@@ -10458,7 +10409,7 @@ snapshots:
       rc9: 3.1.0
       std-env: 4.3.0
 
-  '@nuxt/test-utils@4.4.0(d4b24f4c41019bd3f010a2de6a8a3590)':
+  '@nuxt/test-utils@4.4.0(464f57b241a7c3c07b35f686a05dad1b)':
     dependencies:
       '@clack/prompts': 1.8.1
       '@nuxt/devtools-kit': 3.4.4(@nuxt/schema@4.6.4)(confbox@0.3.2)(dotenv@17.4.2)(giget@3.3.1)(jiti@2.7.0)(magic-string@1.4.5)(mlly@1.8.2)(oxc-parser@0.151.0)(rolldown@1.2.16)(unplugin@3.7.0(esbuild@0.28.2)(rolldown@1.2.16)(rollup@4.68.0)(vite@8.3.6(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1)))(vite@8.3.6(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))
@@ -10484,7 +10435,7 @@ snapshots:
     optionalDependencies:
       h3: 1.15.11
       nuxt: 4.6.4(@babel/plugin-syntax-jsx@7.29.7(@babel/core@7.29.13(supports-color@10.2.2)))(@babel/plugin-syntax-typescript@7.29.7(@babel/core@7.29.13(supports-color@10.2.2)))(@oxc-project/types@0.156.0)(@types/node@26.6.6)(@vue/compiler-sfc@3.5.45)(acorn@8.19.0)(bare-buffer@3.7.1)(better-sqlite3@12.11.1)(confbox@0.3.2)(db0@0.3.4(better-sqlite3@12.11.1))(dotenv@17.4.2)(esbuild@0.28.2)(eslint@10.14.0(jiti@2.7.0)(supports-color@10.2.2))(giget@3.3.1)(ioredis@5.11.1(supports-color@10.2.2))(lightningcss@1.33.0)(mlly@1.8.2)(optionator@0.9.4)(oxc-parser@0.151.0)(rolldown@1.2.16)(rollup-plugin-visualizer@7.1.2(rolldown@1.2.16)(rollup@4.68.0))(rollup@4.68.0)(srvx@0.11.22)(supports-color@10.2.2)(terser@5.51.2)(typescript@5.9.3)(vite@8.3.6(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))(yaml@2.9.1)
-      vitest: 4.1.12(@types/node@26.6.6)(@vitest/coverage-v8@4.1.12)(vite@8.3.6(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))
+      vitest: 5.1.0(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(vite@8.3.6(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))
     transitivePeerDependencies:
       - '@farmfe/core'
       - '@nuxt/schema'
@@ -12466,19 +12417,17 @@ snapshots:
       vite: 8.3.6(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1)
       vue: 3.5.45(typescript@5.9.3)
 
-  '@vitest/coverage-v8@4.1.12(vitest@4.1.12)':
+  '@vitest/coverage-v8@5.1.0(vitest@5.1.0)':
     dependencies:
       '@bcoe/v8-coverage': 1.0.2
-      '@vitest/utils': 4.1.12
+      '@vitest/istanbul-lib-coverage': 2.1.0
+      '@vitest/istanbul-lib-report': 2.1.0
       ast-v8-to-istanbul: 1.0.7
-      istanbul-lib-coverage: 3.2.2
-      istanbul-lib-report: 3.0.1
-      istanbul-reports: 3.2.0
       magicast: 0.5.5
-      obug: 2.2.1
+      obug: 3.0.0
       std-env: 4.3.0
       tinyrainbow: 3.2.0
-      vitest: 4.1.12(@types/node@26.6.6)(@vitest/coverage-v8@4.1.12)(vite@8.3.6(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))
+      vitest: 5.1.0(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(vite@8.3.6(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))
 
   '@vitest/expect@4.1.12':
     dependencies:
@@ -12488,38 +12437,39 @@ snapshots:
       '@vitest/utils': 4.1.12
       chai: 6.3.0
       tinyrainbow: 3.2.0
+    optional: true
 
-  '@vitest/mocker@4.1.12(vite@8.3.6(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))':
+  '@vitest/istanbul-lib-coverage@2.1.0': {}
+
+  '@vitest/istanbul-lib-report@2.1.0':
     dependencies:
-      '@vitest/spy': 4.1.12
+      '@vitest/istanbul-lib-coverage': 2.1.0
+
+  '@vitest/mocker@5.1.0(vite@8.3.6(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))':
+    dependencies:
+      '@jridgewell/trace-mapping': 0.3.31
+      '@vitest/spy': 5.1.0
       estree-walker: 3.0.3
-      magic-string: 0.30.21
+      magic-string: 1.4.5
     optionalDependencies:
       vite: 8.3.6(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1)
 
   '@vitest/pretty-format@4.1.12':
     dependencies:
       tinyrainbow: 3.2.0
+    optional: true
 
-  '@vitest/runner@4.1.12':
-    dependencies:
-      '@vitest/utils': 4.1.12
-      pathe: 2.0.3
+  '@vitest/spy@4.1.12':
+    optional: true
 
-  '@vitest/snapshot@4.1.12':
-    dependencies:
-      '@vitest/pretty-format': 4.1.12
-      '@vitest/utils': 4.1.12
-      magic-string: 0.30.21
-      pathe: 2.0.3
-
-  '@vitest/spy@4.1.12': {}
+  '@vitest/spy@5.1.0': {}
 
   '@vitest/utils@4.1.12':
     dependencies:
       '@vitest/pretty-format': 4.1.12
       convert-source-map: 2.0.0
       tinyrainbow: 3.2.0
+    optional: true
 
   '@volar/language-core@2.4.30':
     dependencies:
@@ -14346,8 +14296,6 @@ snapshots:
       ufo: 1.6.4
       uncrypto: 0.1.3
 
-  has-flag@4.0.0: {}
-
   has-property-descriptors@1.0.2:
     dependencies:
       es-define-property: 1.0.1
@@ -14519,9 +14467,7 @@ snapshots:
 
   html-entities@2.6.0: {}
 
-  html-escaper@2.0.2: {}
-
-  html-validate@11.11.0(@vitest/expect@4.1.12)(vitest@4.1.12):
+  html-validate@11.11.0(@vitest/expect@4.1.12)(vitest@5.1.0):
     dependencies:
       '@html-validate/stylish': 6.1.0
       '@sidvind/better-ajv-errors': 7.0.0(ajv@8.20.0)
@@ -14531,7 +14477,7 @@ snapshots:
       semver: 7.8.6
     optionalDependencies:
       '@vitest/expect': 4.1.12
-      vitest: 4.1.12(@types/node@26.6.6)(@vitest/coverage-v8@4.1.12)(vite@8.3.6(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))
+      vitest: 5.1.0(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(vite@8.3.6(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))
 
   html-void-elements@3.0.0: {}
 
@@ -14753,19 +14699,6 @@ snapshots:
       simple-get: 4.0.1
 
   isomorphic.js@0.2.5: {}
-
-  istanbul-lib-coverage@3.2.2: {}
-
-  istanbul-lib-report@3.0.1:
-    dependencies:
-      istanbul-lib-coverage: 3.2.2
-      make-dir: 4.0.0
-      supports-color: 7.2.0
-
-  istanbul-reports@3.2.0:
-    dependencies:
-      html-escaper: 2.0.2
-      istanbul-lib-report: 3.0.1
 
   jiti@1.21.7: {}
 
@@ -15038,10 +14971,6 @@ snapshots:
       p-event: 6.0.1
       type-fest: 4.41.0
       web-worker: 1.5.0
-
-  make-dir@4.0.0:
-    dependencies:
-      semver: 7.8.6
 
   markdown-exit@1.1.0-beta.2:
     dependencies:
@@ -15763,7 +15692,7 @@ snapshots:
 
   node-releases@2.0.63: {}
 
-  node@runtime:26.13.0: {}
+  node@runtime:26.13.1: {}
 
   nopt@8.1.0:
     dependencies:
@@ -17735,8 +17664,6 @@ snapshots:
       side-channel-map: 1.0.1
       side-channel-weakmap: 1.0.2
 
-  siginfo@2.0.0: {}
-
   signal-exit@3.0.7: {}
 
   signal-exit@4.1.0: {}
@@ -17828,8 +17755,6 @@ snapshots:
 
   stable-hash-x@0.2.0: {}
 
-  stackback@0.0.2: {}
-
   standard-as-callback@2.1.0: {}
 
   statuses@2.0.2: {}
@@ -17904,10 +17829,6 @@ snapshots:
       time-span: 5.1.0
 
   supports-color@10.2.2: {}
-
-  supports-color@7.2.0:
-    dependencies:
-      has-flag: 4.0.0
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
@@ -18000,7 +17921,7 @@ snapshots:
 
   tiny-invariant@1.3.3: {}
 
-  tinybench@2.9.0: {}
+  tinybench@6.2.3: {}
 
   tinyclip@0.1.15: {}
 
@@ -18624,33 +18545,27 @@ snapshots:
 
   vitest-environment-nuxt@2.0.0:
     dependencies:
-      '@nuxt/test-utils': 4.4.0(d4b24f4c41019bd3f010a2de6a8a3590)
+      '@nuxt/test-utils': 4.4.0(464f57b241a7c3c07b35f686a05dad1b)
 
-  vitest@4.1.12(@types/node@26.6.6)(@vitest/coverage-v8@4.1.12)(vite@8.3.6(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1)):
+  vitest@5.1.0(@types/node@26.6.6)(@vitest/coverage-v8@5.1.0)(vite@8.3.6(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1)):
     dependencies:
-      '@vitest/expect': 4.1.12
-      '@vitest/mocker': 4.1.12(vite@8.3.6(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))
-      '@vitest/pretty-format': 4.1.12
-      '@vitest/runner': 4.1.12
-      '@vitest/snapshot': 4.1.12
-      '@vitest/spy': 4.1.12
-      '@vitest/utils': 4.1.12
+      '@types/chai': 5.2.3
+      '@vitest/mocker': 5.1.0(vite@8.3.6(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1))
+      chai: 6.3.0
       es-module-lexer: 2.3.2
       expect-type: 1.4.0
-      magic-string: 0.30.21
-      obug: 2.2.1
-      pathe: 2.0.3
+      magic-string: 1.4.5
+      obug: 3.0.0
       picomatch: 4.0.7
       std-env: 4.3.0
-      tinybench: 2.9.0
+      tinybench: 6.2.3
       tinyexec: 1.3.1
       tinyglobby: 0.2.17
-      tinyrainbow: 3.2.0
       vite: 8.3.6(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.1)
-      why-is-node-running: 2.3.0
+      why-is-node-running: 3.2.1
     optionalDependencies:
       '@types/node': 26.6.6
-      '@vitest/coverage-v8': 4.1.12(vitest@4.1.12)
+      '@vitest/coverage-v8': 5.1.0(vitest@5.1.0)
     transitivePeerDependencies:
       - msw
 
@@ -18799,10 +18714,7 @@ snapshots:
     dependencies:
       isexe: 4.0.0
 
-  why-is-node-running@2.3.0:
-    dependencies:
-      siginfo: 2.0.0
-      stackback: 0.0.2
+  why-is-node-running@3.2.1: {}
 
   word-wrap@1.2.5: {}
 
