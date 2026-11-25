@@ -9,6 +9,7 @@ export default createConfigForNuxt({
   dirs: {
     src: [
       './playground',
+      './test/fixtures/nuxt-v5',
       './docs',
     ],
   },
