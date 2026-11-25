@@ -54,4 +54,4 @@ export const DEFAULTS: Required<Omit<ModuleOptions, 'logLevel'>> & { logLevel?: 
   ignore: [/\.(xml|rss|json)$/],
 }
 
-export const NuxtRedirectHtmlRegex = /<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=([^"]+)"><\/head><\/html>/
+export const NuxtRedirectHtmlRegex = /<html><head><meta http-equiv="refresh" content="0; url=([^"]+)"(?: \/)?><\/head><\/html>/

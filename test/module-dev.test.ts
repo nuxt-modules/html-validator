@@ -1,21 +1,17 @@
 import { fileURLToPath } from 'node:url'
-import { describe, it, expect, vi } from 'vitest'
-import { setup, $fetch } from '@nuxt/test-utils'
-
-vi.spyOn(console, 'error')
+import { describe, it, expect } from 'vitest'
+import { setup, $fetch, useTestContext } from '@nuxt/test-utils'
 
 await setup({
   rootDir: fileURLToPath(new URL('../playground', import.meta.url)),
   dev: true,
 })
 
-describe.todo('Nuxt dev', () => {
+describe('Nuxt dev', () => {
   it('should add hook to server response', async () => {
     const body = await $fetch('/')
 
     expect(body).toContain('This is an invalid nested anchor tag')
-    expect(console.error).toHaveBeenCalledWith(
-      expect.stringContaining('element-permitted-content'),
-    )
-  })
+    await expect.poll(() => useTestContext().serverLogs.join('\n'), { timeout: 10_000 }).toContain('element-permitted-content')
+  }, 20_000)
 })

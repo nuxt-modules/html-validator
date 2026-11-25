@@ -1,7 +1,17 @@
+import type { H3Event } from 'h3'
+import type { Result } from 'html-validate'
 import type { NitroAppPlugin, RenderResponse } from 'nitropack'
 import { useChecker, getValidator, isIgnored } from './validator'
 // @ts-expect-error virtual module
 import config from '#html-validator-config'
+
+declare module 'nitropack' {
+  interface NitroRuntimeHooks {
+    'html-validator:check': (result: { valid: boolean, results: Result[] }, response: Partial<RenderResponse>, context: {
+      event: H3Event
+    }) => void
+  }
+}
 
 export default <NitroAppPlugin> function (nitro) {
   const validator = getValidator(config.options)
